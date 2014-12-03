@@ -1,0 +1,35 @@
+//
+// Preloader
+// ----------------------------
+
+.preloader {
+    $strokeWidth: 2px;
+    $width: 232px;
+    @extend %spread;
+    position: fixed;
+    background-color: $white;
+    .spinner,
+    .badge {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $width;
+        height: $width;
+        margin-top: -($width / 2);
+        margin-left: -($width / 2);
+    }
+    .spinner {
+        @extend %transition-opacity-slow;
+        border-bottom: $strokeWidth solid $white;
+        border-left: $strokeWidth solid $white;
+        border-right: $strokeWidth solid black;
+        border-top: $strokeWidth solid black;
+        border-radius: 100%;
+        @include animation(spin 0.6s infinite linear);
+    }
+    .badge {
+        // background-image: url(../images/common/badge.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}

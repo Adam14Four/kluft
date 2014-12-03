@@ -1,0 +1,36 @@
+//
+// Layout
+// ---------------------------
+
+.app {
+    min-height: 100%;
+    position: relative;
+}
+
+#region-content {
+    //height of footer
+    padding-bottom: 100px;
+    //height of header
+    padding-top: 100px;
+}
+
+.section {
+    // position: relative;
+    // @include clearfix();
+    // overflow: auto;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
+// This markup structure is used for more "traditional" page layouts
+// where column content needs to stay centered but scroll
+// when the page content is taller than the viewport
+.page {
+    @extend %table;
+    .page-inner {
+        @extend %table-cell;
+    }
+}

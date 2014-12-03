@@ -1,0 +1,45 @@
+//
+// Base
+// ---------------------------
+
+@-webkit-viewport { width: device-width; }
+@-moz-viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+
+
+// Border-box everything
+// ----------------------
+// (http://paulirish.com/2012/box-sizing-border-box-ftw/)
+// Use with caution if app needs to support oldIE (6,7,8)
+// Updated inheritence version: http://blog.teamtreehouse.com/box-sizing-secret-simple-css-layouts#comment-50223
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+// Body reset
+// -----------
+
+body {
+    font-size: $baseFontSize;
+    font-family: $baseFontFamily;
+    line-height: $baseLineHeight;
+    color: $textColor;
+    background-color: $bodyBackground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+}

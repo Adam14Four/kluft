@@ -1,0 +1,30 @@
+.header {
+    height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: $grayLight;
+    @include transition(top 0.3s $easeInOut);
+
+    &.nav-up {
+        top: -100px;
+    }
+
+    nav {
+
+    }
+
+    ul {
+
+    }
+
+    li {
+        display: inline-block;
+        padding: 0 1em;
+    }
+
+    a {
+
+    }
+}

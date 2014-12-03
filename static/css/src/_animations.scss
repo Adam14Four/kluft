@@ -1,0 +1,21 @@
+//
+// Animations
+// ---------------------------
+
+@include keyframes(fadeIn) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@include keyframes(spin) {
+    from {
+        @include rotate(0deg);
+    }
+    to {
+        @include rotate(360deg);
+    }
+}

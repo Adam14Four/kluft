@@ -1,0 +1,149 @@
+//
+// @extends
+// ---------------------------
+
+// Animations
+// -----------
+
+// All
+%transition-all { @include transition(all $transTime $easeDefault); }
+%transition-all-fast { @include transition(all $transTimeFast $easeDefault); }
+%transition-all-slow { @include transition(all $transTimeSlow $easeDefault); }
+%transition-all-super-slow { @include transition(all $transTimeSuperSlow $easeDefault); }
+
+// Opacity
+%transition-opacity { @include transition(opacity $transTime $easeDefault); }
+%transition-opacity-fast { @include transition(opacity $transTimeFast $easeDefault); }
+%transition-opacity-slow { @include transition(opacity $transTimeSlow $easeDefault); }
+%transition-opacity-super-slow { @include transition(opacity $transTimeSuperSlow $easeDefault); }
+
+// Transform
+%transition-transform { @include transition(transform $transTime $easeDefault); }
+%transition-transform-fast { @include transition(transform $transTimeFast $easeDefault); }
+%transition-transform-slow { @include transition(transform $transTimeSlow $easeDefault); }
+%transition-transform-super-slow { @include transition(transform $transTimeSuperSlow $easeDefault); }
+
+// Background color
+%transition-background-color { @include transition(background-color $transTime $easeDefault); }
+
+// Transition delays
+%transition-no-delay { @include transition-delay(0s); }
+%transition-short-delay { @include transition-delay(0s); }
+%transition-standard-delay { @include transition-delay(0s); }
+%transition-long-delay { @include transition-delay($transTimeSlow); }
+
+// Translate3d reset
+%translate3d-reset { @include translate3d(0,0,0); }
+
+
+// Layout
+// -------
+
+%spread {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+%horizontal-center {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+
+%vertical-center {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+%absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translateX(-50%) translateY(-50%));
+}
+
+%table {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: table;
+    table-layout: fixed;
+    overflow: hidden;
+}
+
+%table-cell {
+    width: 100%;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+// User Select
+// -------------------------
+%user-select-nullify {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-drag: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+// Responsive media embeds
+// -------------------------
+
+.embed-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; // 16:9 aspect ratio (adjust accordingly)
+    overflow: hidden;
+    iframe, object, embed, video, img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Misc
+// -------------------------
+
+%hide-text {
+    @include hide-text;
+}
+
+%background-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include background-size(cover);
+}
+
+%background-contain {
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include background-size(contain);
+}
+
+// http://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+%visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
+}

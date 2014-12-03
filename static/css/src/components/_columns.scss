@@ -1,0 +1,54 @@
+[class*='col-'] {
+    position: relative;
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: auto;
+}
+
+.col-1-1 {
+    width: 100%;
+}
+
+.col-1-2 {
+    width: 50%;
+}
+
+.col-1-3 {
+    width: 33.33%;
+}
+
+.col-2-3 {
+    width: 66.66%;
+}
+
+.headline {
+    padding: 5em 0;
+    text-align: center;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.masthead {
+    text-align: center;
+    background-image: url(../img/fpo-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .row {
+        max-width: 600px;
+        width: 70%;
+        padding: 15em 0;
+        margin: 0 auto;
+        // @extend %absolute-center;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}

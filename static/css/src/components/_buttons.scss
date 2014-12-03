@@ -1,0 +1,35 @@
+//
+// Buttons
+// ---------------------------
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    &:hover {}
+    &:focus {
+        outline: none;
+    }
+    &.active,
+    &:active {}
+    &.disabled,
+    &[disabled] {
+        cursor: default;
+        opacity: 0.4;
+        pointer-events: none;
+    }
+
+    &.scroll {
+        @extend .h5;
+        margin: 0;
+        font-family: $sans;
+        color: $white;
+    }
+
+}
