@@ -1,0 +1,11 @@
+//
+// Stacking order (z-index)
+// ---------------------------
+
+$zindex: (
+    preloader: 2000
+);
+
+.preloader {
+    z-index: map-get($zindex, preloader);
+}
