@@ -1,0 +1,57 @@
+.block-text {
+    padding: 2em 0;
+
+    width: 80%;
+    margin: 0 auto;
+
+    p {
+        padding: 1em 0;
+        // width: 75%;
+    }
+
+    .col-left & {
+
+    }
+
+    .col-right & {
+
+    }
+}
+
+.block-figure {
+
+    figure {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        &.partial-1-2 {
+            display: inline-block;
+            width: 48%;
+
+            &:nth-child(1) {
+                margin-right: 3%;
+            }
+        }
+
+        &.partial-2-3 {
+            // width: 75%;
+            // margin: 5% 0 10% 25%;
+        }
+
+        .col-right & {
+            &:last-child {
+                // margin-bottom: 10%;
+            }
+        }
+
+        .col-bottom-masthead & {
+            // padding-bottom: 25%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

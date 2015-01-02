@@ -1,0 +1,23 @@
+.retailers.page {
+
+    .headline {
+        background-color: $grayLight;
+        overflow: visible;
+        position: relative;
+
+        .block-text {
+            padding: 10em 0;
+            width: 50%;
+            margin-left: 50%;
+        }
+    }
+
+    #map {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        background-color: black;
+        width: 35%;
+        padding-bottom: 35%;
+    }
+}

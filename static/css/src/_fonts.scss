@@ -1,0 +1,26 @@
+//
+// Fonts
+// ---------------------------
+@font-face {
+  font-family: 'MrsEavesBold';
+  src: url('../fonts/MrsEavBd.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/MrsEavBd.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/MrsEavBd.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/MrsEavBd.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/MrsEavBd.svg#bfc5dafd5caeff16167ee3d6680c8fb2') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'MrsEavesRoman';
+  src: url('../fonts/MrsEavesRoman.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/MrsEavesRoman.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/MrsEavesRoman.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/MrsEavesRoman.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/MrsEavesRoman.svg#6020e02912aa439a13aa09cf888712d8') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  300;
+}
