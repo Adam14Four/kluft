@@ -11,6 +11,8 @@ $baseUrl: env_or_default("STATIC_URL", "/static/");
 $white:                     #ffffff !default;
 $black:                     #000000 !default;
 $grayLight:                 #e4e4e4 !default;
+$grayDark:                  #454545 !default;
+$gold:                      #cf8e12 !default;
 
 // Scaffolding
 // -------------------------
@@ -32,6 +34,8 @@ $linkColorHover:            lighten($linkColor, 10%) !default;
 
 $sans:                      sans-serif !default;
 $serif:                     serif !default;
+$MrsEavesRoman:             'MrsEavesRoman' !default;
+$MrsEavesBold:              'MrsEavesBold' !default;
 
 $thin:                      100 !default;
 $light:                     300 !default;
@@ -41,11 +45,11 @@ $bold:                      600 !default;
 $ultraBold:                 800 !default;
 
 $baseFontSize:              10px !default;
-$baseFontFamily:            $sans !default;
+$baseFontFamily:            $MrsEavesRoman !default;
 $baseLineHeight:            22px !default;
 
 $headingsFontWeight:        $sans !default;
-$headingsFontFamily:        $sans !default;
+$headingsFontFamily:        $MrsEavesBold !default;
 $headingsColor:             inherit !default;
 
 // Borders

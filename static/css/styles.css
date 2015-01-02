@@ -452,26 +452,15 @@ th {
   display: block;
 }
 
-/* line 72, src/_extends.scss */
-.page {
+/* line 65, src/_extends.scss */
+.col-full-bleed-bg .row {
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  display: table;
-  table-layout: fixed;
-  overflow: hidden;
-}
-
-/* line 85, src/_extends.scss */
-.page .page-inner {
-  width: 100%;
-  margin: 0 auto;
-  display: table-cell;
-  vertical-align: middle;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 /* line 109, src/_extends.scss */
@@ -490,6 +479,43 @@ th {
   height: 100%;
 }
 
+/* line 126, src/_extends.scss */
+.header .logo {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+/* line 151, src/_extends.scss */
+.col-full-bleed-bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'MrsEavesBold';
+  src: url("../fonts/MrsEavBd.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/MrsEavBd.eot?#iefix") format("embedded-opentype"), url("../fonts/MrsEavBd.woff") format("woff"), url("../fonts/MrsEavBd.ttf") format("truetype"), url("../fonts/MrsEavBd.svg#bfc5dafd5caeff16167ee3d6680c8fb2") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'MrsEavesRoman';
+  src: url("../fonts/MrsEavesRoman.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/MrsEavesRoman.eot?#iefix") format("embedded-opentype"), url("../fonts/MrsEavesRoman.woff") format("woff"), url("../fonts/MrsEavesRoman.ttf") format("truetype"), url("../fonts/MrsEavesRoman.svg#6020e02912aa439a13aa09cf888712d8") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 300;
+}
 /* line 5, src/_typography.scss */
 a {
   color: #000000;
@@ -501,50 +527,84 @@ a:hover {
 }
 
 /* line 13, src/_typography.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: sans-serif;
-  font-family: sans-serif;
+p, .p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6em;
+  line-height: 1.8;
+  font-family: "MrsEavesRoman";
+  color: #000000;
+}
+/* line 21, src/_typography.scss */
+p.quote, .p.quote {
+  text-transform: uppercase;
+  font-family: "MrsEavesBold";
+  font-size: 2em;
+}
+/* line 27, src/_typography.scss */
+p.inverted, .p.inverted {
+  color: #ffffff;
+}
+
+/* line 32, src/_typography.scss */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, .collections.page nav a, h5, .h5, .btn.scroll, .header a, .retail-locations h4, .retail-locations address, .retail-locations .distance, .retail-locations .directions, h6, .h6 {
+  font-weight: 300;
+  font-family: "MrsEavesBold";
   line-height: 1.2;
   margin: 0;
+  padding: 0;
+  color: #000000;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+/* line 42, src/_typography.scss */
+h1.inverted, .h1.inverted, h2.inverted, .h2.inverted, h3.inverted, .h3.inverted, h4.inverted, .h4.inverted, .collections.page nav a.inverted, h5.inverted, .h5.inverted, .inverted.btn.scroll, .header a.inverted, .retail-locations h4.inverted, .retail-locations address.inverted, .retail-locations .inverted.distance, .retail-locations .inverted.directions, h6.inverted, .h6.inverted {
+  color: #ffffff;
 }
 
-/* line 20, src/_typography.scss */
+/* line 47, src/_typography.scss */
 h1, .h1 {
-  font-size: 4.4em;
+  font-size: 3.6em;
+  font-family: "MrsEavesRoman";
+  letter-spacing: 0.25em;
+}
+/* line 52, src/_typography.scss */
+h1.large, .h1.large {
+  font-size: 5em;
 }
 
-/* line 24, src/_typography.scss */
+/* line 57, src/_typography.scss */
 h2, .h2 {
-  font-size: 3.8em;
+  font-size: 1.9em;
+  font-family: "MrsEavesRoman";
+}
+/* line 61, src/_typography.scss */
+h2.large, .h2.large {
+  font-size: 4.2em;
 }
 
-/* line 28, src/_typography.scss */
+/* line 66, src/_typography.scss */
 h3, .h3 {
   font-size: 3em;
   margin-bottom: 0.5em;
   line-height: 1.3em;
 }
 
-/* line 34, src/_typography.scss */
-h4, .h5, .btn.scroll {
-  font-size: 2em;
+/* line 72, src/_typography.scss */
+h4, .h4, .collections.page nav a {
+  font-size: 1.9em;
+  font-family: "MrsEavesRoman";
+  text-transform: none;
 }
 
-/* line 38, src/_typography.scss */
-h5, .h5, .btn.scroll {
+/* line 78, src/_typography.scss */
+h5, .h5, .btn.scroll, .header a, .retail-locations h4, .retail-locations address, .retail-locations .distance, .retail-locations .directions {
   font-size: 1.5em;
-  text-transform: uppercase;
   color: #000000;
+  letter-spacing: 1px;
 }
 
-/* line 44, src/_typography.scss */
-p, .p {
-  font-size: 1.6em;
-  font-family: sans-serif;
-  line-height: 1.4;
-}
-
-/* line 50, src/_typography.scss */
+/* line 84, src/_typography.scss */
 li {
   font-family: sans-serif;
 }
@@ -585,16 +645,24 @@ body {
 /* line 34, src/_base.scss */
 body {
   font-size: 10px;
-  font-family: sans-serif;
-  line-height: 22px;
+  font-family: "MrsEavesRoman";
   color: #000000;
   background-color: #ffffff;
+  overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
   /* For some Androids */
+  font-size: 6px;
+}
+
+/* line 49, src/_base.scss */
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* line 5, src/_layout.scss */
@@ -603,14 +671,8 @@ body {
   position: relative;
 }
 
-/* line 10, src/_layout.scss */
-#region-content {
-  padding-bottom: 100px;
-  padding-top: 100px;
-}
-
 /* line 21, src/_layout.scss */
-.section:after {
+.page:after {
   content: "";
   display: table;
   clear: both;
@@ -626,24 +688,88 @@ button {
 
 /* line 12, src/components/_buttons.scss */
 .btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
   display: inline-block;
   cursor: pointer;
+  font-size: 1.2em;
+  font-family: "MrsEavesBold";
+  color: #cf8e12;
+  text-transform: uppercase;
 }
-/* line 16, src/components/_buttons.scss */
+/* line 23, src/components/_buttons.scss */
+.btn.inverted {
+  color: #ffffff;
+}
+/* line 26, src/components/_buttons.scss */
+.btn:hover {
+  text-decoration: none;
+}
+/* line 29, src/components/_buttons.scss */
 .btn:focus {
   outline: none;
 }
-/* line 21, src/components/_buttons.scss */
+/* line 34, src/components/_buttons.scss */
 .btn.disabled, .btn[disabled] {
   cursor: default;
   opacity: 0.4;
   pointer-events: none;
 }
-/* line 28, src/components/_buttons.scss */
+/* line 41, src/components/_buttons.scss */
+.btn.learn-more {
+  position: relative;
+  padding: 1em 5em 1em 3em;
+  letter-spacing: 5px;
+  border: 1px solid #000000;
+}
+/* line 47, src/components/_buttons.scss */
+.btn.learn-more:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  width: 1em;
+  height: 1.8em;
+  background-image: url(../img/global/triangle-gold.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -o-transition: -o-transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -moz-transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+/* line 62, src/components/_buttons.scss */
+.btn.learn-more:hover:after {
+  -moz-transform: translate3d(50%, -50%, 0);
+  -webkit-transform: translate3d(50%, -50%, 0);
+  transform: translate3d(50%, -50%, 0);
+}
+/* line 68, src/components/_buttons.scss */
 .btn.scroll {
   margin: 0;
   font-family: sans-serif;
   color: #ffffff;
+}
+/* line 75, src/components/_buttons.scss */
+.btn.search {
+  position: relative;
+  padding: 1em 2em;
+  letter-spacing: 5px;
+  border: 1px solid #000000;
+}
+/* line 82, src/components/_buttons.scss */
+.btn.zipcode {
+  position: relative;
+  padding: 1em 2em;
+  letter-spacing: 2px;
+  border: 1px solid #000000;
+  color: #000000;
+  margin-right: 1em;
 }
 
 /* line 5, src/components/_preloader.scss */
@@ -681,29 +807,45 @@ button {
 
 /* line 1, src/components/_header.scss */
 .header {
-  height: 100px;
-  position: fixed;
+  height: 170px;
   top: 0;
   width: 100%;
   text-align: center;
-  background-color: #e4e4e4;
+  background-color: #ffffff;
+  overflow: hidden;
   -moz-transition: top 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: top 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition: top 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   transition: top 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
-/* line 10, src/components/_header.scss */
+/* line 11, src/components/_header.scss */
 .header.nav-up {
-  top: -100px;
+  top: -170px;
 }
-/* line 22, src/components/_header.scss */
+/* line 15, src/components/_header.scss */
+.header .logo {
+  display: block;
+  margin: 30px auto 25px auto;
+  width: 118px;
+  height: 73px;
+  background-image: url(../img/logo-kluft.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 35, src/components/_header.scss */
 .header li {
   display: inline-block;
   padding: 0 1em;
 }
+/* line 40, src/components/_header.scss */
+.header a {
+  text-transform: uppercase;
+}
 
 /* line 1, src/components/_footer.scss */
 .footer {
+  display: none;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -711,7 +853,7 @@ button {
   text-align: center;
   background-color: #e4e4e4;
 }
-/* line 9, src/components/_footer.scss */
+/* line 10, src/components/_footer.scss */
 .footer h1 {
   padding: 0.6em 0 0;
 }
@@ -732,50 +874,270 @@ button {
 
 /* line 13, src/components/_columns.scss */
 .col-1-2 {
-  width: 50%;
+  width: 100%;
 }
 
 /* line 17, src/components/_columns.scss */
 .col-1-3 {
-  width: 33.33%;
+  width: 100%;
 }
 
 /* line 21, src/components/_columns.scss */
 .col-2-3 {
-  width: 66.66%;
+  width: 100%;
 }
 
 /* line 25, src/components/_columns.scss */
-.headline {
+.col-headline {
   padding: 5em 0;
   text-align: center;
 }
 
-/* line 30, src/components/_columns.scss */
-figure {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 35, src/components/_columns.scss */
-.masthead {
+/* line 37, src/components/_columns.scss */
+.col-masthead {
   text-align: center;
-  background-image: url(../img/fpo-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-/* line 42, src/components/_columns.scss */
-.masthead .row {
+/* line 43, src/components/_columns.scss */
+.col-masthead .row {
   max-width: 600px;
   width: 70%;
   padding: 15em 0;
   margin: 0 auto;
 }
-/* line 50, src/components/_columns.scss */
-.masthead p {
+/* line 49, src/components/_columns.scss */
+.col-masthead .row.text-box {
+  background-color: rgba(69, 69, 69, 0.3);
+  max-width: 750px;
+  padding: 4em;
+}
+/* line 54, src/components/_columns.scss */
+.col-masthead .row.text-box * {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* line 67, src/components/_columns.scss */
+.col-full-bleed-bg .row {
   padding: 0;
   margin: 0;
+}
+
+/* line 1, src/components/_sections.scss */
+.section {
+  overflow: auto;
+}
+
+/* line 1, src/components/_grid-blocks.scss */
+.block-text {
+  padding: 2em 0;
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 7, src/components/_grid-blocks.scss */
+.block-text p {
+  padding: 1em 0;
+}
+
+/* line 23, src/components/_grid-blocks.scss */
+.block-figure figure {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* line 28, src/components/_grid-blocks.scss */
+.block-figure figure.partial-1-2 {
+  display: inline-block;
+  width: 48%;
+}
+/* line 32, src/components/_grid-blocks.scss */
+.block-figure figure.partial-1-2:nth-child(1) {
+  margin-right: 3%;
+}
+/* line 52, src/components/_grid-blocks.scss */
+.block-figure figure img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 1, src/components/_form.scss */
+.zipcode-form {
+  padding: 4em 0;
+  width: 50%;
+  margin-left: 50%;
+}
+/* line 6, src/components/_form.scss */
+.zipcode-form h4 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+/* line 3, src/components/_retail-locations.scss */
+.retail-locations li {
+  padding: 2em 0 4em;
+  margin-left: 20%;
+}
+/* line 8, src/components/_retail-locations.scss */
+.retail-locations span {
+  display: block;
+}
+/* line 12, src/components/_retail-locations.scss */
+.retail-locations h4, .retail-locations address, .retail-locations .distance, .retail-locations .directions {
+  font-size: 14px;
+  font-style: normal;
+}
+/* line 18, src/components/_retail-locations.scss */
+.retail-locations .directions {
+  text-decoration: underline;
+  color: #cf8e12;
+  text-transform: none;
+}
+/* line 24, src/components/_retail-locations.scss */
+.retail-locations .location-list {
+  padding: 10em 0 15em;
+}
+@media (min-width: 600px) {
+  /* line 29, src/components/_retail-locations.scss */
+  .retail-locations .location-list {
+    width: 70%;
+    margin: 0 auto;
+  }
+  /* line 34, src/components/_retail-locations.scss */
+  .retail-locations li {
+    margin-left: 0;
+    display: inline-block;
+  }
+  /* line 37, src/components/_retail-locations.scss */
+  .retail-locations li:nth-child(odd) {
+    margin-right: 30%;
+  }
+}
+
+/* line 2, src/pages/_home.scss */
+.intro .col-full-bleed-bg {
+  background-color: #e4e4e4;
+}
+
+/* line 9, src/pages/_home.scss */
+.kluft .col-full-bleed-bg {
+  background-image: url(../img/pages/home/kluft.jpg);
+}
+
+/* line 14, src/pages/_home.scss */
+.learn-more {
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+/* line 18, src/pages/_home.scss */
+.learn-more.inverted {
+  margin-bottom: 2em;
+}
+
+/* line 3, src/pages/_collections.scss */
+.collections.page .col-full-bleed-bg {
+  background-image: url(../img/pages/collections/bedroom-1.jpg);
+}
+/* line 7, src/pages/_collections.scss */
+.collections.page .row {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 14, src/pages/_collections.scss */
+.collections.page h1 {
+  display: inline-block;
+  border-bottom: 1px solid #000000;
+  padding: 0 1em;
+}
+/* line 20, src/pages/_collections.scss */
+.collections.page nav {
+  padding-top: 3em;
+}
+/* line 24, src/pages/_collections.scss */
+.collections.page nav li {
+  position: relative;
+  display: inline-block;
+  padding: 0 2em;
+}
+/* line 29, src/pages/_collections.scss */
+.collections.page nav li:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 20%;
+  left: 100%;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background-color: #000000;
+}
+/* line 42, src/pages/_collections.scss */
+.collections.page nav li:last-child:after {
+  display: none;
+}
+/* line 48, src/pages/_collections.scss */
+.collections.page nav a {
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+
+/* line 3, src/pages/_product.scss */
+.product.page h2 {
+  text-transform: none;
+}
+/* line 6, src/pages/_product.scss */
+.product.page h2.large {
+  text-transform: uppercase;
+}
+
+/* line 13, src/pages/_product.scss */
+.beyond-luxury .col-full-bleed-bg {
+  background-image: url(../img/pages/products/luxury-1.jpg);
+}
+
+/* line 3, src/pages/_about.scss */
+.about.page h5 {
+  font-family: "MrsEavesRoman";
+  letter-spacing: 2px;
+}
+/* line 8, src/pages/_about.scss */
+.about.page .block-figure figure.partial-2-3 {
+  width: 75%;
+  margin: 5% 0 10% 0%;
+}
+/* line 13, src/pages/_about.scss */
+.about.page .block-text {
+  margin: 0;
+}
+/* line 18, src/pages/_about.scss */
+.about.page .col-left .block-text {
+  margin-left: 20%;
+}
+
+/* line 3, src/pages/_retailers.scss */
+.retailers.page .headline {
+  background-color: #e4e4e4;
+  overflow: visible;
+  position: relative;
+}
+/* line 8, src/pages/_retailers.scss */
+.retailers.page .headline .block-text {
+  padding: 10em 0;
+  width: 50%;
+  margin-left: 50%;
+}
+/* line 15, src/pages/_retailers.scss */
+.retailers.page #map {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  background-color: black;
+  width: 35%;
+  padding-bottom: 35%;
 }
 
 /* line 9, src/_zindex.scss */
@@ -839,5 +1201,138 @@ figure {
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+@media (min-width: 480px) {
+  /* line 5, src/mq/_480.scss */
+  body {
+    font-size: 7px;
+  }
+}
+@media (min-width: 600px) {
+  /* line 5, src/mq/_600.scss */
+  body {
+    font-size: 8px;
+  }
+
+  /* line 9, src/mq/_600.scss */
+  .col-1-1 {
+    width: 100%;
+  }
+
+  /* line 13, src/mq/_600.scss */
+  .col-1-2 {
+    width: 50%;
+  }
+
+  /* line 17, src/mq/_600.scss */
+  .col-1-3 {
+    width: 33.33%;
+  }
+
+  /* line 21, src/mq/_600.scss */
+  .col-2-3 {
+    width: 66.66%;
+  }
+
+  /* line 25, src/mq/_600.scss */
+  .col-headline {
+    padding: 5em 0;
+  }
+
+  /* line 29, src/mq/_600.scss */
+  .col-left {
+    padding-right: 2.5%;
+  }
+
+  /* line 33, src/mq/_600.scss */
+  .col-right {
+    padding-left: 2.5%;
+  }
+
+  /* line 39, src/mq/_600.scss */
+  .col-masthead .row {
+    max-width: 600px;
+    width: 70%;
+    padding: 15em 0;
+    margin: 0 auto;
+  }
+  /* line 45, src/mq/_600.scss */
+  .col-masthead .row.text-box {
+    max-width: 750px;
+    padding: 4em;
+  }
+  /* line 49, src/mq/_600.scss */
+  .col-masthead .row.text-box * {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* line 59, src/mq/_600.scss */
+  .block-text {
+    padding: 2em 0;
+  }
+  /* line 62, src/mq/_600.scss */
+  .block-text p {
+    padding: 1em 0;
+    width: 75%;
+  }
+
+  /* line 78, src/mq/_600.scss */
+  .block-figure figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 83, src/mq/_600.scss */
+  .block-figure figure.partial-2-3 {
+    width: 75%;
+    margin: 5% 0 10% 25%;
+  }
+  /* line 89, src/mq/_600.scss */
+  .col-right .block-figure figure:last-child {
+    margin-bottom: 10%;
+  }
+  /* line 98, src/mq/_600.scss */
+  .block-figure figure img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* line 107, src/mq/_600.scss */
+  .master-standard.page .col-right {
+    padding-top: 2.5%;
+  }
+  /* line 110, src/mq/_600.scss */
+  .master-standard.page .col-right .block-text {
+    margin-left: 0;
+  }
+  /* line 114, src/mq/_600.scss */
+  .master-standard.page .col-right .block-figure figure.partial-2-3 {
+    width: 75%;
+    margin: 5% 0 10% 0%;
+  }
+  /* line 120, src/mq/_600.scss */
+  .master-standard.page .partial {
+    width: 70%;
+    margin-left: 30%;
+  }
+  /* line 127, src/mq/_600.scss */
+  .master-standard.page .col-left .block-figure:nth-child(1) {
+    margin-left: 15%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 5, src/mq/_768.scss */
+  body {
+    font-size: 9px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 5, src/mq/_992.scss */
+  body {
+    font-size: 10px;
   }
 }

@@ -8,22 +8,28 @@ define(function(require, exports, module) {
 
     return BaseView.extend({
 
-        className: 'collections',
+        className: 'collections page',
 
         template: template,
 
         ui: {
+            fullBleedSections: '.col-full-bleed-bg'
         },
 
         events: {
         },
 
         initialize: function(options) {
-
+            $(window).on('resize', _.bind(this.setBackgroundSize, this));
         },
 
         onShow: function() {
-        }
+            this.setBackgroundSize();
+        },
+
+        setBackgroundSize: function() {
+            helpers.setBackgroundSize(this.ui.fullBleedSections, $('.header').height());
+        },
 
     });
 });

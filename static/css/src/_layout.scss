@@ -9,12 +9,12 @@
 
 #region-content {
     //height of footer
-    padding-bottom: 100px;
-    //height of header
-    padding-top: 100px;
+    // padding-bottom: 100px;
+    // //height of header
+    // padding-top: 100px;
 }
 
-.section {
+.page {
     // position: relative;
     // @include clearfix();
     // overflow: auto;
@@ -28,9 +28,9 @@
 // This markup structure is used for more "traditional" page layouts
 // where column content needs to stay centered but scroll
 // when the page content is taller than the viewport
-.page {
-    @extend %table;
-    .page-inner {
-        @extend %table-cell;
-    }
-}
+// .page {
+//     @extend %table;
+//     .page-inner {
+//         @extend %table-cell;
+//     }
+// }

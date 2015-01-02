@@ -45,6 +45,14 @@ define(function(require, exports, module) {
         return true;
     };
 
+    exports.setBackgroundSize = function(element, offset) {
+        var winHeight = $(window).height();
+        var heightOffset = offset ? offset : 0;
+
+
+        element.css('height', winHeight - heightOffset);
+    };
+
     return exports;
 
 });

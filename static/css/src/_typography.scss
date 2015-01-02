@@ -10,19 +10,57 @@ a {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: $sans;
+p, .p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6em;
+    line-height: 1.8;
+    font-family: $MrsEavesRoman;
+    color: $black;
+
+    &.quote {
+        text-transform: uppercase;
+        font-family: $MrsEavesBold;
+        font-size: 2em;
+    }
+
+    &.inverted {
+        color: $white;
+    }
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-weight: $light;
     font-family: $headingsFontFamily;
     line-height: 1.2;
     margin: 0;
+    padding: 0;
+    color: $black;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+
+    &.inverted {
+        color: $white;
+    }
 }
 
 h1, .h1 {
-    font-size: 4.4em;
+    font-size: 3.6em;
+    font-family: $MrsEavesRoman;
+    letter-spacing: 0.25em;
+
+    &.large {
+        font-size: 5em;
+    }
 }
 
 h2, .h2 {
-    font-size: 3.8em;
+    font-size: 1.9em;
+    font-family: $MrsEavesRoman;
+
+    &.large {
+        font-size: 4.2em;
+    }
 }
 
 h3, .h3 {
@@ -31,20 +69,16 @@ h3, .h3 {
     line-height: 1.3em;
 }
 
-h4, .h5 {
-    font-size: 2em;
+h4, .h4 {
+    font-size: 1.9em;
+    font-family: $MrsEavesRoman;
+    text-transform: none;
 }
 
 h5, .h5 {
     font-size: 1.5em;
-    text-transform: uppercase;
     color: $black;
-}
-
-p, .p {
-    font-size: 1.6em;
-    font-family: $sans;
-    line-height: 1.4;
+    letter-spacing: 1px;
 }
 
 li {

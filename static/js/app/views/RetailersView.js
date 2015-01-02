@@ -8,7 +8,7 @@ define(function(require, exports, module) {
 
     return BaseView.extend({
 
-        className: 'retailers',
+        className: 'retailers page',
 
         template: template,
 

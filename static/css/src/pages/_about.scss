@@ -1,0 +1,22 @@
+.about.page {
+
+    h5 {
+        font-family: $MrsEavesRoman;
+        letter-spacing: 2px;
+    }
+
+    .block-figure figure.partial-2-3 {
+        width: 75%;
+        margin: 5% 0 10% 0%;
+    }
+
+    .block-text {
+        margin: 0;
+    }
+
+    .col-left {
+        .block-text {
+            margin-left: 20%;
+        }
+    }
+}

@@ -7,6 +7,7 @@ define(function (require, exports, module) {
         appRoutes: {
             '(/)': 'index',
             'collections(/)': 'collections',
+            'collections(/):slug(/)': 'product',
             'earl-kluft(/)': 'about',
             'master-standard(/)': 'masterStandard',
             'retailers(/)': 'retailers',

@@ -21,29 +21,29 @@ define(function(require, exports, module) {
         },
 
         initialize: function(options) {
-            this.lastScrollTop = 0;
-            this.winHeight = $(window).height();
-            this.docHeight = $(document).height();
-            this.didScroll = false;
-            this.delta = 5;
-            this.navbarHeight = this.$el.outerHeight();
+            // this.lastScrollTop = 0;
+            // this.winHeight = $(window).height();
+            // this.docHeight = $(document).height();
+            // this.didScroll = false;
+            // this.delta = 5;
+            // this.navbarHeight = this.$el.outerHeight();
 
         },
 
         onShow: function() {
-            var self = this;
-            _.bindAll(this, 'hasScrolled');
+            // var self = this;
+            // _.bindAll(this, 'hasScrolled');
 
-            setInterval(function() {
-                if (self.didScroll) {
-                    self.hasScrolled();
-                    self.didScroll = false;
-                }
-            }, 250);
+            // setInterval(function() {
+            //     if (self.didScroll) {
+            //         self.hasScrolled();
+            //         self.didScroll = false;
+            //     }
+            // }, 250);
 
-            $(window).scroll(function(event){
-                self.didScroll = true;
-            });
+            // $(window).scroll(function(event){
+            //     self.didScroll = true;
+            // });
         },
 
         hasScrolled: function() {

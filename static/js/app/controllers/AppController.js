@@ -6,12 +6,16 @@ define(function(require) {
         constants = require('app/utils/constants'),
         channels = require('app/channels'),
 
+        // Collections/Data
+        ProductData = require('app/data/Products'),
+
         // Views
         GlobalView = require('app/views/GlobalView'),
         HeaderView = require('app/views/HeaderView'),
         FooterView = require('app/views/FooterView'),
         HomeView = require('app/views/HomeView'),
-        CollectionsView = require('app/views/CollectionsView'),
+        CollectionView = require('app/views/CollectionView'),
+        ProductView = require('app/views/ProductView'),
         MasterStandardView = require('app/views/MasterStandardView'),
         AboutView = require('app/views/AboutView'),
         ContactView = require('app/views/ContactView'),
@@ -77,9 +81,17 @@ define(function(require) {
         },
 
         collections: function() {
-            this.collectionsView = new CollectionsView();
+            this.collectionView = new CollectionView();
 
             App.contentRegion.show(this.collectionView);
+        },
+
+        product: function(slug) {
+            this.productView = new ProductView({
+                productData: ProductData.products[slug]
+            });
+
+            App.contentRegion.show(this.productView);
         },
 
         about: function() {

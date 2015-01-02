@@ -1,0 +1,21 @@
+.intro {
+    .col-full-bleed-bg {
+        background-color: $grayLight;
+        // background-image: url(../img/fpo-1.jpg);
+    }
+}
+
+.kluft {
+    .col-full-bleed-bg {
+        background-image: url(../img/pages/home/kluft.jpg);
+    }
+}
+
+.learn-more {
+    margin-top: 2em;
+    margin-bottom: 4em;
+
+    &.inverted {
+        margin-bottom: 2em;
+    }
+}
