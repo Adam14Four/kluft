@@ -1,57 +1,123 @@
 .block-text {
-    padding: 2em 0;
+    width: 65%;
+}
 
-    width: 80%;
-    margin: 0 auto;
+.block {
+    @extend %background-cover;
+}
 
-    p {
-        padding: 1em 0;
-        // width: 75%;
-    }
-
-    .col-left & {
-
-    }
-
-    .col-right & {
-
+.block-double {
+    margin-top: 1.5em;
+    .block {
+        display: inline-block;
+        float: left;
+        margin-right: 1.5em;
     }
 }
 
-.block-figure {
+.block-40 {
+    width: 40%;
+}
 
-    figure {
-        width: 100%;
-        margin: 0;
-        padding: 0;
+.block-60 {
+    width: 60%;
+}
 
-        &.partial-1-2 {
-            display: inline-block;
-            width: 48%;
+.block-66 {
+    width: 66.66%;
+}
 
-            &:nth-child(1) {
-                margin-right: 3%;
-            }
-        }
+.block-70 {
+    width: 70%;
+}
 
-        &.partial-2-3 {
-            // width: 75%;
-            // margin: 5% 0 10% 25%;
-        }
+.block-86 {
+    width: 86%;
+    margin-left: 14%;
+    padding-bottom: 92%;
+}
 
-        .col-right & {
-            &:last-child {
-                // margin-bottom: 10%;
-            }
-        }
+.block-87 {
+    width: 87%;
+    margin-left: 13%;
+    padding-bottom: 123.5%;
+}
 
-        .col-bottom-masthead & {
-            // padding-bottom: 25%;
-        }
+.block-100 {
+    width: 100%;
+}
 
-        img {
-            width: 100%;
-            height: auto;
-        }
+.aspect-1 {
+    &.block-40 {
+        padding-bottom: 40%;
+    }
+    &.block-60 {
+        padding-bottom: 60%;
+    }
+    &.block-66 {
+        padding-bottom: 66.66%;
+    }
+    &.block-70 {
+        padding-bottom: 70%;
+    }
+}
+
+.aspect-58 {    //12:7 ratio
+    &.block-66 {
+        padding-bottom: 39%;
+    }
+    &.block-70 {
+        padding-bottom: 58%;
+    }
+    &.block-100 {
+        padding-bottom: 58%;
+    }
+}
+
+.aspect-63 {
+    &.block-66 {
+        // padding-bottom: 50%;
+    }
+    &.block-100 {
+        padding-bottom: 63%;
+    }
+}
+
+.aspect-75 {    //4:3 ratio
+    &.block-66 {
+        padding-bottom: 50%;
+    }
+    &.block-100 {
+        padding-bottom: 75%;
+    }
+}
+
+.aspect-87 {    //15:13 ratio
+    &.block-66 {
+        padding-bottom: 58%;
+    }
+    &.block-100 {
+        padding-bottom: 87%;
+    }
+}
+
+.aspect-92 {
+    &.block-66 {
+        // padding-bottom: 58%;
+    }
+    &.block-100 {
+        padding-bottom: 92%;
+    }
+}
+
+.aspect-114 {   //80:91 ratio
+    &.block-66 {
+        padding-bottom: 76%;
+    }
+    &.block-70 {
+        padding-bottom: 88%;
+    }
+    &.block-100 {
+        padding-bottom: 114%;
     }
 }

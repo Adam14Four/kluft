@@ -13,72 +13,77 @@ define(function(require, exports, module) {
         template: template,
 
         ui: {
-            // form: 'form',
-            // email: '#email'
+            email: '.email',
+            submitBtn: '.submit',
+            form: 'form',
+            errors: '.errors'
         },
 
         events: {
-            // 'submit @ui.form': 'onFormSubmitted'
+            'click @ui.submitBtn': 'onFormSubmit'
         },
 
         initialize: function(options) {
-
         },
 
         onShow: function() {
         },
 
-        onFormSubmitted: function(event) {
+        setBackgroundSize: function() {
+        },
+
+        onFormSubmit: function(event) {
             event.stopPropagation();
             event.preventDefault();
 
             this.resetErrors();
 
             if (helpers.validEmail(this.ui.email.val()) !== true) {
+                console.log('ERROR');
                 this.addError('Please enter a valid email address', this.ui.email);
             }
 
             if (this.errors.length === 0) {
-                url = this.ui.form.attr('action') + '?' + this.ui.form.serialize();
+                var self = this;
+                console.log('NO ERRORS');
 
-                $('<img />').attr('src', url).appendTo('body');
-                this.options.success();
+                $.ajax({
+                    url: 'http://127.0.0.1:8000/form',
+                    type: 'post',
+                    dataType: 'json',
+                    data: this.ui.form.serialize(),
+                    success: function(data) {
+                        self.onSuccess();
+                    }
+                });
             } else {
                 this.showErrors();
             }
-        },
 
-        formSubmitSucces: function() {
-
-            console.log('form submission successful');
-
-            // $('.contact-form-container form').add('.contact-form form').add('.news .left .top').css({
-            //     opacity: 0,
-            //     visibility: 'hidden'
-            // });
-
-            // $('.contact-form-container .success').add('.contact-form .success').velocity({
-            //     opacity: 1
-            // }, {
-            //     visibility: 'visible',
-            //     duration: 600
-            // });
-
+            this.onSuccess();
         },
 
         resetErrors: function() {
             this.errors = [];
-            // this.ui.errors.empty();
-            // this.$('.' + this.options.errorClass).removeClass(this.options.errorClass);
+            this.ui.errors.empty();
+            $('.error').removeClass('.error');
         },
 
         addError: function(msg, $input) {
             this.errors.push(msg);
-            // $input.addClass(this.options.errorClass);
+            $input.addClass('error');
         },
 
         showErrors: function() {
-            console.log('called show errors');
+            var errorContainer = $('<p>').addClass('error');
+
+            errorContainer.text('Please provide a valid email').appendTo(this.ui.errors);
+
+            errorContainer.appendTo(this.ui.errors);
+        },
+
+        onSuccess: function() {
+            this.$el.addClass('success-showing');
         }
 
     });

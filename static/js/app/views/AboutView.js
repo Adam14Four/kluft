@@ -13,7 +13,7 @@ define(function(require, exports, module) {
         template: template,
 
         ui: {
-            fullBleedSections: '.col-full-bleed-bg'
+            masthead: '.intro .masthead'
         },
 
         events: {
@@ -28,7 +28,7 @@ define(function(require, exports, module) {
         },
 
         setBackgroundSize: function() {
-            helpers.setBackgroundSize(this.ui.fullBleedSections, $('.header').height());
+            helpers.setBackgroundSize(this.ui.masthead, $('.header').height());
         }
 
     });

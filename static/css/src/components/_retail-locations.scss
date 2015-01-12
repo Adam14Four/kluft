@@ -1,41 +1,57 @@
 .retail-locations {
 
     li {
+        position: relative;
         padding: 2em 0 4em;
         margin-left: 20%;
+
+        &:before {
+            @extend .h9;
+            position: absolute;
+            display: block;
+            top: 1.6em;
+            left: -5.7em;
+            padding: 0.9em 1.1em;
+            content: attr(data-text);
+            background-color: $black;
+            color: $white;
+        }
     }
 
     span {
         display: block;
     }
 
-    h4, address, .distance, .directions {
-        @extend .h5;
-        font-size: 14px;
-        font-style: normal;
+    .h9 {
+        font-family: $MrsEavesBold;
+        letter-spacing: 0.1em;
+    }
+
+    .distance {
+        text-transform: none;
     }
 
     .directions {
         text-decoration: underline;
-        color: $gold;
+        color: $blueDark;
         text-transform: none;
     }
 
     .location-list {
-        padding: 10em 0 15em;
+        padding: 8em 0 15em;
     }
 
     @media (min-width: 600px) {
         .location-list {
-            width: 70%;
-            margin: 0 auto;
+            width: 80%;
+            margin-left: 20%;
         }
 
         li {
             margin-left: 0;
             display: inline-block;
             &:nth-child(odd) {
-                margin-right: 30%;
+                margin-right: 27%;
             }
         }
     }

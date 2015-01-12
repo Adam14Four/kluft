@@ -1,18 +1,18 @@
 .retailers.page {
 
-    .headline {
-        background-color: $grayLight;
+    .intro {
         overflow: visible;
-        position: relative;
-
-        .block-text {
-            padding: 10em 0;
-            width: 50%;
-            margin-left: 50%;
-        }
     }
 
+    .headline {
+        padding: 4.5em 0 5em 0;
+    }
+
+    .masthead-5 { background-image: url(../img/pages/retailers/masthead.jpg); }
+    #map { background-image: url(../img/pages/retailers/map.jpg); }
+
     #map {
+        @extend %background-cover;
         position: absolute;
         top: 20%;
         left: 10%;
@@ -20,4 +20,9 @@
         width: 35%;
         padding-bottom: 35%;
     }
+
+    .zipcode-form {
+        pointer-events: none;
+    }
+
 }

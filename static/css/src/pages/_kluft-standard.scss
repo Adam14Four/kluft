@@ -1,0 +1,46 @@
+.kluft-standard.page {
+
+    .grid {
+        margin: -5.5em 0 13.5em 0;
+    }
+
+    .masthead-4 {
+
+        .text-box {
+            width: 90%;
+
+            .text-wrap {
+                padding: 0;
+            }
+
+            h2 {
+                letter-spacing: 0.4em;
+            }
+
+            .h7 {
+                margin: 0.7em 0 2.2em 0;
+            }
+        }
+    }
+
+    .masthead-4 { background-image: url(../img/pages/kluft-standard/masthead.jpg); }
+    .block-1 { background-image: url(../img/pages/kluft-standard/block-1.jpg); }
+
+    .block-text-1 {
+        width: 70%;
+        margin: 13em 0 2.6em 0;
+
+        p {
+            margin-top: 1em;
+            line-height: 2.6;
+        }
+    }
+
+    .block-link-1 {
+        margin-top: 6em;
+    }
+
+    .h8 {
+        line-height: 2;
+    }
+}

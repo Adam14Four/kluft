@@ -6,19 +6,20 @@ define(function(require) {
         constants = require('app/utils/constants'),
         channels = require('app/channels'),
 
-        // Collections/Data
-        ProductData = require('app/data/Products'),
-
         // Views
         GlobalView = require('app/views/GlobalView'),
         HeaderView = require('app/views/HeaderView'),
         FooterView = require('app/views/FooterView'),
         HomeView = require('app/views/HomeView'),
         CollectionView = require('app/views/CollectionView'),
-        ProductView = require('app/views/ProductView'),
-        MasterStandardView = require('app/views/MasterStandardView'),
         AboutView = require('app/views/AboutView'),
+        KluftStandardView = require('app/views/KluftStandardView'),
+        BeyondLuxuryView = require('app/views/BeyondLuxuryView'),
+        KluftSignatureView = require('app/views/KluftSignatureView'),
+        RoyalSovereignView = require('app/views/RoyalSovereignView'),
+        RoyalSovereignLatexView = require('app/views/RoyalSovereignLatexView'),
         ContactView = require('app/views/ContactView'),
+        MethodView = require('app/views/MethodView'),
         RetailersView = require('app/views/RetailersView');
 
 
@@ -86,12 +87,28 @@ define(function(require) {
             App.contentRegion.show(this.collectionView);
         },
 
-        product: function(slug) {
-            this.productView = new ProductView({
-                productData: ProductData.products[slug]
-            });
+        beyondLuxury: function() {
+            this.beyondLuxuryView = new BeyondLuxuryView();
 
-            App.contentRegion.show(this.productView);
+            App.contentRegion.show(this.beyondLuxuryView);
+        },
+
+        kluftSignature: function() {
+            this.kluftSignatureView = new KluftSignatureView();
+
+            App.contentRegion.show(this.kluftSignatureView);
+        },
+
+        royalSovereign: function() {
+            this.royalSovereignView = new RoyalSovereignView();
+
+            App.contentRegion.show(this.royalSovereignView);
+        },
+
+        royalSovereignLatex: function() {
+            this.royalSovereignLatexView = new RoyalSovereignLatexView();
+
+            App.contentRegion.show(this.royalSovereignLatexView);
         },
 
         about: function() {
@@ -100,10 +117,16 @@ define(function(require) {
             App.contentRegion.show(this.aboutView);
         },
 
-        masterStandard: function() {
-            this.masterStandardView = new MasterStandardView();
+        method: function() {
+            this.methodView = new MethodView();
 
-            App.contentRegion.show(this.masterStandardView);
+            App.contentRegion.show(this.methodView);
+        },
+
+        kluftStandard: function() {
+            this.kluftStandardView = new KluftStandardView();
+
+            App.contentRegion.show(this.kluftStandardView);
         },
 
         retailers: function() {

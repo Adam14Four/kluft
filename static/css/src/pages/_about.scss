@@ -1,22 +1,52 @@
 .about.page {
 
-    h5 {
-        font-family: $MrsEavesRoman;
-        letter-spacing: 2px;
+    .grid {
+        margin: -5.5em 0 13.5em 0;
     }
 
-    .block-figure figure.partial-2-3 {
-        width: 75%;
-        margin: 5% 0 10% 0%;
+    .masthead-4 { background-image: url(../img/pages/about/masthead.jpg); }
+    .block-1 { background-image: url(../img/pages/about/block-1.jpg); }
+    .block-2 { background-image: url(../img/pages/about/block-2.jpg); }
+    .block-3 { background-image: url(../img/pages/about/block-3.jpg); }
+
+    .block-3 {
+        margin-top: 4.5em;
     }
 
-    .block-text {
-        margin: 0;
+    .block-text-1 {
+        margin-top: 7.5em;
+        margin-left: 17%;
+
+        p {
+            margin-top: 1.5em;
+            line-height: 2.6;
+        }
     }
 
-    .col-left {
-        .block-text {
-            margin-left: 20%;
+    .block-text-2 {
+        margin-top: 6.5em;
+        margin-left: 17%;
+
+        p {
+            margin-top: 1.5em;
+            line-height: 2.6;
+        }
+    }
+
+    .block-text-3 {
+        margin: 17.7em 0 9em 0;
+        width: 80%;
+
+        .h6 {
+            line-height: 1.5;
+            letter-spacing: 0.42em;
+            text-transform: uppercase;
+        }
+        .h7 {
+            margin-top: 1.6em;
+            font-size: 1.8em;
+            letter-spacing: 0.1em;
+            text-transform: none;
         }
     }
 }
