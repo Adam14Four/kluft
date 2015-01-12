@@ -1,6 +1,6 @@
 define(function(require) {
 
-    var App = require('app/app'),
+    var app = require('app/app'),
         Marionette = require('marionette'),
         helpers = require('app/utils/helpers'),
         constants = require('app/utils/constants'),
@@ -29,7 +29,7 @@ define(function(require) {
         initialize: function() {
             var self = this;
 
-            App.firstLoad = true;
+            app.firstLoad = true;
             this.bootstrap();
         },
 
@@ -40,10 +40,10 @@ define(function(require) {
             this.headerView = new HeaderView();
             this.footerView = new FooterView();
 
-            App.headerRegion.show(this.headerView);
-            App.footerRegion.show(this.footerView);
+            app.headerRegion.show(this.headerView);
+            app.footerRegion.show(this.footerView);
 
-            this.onAppReady();
+            this.onappReady();
         },
 
         navigate: function(options) {
@@ -62,7 +62,7 @@ define(function(require) {
 
         },
 
-        onAppReady: function() {
+        onappReady: function() {
             // JS is inited and ready
             $('body').removeClass(constants.INITING_CLASS);
 
@@ -78,67 +78,67 @@ define(function(require) {
         index: function() {
             this.homeView = new HomeView();
 
-            App.contentRegion.show(this.homeView);
+            app.contentRegion.transitionToView(this.homeView);
         },
 
         collections: function() {
             this.collectionView = new CollectionView();
 
-            App.contentRegion.show(this.collectionView);
+            app.contentRegion.transitionToView(this.collectionView);
         },
 
         beyondLuxury: function() {
             this.beyondLuxuryView = new BeyondLuxuryView();
 
-            App.contentRegion.show(this.beyondLuxuryView);
+            app.contentRegion.transitionToView(this.beyondLuxuryView);
         },
 
         kluftSignature: function() {
             this.kluftSignatureView = new KluftSignatureView();
 
-            App.contentRegion.show(this.kluftSignatureView);
+            app.contentRegion.transitionToView(this.kluftSignatureView);
         },
 
         royalSovereign: function() {
             this.royalSovereignView = new RoyalSovereignView();
 
-            App.contentRegion.show(this.royalSovereignView);
+            app.contentRegion.transitionToView(this.royalSovereignView);
         },
 
         royalSovereignLatex: function() {
             this.royalSovereignLatexView = new RoyalSovereignLatexView();
 
-            App.contentRegion.show(this.royalSovereignLatexView);
+            app.contentRegion.transitionToView(this.royalSovereignLatexView);
         },
 
         about: function() {
             this.aboutView = new AboutView();
 
-            App.contentRegion.show(this.aboutView);
+            app.contentRegion.transitionToView(this.aboutView);
         },
 
         method: function() {
             this.methodView = new MethodView();
 
-            App.contentRegion.show(this.methodView);
+            app.contentRegion.transitionToView(this.methodView);
         },
 
         kluftStandard: function() {
             this.kluftStandardView = new KluftStandardView();
 
-            App.contentRegion.show(this.kluftStandardView);
+            app.contentRegion.transitionToView(this.kluftStandardView);
         },
 
         retailers: function() {
             this.retailersView = new RetailersView();
 
-            App.contentRegion.show(this.retailersView);
+            app.contentRegion.transitionToView(this.retailersView);
         },
 
         contact: function() {
             this.contactView = new ContactView();
 
-            App.contentRegion.show(this.contactView);
+            app.contentRegion.transitionToView(this.contactView);
         }
 
     });

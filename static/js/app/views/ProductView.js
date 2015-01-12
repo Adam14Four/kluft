@@ -26,7 +26,7 @@ define(function(require, exports, module) {
             this.$el.addClass(this.productData.title.replace(' ', '-').toLowerCase());
         },
 
-        onShow: function() {
+        onRender: function() {
             this.setBackgroundSize();
         },
 

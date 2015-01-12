@@ -23,11 +23,12 @@ define(function(require, exports, module) {
             $(window).on('resize', _.bind(this.setBackgroundSize, this));
         },
 
-        onShow: function() {
+        onRender: function() {
             this.setBackgroundSize();
         },
 
         setBackgroundSize: function() {
+            console.log('size it')
             helpers.setBackgroundSize(this.ui.masthead, $('.header').height());
         }
 

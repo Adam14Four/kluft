@@ -53,6 +53,37 @@ define(function(require, exports, module) {
         element.css('height', winHeight - heightOffset);
     };
 
+    exports.scrollTo = function(target, jump) {
+        var targetOffset = $(target).offset().top;
+
+        if (jump || Modernizr.touch) {
+            body.scrollTop(targetOffset);
+        } else {
+            body.velocity('scroll', {
+                duration: 300,
+                easing: 'easeInOutCubic',
+                offset: targetOffset
+            });
+        }
+    };
+
+    exports.prefixedTransEnd = (function() {
+        var transEndEventNames = {
+            'WebkitTransition' : 'webkitTransitionEnd',
+            'MozTransition'    : 'transitionend',
+            'OTransition'      : 'oTransitionEnd',
+            'msTransition'     : 'MSTransitionEnd',
+            'transition'       : 'transitionend'
+        };
+        return transEndEventNames[ Modernizr.prefixed('transition') ];
+    })();
+
+    exports.prefixedTransform = (function() {
+        var str = Modernizr.prefixed('transform');
+        str = str.replace(/([A-Z])/g, function(str,m1){ return '-' + m1.toLowerCase(); }).replace(/^ms-/,'-ms-');
+        return str;
+    })();
+
     return exports;
 
 });

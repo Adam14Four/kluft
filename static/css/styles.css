@@ -722,11 +722,39 @@ ul, ol, li {
   position: relative;
 }
 
-/* line 21, src/_layout.scss */
+/* line 17, src/_layout.scss */
+.page {
+  -moz-transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
+}
+/* line 22, src/_layout.scss */
 .page:after {
   content: "";
   display: table;
   clear: both;
+}
+/* line 28, src/_layout.scss */
+.views-transitioning .page {
+  -moz-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+/* line 36, src/_layout.scss */
+.page.before-transition {
+  visibility: hidden;
+  opacity: 0;
+}
+/* line 40, src/_layout.scss */
+.page.transitioning-in {
+  visibility: visible;
+  opacity: 1;
+}
+/* line 44, src/_layout.scss */
+.page.transitioning-out {
+  opacity: 0;
 }
 
 /* line 5, src/components/_buttons.scss */

@@ -18,19 +18,30 @@
     // position: relative;
     // @include clearfix();
     // overflow: auto;
+    @include transition(opacity 0.1s $easeInOut);
     &:after {
       content: "";
       display: table;
       clear: both;
     }
-}
 
-// This markup structure is used for more "traditional" page layouts
-// where column content needs to stay centered but scroll
-// when the page content is taller than the viewport
-// .page {
-//     @extend %table;
-//     .page-inner {
-//         @extend %table-cell;
-//     }
-// }
+    .views-transitioning & {
+        // overflow: hidden;
+        @include transition(
+            opacity 0.3s $easeInOut,
+            visibility 0.3s $easeInOut
+        );
+    }
+
+    &.before-transition {
+        visibility: hidden;
+        opacity: 0;
+    }
+    &.transitioning-in {
+        visibility: visible;
+        opacity: 1;
+    }
+    &.transitioning-out {
+        opacity: 0;
+    }
+}
