@@ -1,21 +1,27 @@
-.intro {
-    .col-full-bleed-bg {
-        background-color: $grayLight;
-        // background-image: url(../img/fpo-1.jpg);
+.home.page {
+    .masthead-1 { background-image: url(../img/pages/home/masthead-1.jpg); }
+    .masthead-2 { background-image: url(../img/pages/home/masthead-2.jpg); }
+    .masthead-3 { background-image: url(../img/pages/home/masthead-3.jpg); }
+    .block-1 { background-image: url(../img/pages/home/block-1.jpg); }
+    .block-2 { background-image: url(../img/pages/home/block-2.jpg); }
+    .block-3 { background-image: url(../img/pages/home/block-3.jpg); }
+    .block-4 { background-image: url(../img/pages/home/block-4.jpg); }
+    .block-5 { background-image: url(../img/pages/home/block-5.jpg); }
+
+    .block-2 {
+        float: right;
+        margin-top: 3.5em;
     }
-}
 
-.kluft {
-    .col-full-bleed-bg {
-        background-image: url(../img/pages/home/kluft.jpg);
+    .block-link {
+        margin: 5em 0 9em 0;
     }
-}
 
-.learn-more {
-    margin-top: 2em;
-    margin-bottom: 4em;
+    .block-text-1 {
+        margin-top: 6em;
+    }
 
-    &.inverted {
-        margin-bottom: 2em;
+    .block-text-2 {
+        margin-top: 4.5em;
     }
 }

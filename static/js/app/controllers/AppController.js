@@ -19,6 +19,7 @@ define(function(require) {
         MasterStandardView = require('app/views/MasterStandardView'),
         AboutView = require('app/views/AboutView'),
         ContactView = require('app/views/ContactView'),
+        MethodView = require('app/views/MethodView'),
         RetailersView = require('app/views/RetailersView');
 
 
@@ -98,6 +99,12 @@ define(function(require) {
             this.aboutView = new AboutView();
 
             App.contentRegion.show(this.aboutView);
+        },
+
+        method: function() {
+            this.methodView = new MethodView();
+
+            App.contentRegion.show(this.methodView);
         },
 
         masterStandard: function() {

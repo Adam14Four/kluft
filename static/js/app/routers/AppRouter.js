@@ -9,6 +9,7 @@ define(function (require, exports, module) {
             'collections(/)': 'collections',
             'collections(/):slug(/)': 'product',
             'earl-kluft(/)': 'about',
+            'method(/)': 'method',
             'master-standard(/)': 'masterStandard',
             'retailers(/)': 'retailers',
             'contact(/)': 'contact'

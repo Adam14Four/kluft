@@ -11,8 +11,10 @@ $baseUrl: env_or_default("STATIC_URL", "/static/");
 $white:                     #ffffff !default;
 $black:                     #000000 !default;
 $grayLight:                 #e4e4e4 !default;
+$gray:                      #959595 !default;
 $grayDark:                  #454545 !default;
 $gold:                      #cf8e12 !default;
+$blueDark:                  #041c2c !default;
 
 // Scaffolding
 // -------------------------
