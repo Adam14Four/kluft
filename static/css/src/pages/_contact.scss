@@ -1,0 +1,112 @@
+.contact.page {
+
+    .intro {
+        overflow: visible;
+    }
+
+    .headline {
+        padding: 4.5em 0 5em 0;
+
+        .h9 {
+            font-family: $MrsEavesBold;
+            letter-spacing: 0.1em;
+        }
+
+        .address-block {
+            width: 50%;
+            margin-left: 50%;
+            text-align: left;
+            margin-bottom: 1.4em;
+        }
+    }
+
+    .masthead-5 { background-image: url(../img/pages/contact/masthead.jpg); }
+    #map { background-image: url(../img/pages/contact/map.jpg); }
+
+    #map {
+        @extend %background-cover;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        background-color: black;
+        width: 35%;
+        padding-bottom: 35%;
+    }
+
+    &.success-showing {
+        .contact-form {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .success {
+            opacity: 1;
+            visibility: visible
+        }
+    }
+
+    .email-label {
+        // @extend .h8;
+    }
+
+    .text-box-left {
+        width: 55%;
+        padding: 3em 0;
+        margin-left: 20%;
+    }
+
+    .message, .email {
+        @extend .h8;
+        margin: 1em 0;
+        padding: 1em;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    label, textarea, input {
+        display: block;
+    }
+
+    .contact-form {
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 15em;
+        @include transition(all 0.5s $easeInOutQuad);
+    }
+
+    .email-wrapper {
+        position: relative;
+    }
+
+    .submit {
+        float: right;
+        margin-top: 3em;
+        padding: 1.5em 3em;
+    }
+
+    .errors {
+        position: absolute;
+        right: 0;
+        @include translate3d(0, -100%, 0);
+
+        p {
+            @extend .h8;
+            color: red;
+        }
+    }
+
+    .subtitle.large, .subtitle {
+        text-transform: uppercase;
+    }
+
+    .success {
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        @extend %absolute-center;
+        @include transition(all 0.5s $easeInOutQuad);
+
+    }
+
+}
