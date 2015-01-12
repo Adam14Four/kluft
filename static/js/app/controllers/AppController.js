@@ -12,8 +12,8 @@ define(function(require) {
         FooterView = require('app/views/FooterView'),
         HomeView = require('app/views/HomeView'),
         CollectionView = require('app/views/CollectionView'),
-        MasterStandardView = require('app/views/MasterStandardView'),
         AboutView = require('app/views/AboutView'),
+        KluftStandardView = require('app/views/KluftStandardView'),
         BeyondLuxuryView = require('app/views/BeyondLuxuryView'),
         KluftSignatureView = require('app/views/KluftSignatureView'),
         RoyalSovereignView = require('app/views/RoyalSovereignView'),
@@ -123,10 +123,10 @@ define(function(require) {
             App.contentRegion.show(this.methodView);
         },
 
-        masterStandard: function() {
-            this.masterStandardView = new MasterStandardView();
+        kluftStandard: function() {
+            this.kluftStandardView = new KluftStandardView();
 
-            App.contentRegion.show(this.masterStandardView);
+            App.contentRegion.show(this.kluftStandardView);
         },
 
         retailers: function() {

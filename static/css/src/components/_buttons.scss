@@ -67,16 +67,16 @@ button {
 
     &.search {
         position: relative;
-        padding: 1em 2em;
+        padding: 1.3em 2em;
         letter-spacing: 5px;
-        border: 1px solid $black;
+        border: 2px solid $black;
     }
 
     &.zipcode {
         position: relative;
-        padding: 1em 2em;
+        padding: 1.3em 5.4em;
         letter-spacing: 2px;
-        border: 1px solid $black;
+        border: 2px solid $black;
         color: $black;
         margin-right: 1em;
     }

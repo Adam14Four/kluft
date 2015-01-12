@@ -111,3 +111,12 @@ h6, .h6 {
 .text-shadow {
     text-shadow: 2px 2px 2px $white;
 }
+
+address {
+    font-size: 1.4em;
+    font-family: $MrsEavesRoman;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.5;
+}

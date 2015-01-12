@@ -13,7 +13,7 @@ define(function (require, exports, module) {
             'collections(/):royal-sovereign-latex(/)': 'royalSovereignLatex',
             'earl-kluft(/)': 'about',
             'method(/)': 'method',
-            'master-standard(/)': 'masterStandard',
+            'kluft-standard(/)': 'kluftStandard',
             'retailers(/)': 'retailers',
             'contact(/)': 'contact'
         },

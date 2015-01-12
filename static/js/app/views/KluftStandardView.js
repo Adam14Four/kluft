@@ -4,16 +4,16 @@ define(function(require, exports, module) {
         channels = require('app/channels'),
         helpers = require('app/utils/helpers'),
         constants = require('app/utils/constants'),
-        template = require('hbs!templates/master-standard');
+        template = require('hbs!templates/kluft-standard');
 
     return BaseView.extend({
 
-        className: 'master-standard page',
+        className: 'kluft-standard page',
 
         template: template,
 
         ui: {
-            fullBleedSections: '.col-full-bleed-bg'
+            masthead: '.intro .masthead'
         },
 
         events: {
@@ -28,7 +28,7 @@ define(function(require, exports, module) {
         },
 
         setBackgroundSize: function() {
-            helpers.setBackgroundSize(this.ui.fullBleedSections, $('.header').height());
+            helpers.setBackgroundSize(this.ui.masthead, $('.header').height());
         }
 
     });
