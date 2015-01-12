@@ -19,6 +19,10 @@
     width: 40%;
 }
 
+.block-60 {
+    width: 60%;
+}
+
 .block-66 {
     width: 66.66%;
 }
@@ -40,6 +44,9 @@
 .aspect-1 {
     &.block-40 {
         padding-bottom: 40%;
+    }
+    &.block-60 {
+        padding-bottom: 60%;
     }
     &.block-66 {
         padding-bottom: 66.66%;

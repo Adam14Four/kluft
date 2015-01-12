@@ -7,7 +7,10 @@ define(function (require, exports, module) {
         appRoutes: {
             '(/)': 'index',
             'collections(/)': 'collections',
-            'collections(/):slug(/)': 'product',
+            'collections(/):beyond-luxury(/)': 'beyondLuxury',
+            'collections(/):kluft-signature(/)': 'kluftSignature',
+            'collections(/):royal-sovereign(/)': 'royalSovereign',
+            'collections(/):royal-sovereign-latex(/)': 'royalSovereignLatex',
             'earl-kluft(/)': 'about',
             'method(/)': 'method',
             'master-standard(/)': 'masterStandard',
