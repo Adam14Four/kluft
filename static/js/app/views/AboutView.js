@@ -29,7 +29,7 @@ define(function(require, exports, module) {
 
         setBackgroundSize: function() {
             helpers.setBackgroundSize(this.ui.masthead, $('.header').height());
-        },
+        }
 
     });
 });

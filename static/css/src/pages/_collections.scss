@@ -1,54 +1,77 @@
 .collections.page {
 
-    .col-full-bleed-bg {
-        background-image: url(../img/pages/collections/bedroom-1.jpg);
+    .grid {
+        margin: -5.5em 0 13.5em 0;
     }
 
-    .row {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
+    .masthead-4 { background-image: url(../img/pages/collections/masthead.jpg); }
+    .block-1 { background-image: url(../img/pages/collections/block-1.jpg); }
+    .block-2 { background-image: url(../img/pages/collections/block-2.jpg); }
+    .block-3 { background-image: url(../img/pages/collections/block-3.jpg); }
+    .block-4 { background-image: url(../img/pages/collections/block-4.jpg); }
+    .block-5 { background-image: url(../img/pages/collections/block-5.jpg); }
+
+    .block-2 {
+        margin: 7.5em 0 0 33.33%;
     }
 
-
-    h1 {
-        display: inline-block;
-        border-bottom: 1px solid $black;
-        padding: 0 1em;
+    .block-3 {
+        margin: 7.5em 0 0 33.33%;
     }
 
-    nav {
+    .block-4 {
+        margin-top: 7.5em;
+    }
 
-        padding-top: 3em;
+    .block-5 {
+        margin-top: 7.5em;
+    }
 
-        li {
-            position: relative;
-            display: inline-block;
-            padding: 0 2em;
+    .block-text-1 {
+        width: 66.66%;
+        margin: 5.5em 0 2.6em 33.33%;
 
-            &:after {
-                content: '';
-                position: absolute;
-                display: inline-block;
-                top: 20%;
-                left: 100%;
-                width: 3px;
-                height: 3px;
-                border-radius: 100%;
-                background-color: $black;
-            }
-
-            &:last-child {
-                &:after {
-                    display: none;
-                }
-            }
+        p {
+            margin-top: 1em;
+            line-height: 2.6;
         }
+    }
 
-        a {
-            @extend .h4;
-            text-transform: uppercase;
-            font-size: 1.6em;
+    .block-text-2 {
+        width: 66.66%;
+        margin: 10em 0 2.6em 0;
+
+        p {
+            margin-top: 1em;
+            line-height: 2.6;
         }
+    }
+
+    .block-text-3 {
+        width: 70%;
+        margin: 5.5em 0 2.6em 0;
+
+        p {
+            margin-top: 1em;
+            line-height: 2.6;
+        }
+    }
+
+    .block-text-4 {
+        width: 70%;
+        margin: 5.5em 0 2.6em 0;
+
+        p {
+            margin-top: 1em;
+            line-height: 2.6;
+        }
+    }
+
+    .block-link-1 {
+        margin-left: 33.33%;
+    }
+
+    .h8 {
+        line-height: 2;
     }
 }

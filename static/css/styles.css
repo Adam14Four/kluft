@@ -543,14 +543,15 @@ p, .p {
   line-height: 1.8;
   font-family: "MrsEavesRoman";
   color: #000000;
+  letter-spacing: 0.1em;
 }
-/* line 21, src/_typography.scss */
+/* line 22, src/_typography.scss */
 p.inverted, .p.inverted {
   color: #ffffff;
 }
 
-/* line 26, src/_typography.scss */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, .collections.page nav a, h5, .h5, .retail-locations h4, .retail-locations address, .retail-locations .distance, .retail-locations .directions, h6, .h6, .h7, .h8, .h9, .h10, .header a, .footer a {
+/* line 27, src/_typography.scss */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .retail-locations h4, .retail-locations address, .retail-locations .distance, .retail-locations .directions, h6, .h6, .h7, .h8, .h9, .h10, .header a, .footer a {
   font-weight: 300;
   font-family: "MrsEavesBold";
   line-height: 1.2;
@@ -560,91 +561,91 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, .collections.page nav a, h5, .h5, .retail-lo
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
 }
-/* line 36, src/_typography.scss */
-h1.inverted, .h1.inverted, h2.inverted, .h2.inverted, h3.inverted, .h3.inverted, h4.inverted, .h4.inverted, .collections.page nav a.inverted, h5.inverted, .h5.inverted, .retail-locations h4.inverted, .retail-locations address.inverted, .retail-locations .inverted.distance, .retail-locations .inverted.directions, h6.inverted, .h6.inverted, .h7.inverted, .h8.inverted, .h9.inverted, .h10.inverted, .header a.inverted, .footer a.inverted {
+/* line 37, src/_typography.scss */
+h1.inverted, .h1.inverted, h2.inverted, .h2.inverted, h3.inverted, .h3.inverted, h4.inverted, .h4.inverted, h5.inverted, .h5.inverted, .retail-locations h4.inverted, .retail-locations address.inverted, .retail-locations .inverted.distance, .retail-locations .inverted.directions, h6.inverted, .h6.inverted, .h7.inverted, .h8.inverted, .h9.inverted, .h10.inverted, .header a.inverted, .footer a.inverted {
   color: #ffffff;
 }
 
-/* line 41, src/_typography.scss */
+/* line 42, src/_typography.scss */
 h1, .h1 {
   font-size: 3.8em;
   font-family: "MrsEavesRoman";
   letter-spacing: 0.5em;
 }
 
-/* line 47, src/_typography.scss */
+/* line 48, src/_typography.scss */
 h2, .h2 {
   font-size: 3.6em;
   font-family: "MrsEavesRoman";
   letter-spacing: 0.5em;
 }
 
-/* line 53, src/_typography.scss */
+/* line 54, src/_typography.scss */
 h3, .h3 {
   font-size: 3.2em;
   font-family: "MrsEavesRoman";
   letter-spacing: 0.5em;
 }
 
-/* line 59, src/_typography.scss */
-h4, .h4, .collections.page nav a {
+/* line 60, src/_typography.scss */
+h4, .h4 {
   font-size: 2.7em;
   font-family: "MrsEavesRoman";
   letter-spacing: 0.5em;
 }
 
-/* line 65, src/_typography.scss */
+/* line 66, src/_typography.scss */
 h5, .h5, .retail-locations h4, .retail-locations address, .retail-locations .distance, .retail-locations .directions {
   font-size: 2.4em;
   font-family: "MrsEavesRoman";
   letter-spacing: 0.5em;
 }
 
-/* line 71, src/_typography.scss */
+/* line 72, src/_typography.scss */
 h6, .h6 {
   font-size: 2em;
   font-family: "MrsEavesRoman";
   letter-spacing: 0.5em;
   text-transform: none;
 }
-/* line 77, src/_typography.scss */
+/* line 78, src/_typography.scss */
 h6.bold, .h6.bold {
   font-family: "MrsEavesBold";
 }
 
-/* line 82, src/_typography.scss */
+/* line 83, src/_typography.scss */
 .h7 {
   font-size: 1.9em;
   font-family: "MrsEavesRoman";
   letter-spacing: 0.5em;
 }
 
-/* line 88, src/_typography.scss */
+/* line 89, src/_typography.scss */
 .h8 {
   font-size: 1.6em;
   font-family: "MrsEavesRoman";
   letter-spacing: 0.41em;
 }
-/* line 93, src/_typography.scss */
+/* line 94, src/_typography.scss */
 .h8.bold {
   font-family: "MrsEavesBold";
 }
 
-/* line 98, src/_typography.scss */
+/* line 99, src/_typography.scss */
 .h9 {
   font-size: 1.4em;
   font-family: "MrsEavesRoman";
   letter-spacing: 0.5em;
 }
 
-/* line 104, src/_typography.scss */
+/* line 105, src/_typography.scss */
 .h10, .header a, .footer a {
   font-size: 1.2em;
   font-family: "MrsEavesRoman";
   letter-spacing: 0.5em;
 }
 
-/* line 110, src/_typography.scss */
+/* line 111, src/_typography.scss */
 .text-shadow {
   text-shadow: 2px 2px 2px #ffffff;
 }
@@ -976,7 +977,7 @@ button {
   padding: 3.4em 5em 5.5em 5em;
 }
 /* line 17, src/components/_masthead.scss */
-.masthead .text-box .h4, .masthead .text-box .collections.page nav a, .collections.page nav .masthead .text-box a {
+.masthead .text-box .h4 {
   letter-spacing: 0.33em;
   margin: 0.5em 0 2em 0;
 }
@@ -1116,56 +1117,60 @@ button {
   padding-bottom: 40%;
 }
 /* line 44, src/components/_grid-blocks.scss */
+.aspect-1.block-66 {
+  padding-bottom: 66.66%;
+}
+/* line 47, src/components/_grid-blocks.scss */
 .aspect-1.block-70 {
   padding-bottom: 70%;
 }
 
-/* line 50, src/components/_grid-blocks.scss */
+/* line 53, src/components/_grid-blocks.scss */
 .aspect-58.block-66 {
   padding-bottom: 39%;
 }
-/* line 53, src/components/_grid-blocks.scss */
+/* line 56, src/components/_grid-blocks.scss */
 .aspect-58.block-100 {
   padding-bottom: 58%;
 }
 
-/* line 62, src/components/_grid-blocks.scss */
+/* line 65, src/components/_grid-blocks.scss */
 .aspect-63.block-100 {
   padding-bottom: 63%;
 }
 
-/* line 68, src/components/_grid-blocks.scss */
+/* line 71, src/components/_grid-blocks.scss */
 .aspect-75.block-66 {
   padding-bottom: 50%;
 }
-/* line 71, src/components/_grid-blocks.scss */
+/* line 74, src/components/_grid-blocks.scss */
 .aspect-75.block-100 {
   padding-bottom: 75%;
 }
 
-/* line 77, src/components/_grid-blocks.scss */
+/* line 80, src/components/_grid-blocks.scss */
 .aspect-87.block-66 {
   padding-bottom: 58%;
 }
-/* line 80, src/components/_grid-blocks.scss */
+/* line 83, src/components/_grid-blocks.scss */
 .aspect-87.block-100 {
   padding-bottom: 87%;
 }
 
-/* line 89, src/components/_grid-blocks.scss */
+/* line 92, src/components/_grid-blocks.scss */
 .aspect-92.block-100 {
   padding-bottom: 92%;
 }
 
-/* line 95, src/components/_grid-blocks.scss */
+/* line 98, src/components/_grid-blocks.scss */
 .aspect-114.block-66 {
   padding-bottom: 76%;
 }
-/* line 98, src/components/_grid-blocks.scss */
+/* line 101, src/components/_grid-blocks.scss */
 .aspect-114.block-70 {
   padding-bottom: 88%;
 }
-/* line 101, src/components/_grid-blocks.scss */
+/* line 104, src/components/_grid-blocks.scss */
 .aspect-114.block-100 {
   padding-bottom: 114%;
 }
@@ -1274,51 +1279,96 @@ button {
 }
 
 /* line 3, src/pages/_collections.scss */
-.collections.page .col-full-bleed-bg {
-  background-image: url(../img/pages/collections/bedroom-1.jpg);
+.collections.page .grid {
+  margin: -5.5em 0 13.5em 0;
 }
 /* line 7, src/pages/_collections.scss */
-.collections.page .row {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
+.collections.page .masthead-4 {
+  background-image: url(../img/pages/collections/masthead.jpg);
+}
+/* line 8, src/pages/_collections.scss */
+.collections.page .block-1 {
+  background-image: url(../img/pages/collections/block-1.jpg);
+}
+/* line 9, src/pages/_collections.scss */
+.collections.page .block-2 {
+  background-image: url(../img/pages/collections/block-2.jpg);
+}
+/* line 10, src/pages/_collections.scss */
+.collections.page .block-3 {
+  background-image: url(../img/pages/collections/block-3.jpg);
+}
+/* line 11, src/pages/_collections.scss */
+.collections.page .block-4 {
+  background-image: url(../img/pages/collections/block-4.jpg);
+}
+/* line 12, src/pages/_collections.scss */
+.collections.page .block-5 {
+  background-image: url(../img/pages/collections/block-5.jpg);
 }
 /* line 14, src/pages/_collections.scss */
-.collections.page h1 {
-  display: inline-block;
-  border-bottom: 1px solid #000000;
-  padding: 0 1em;
+.collections.page .block-2 {
+  margin: 7.5em 0 0 33.33%;
 }
-/* line 20, src/pages/_collections.scss */
-.collections.page nav {
-  padding-top: 3em;
+/* line 18, src/pages/_collections.scss */
+.collections.page .block-3 {
+  margin: 7.5em 0 0 33.33%;
 }
-/* line 24, src/pages/_collections.scss */
-.collections.page nav li {
-  position: relative;
-  display: inline-block;
-  padding: 0 2em;
+/* line 22, src/pages/_collections.scss */
+.collections.page .block-4 {
+  margin-top: 7.5em;
 }
-/* line 29, src/pages/_collections.scss */
-.collections.page nav li:after {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  top: 20%;
-  left: 100%;
-  width: 3px;
-  height: 3px;
-  border-radius: 100%;
-  background-color: #000000;
+/* line 26, src/pages/_collections.scss */
+.collections.page .block-5 {
+  margin-top: 7.5em;
 }
-/* line 42, src/pages/_collections.scss */
-.collections.page nav li:last-child:after {
-  display: none;
+/* line 30, src/pages/_collections.scss */
+.collections.page .block-text-1 {
+  width: 66.66%;
+  margin: 5.5em 0 2.6em 33.33%;
 }
-/* line 48, src/pages/_collections.scss */
-.collections.page nav a {
-  text-transform: uppercase;
-  font-size: 1.6em;
+/* line 34, src/pages/_collections.scss */
+.collections.page .block-text-1 p {
+  margin-top: 1em;
+  line-height: 2.6;
+}
+/* line 40, src/pages/_collections.scss */
+.collections.page .block-text-2 {
+  width: 66.66%;
+  margin: 10em 0 2.6em 0;
+}
+/* line 44, src/pages/_collections.scss */
+.collections.page .block-text-2 p {
+  margin-top: 1em;
+  line-height: 2.6;
+}
+/* line 50, src/pages/_collections.scss */
+.collections.page .block-text-3 {
+  width: 70%;
+  margin: 5.5em 0 2.6em 0;
+}
+/* line 54, src/pages/_collections.scss */
+.collections.page .block-text-3 p {
+  margin-top: 1em;
+  line-height: 2.6;
+}
+/* line 60, src/pages/_collections.scss */
+.collections.page .block-text-4 {
+  width: 70%;
+  margin: 5.5em 0 2.6em 0;
+}
+/* line 64, src/pages/_collections.scss */
+.collections.page .block-text-4 p {
+  margin-top: 1em;
+  line-height: 2.6;
+}
+/* line 70, src/pages/_collections.scss */
+.collections.page .block-link-1 {
+  margin-left: 33.33%;
+}
+/* line 74, src/pages/_collections.scss */
+.collections.page .h8 {
+  line-height: 2;
 }
 
 /* line 3, src/pages/_product.scss */
