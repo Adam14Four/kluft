@@ -6,6 +6,12 @@ define(function(require) {
         constants = require('app/utils/constants'),
         channels = require('app/channels'),
 
+        // Models
+        Address = require('app/models/Address'),
+
+        // Collections
+        Addresses = require('app/collections/Addresses'),
+
         // Views
         GlobalView = require('app/views/GlobalView'),
         HeaderView = require('app/views/HeaderView'),
@@ -129,8 +135,24 @@ define(function(require) {
             app.contentRegion.transitionToView(this.kluftStandardView);
         },
 
-        retailers: function() {
-            this.retailersView = new RetailersView();
+        retailers: function(address) {
+            this.address = this.address || new Address();
+            this.address.set('address', address);
+
+            console.log(this.address)
+
+            // console.log(app.contentRegion)
+
+            // if (app.contentRegion.currentView === this.retailersView && app.regionMain.currentView !== null) {
+            //     return;
+            // }
+
+            console.log(app)
+
+            this.retailersView = new RetailersView({
+                model: this.address,
+                collection: new Addresses({})
+            });
 
             app.contentRegion.transitionToView(this.retailersView);
         },

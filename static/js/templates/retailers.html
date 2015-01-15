@@ -5,24 +5,30 @@
                 <h2 class="h2">Retailers</h2>
             </div>
         </div>
-        <div id="map"></div>
+        <div class="map"></div>
     </div>
 </section>
 
 <section class="section">
     <div class="headline">
-        <form action="#" method="post" class="zipcode-form">
+        <form class="zipcode-form js-search">
             <h6 class="h10">Enter your zip code to<br/> find a retailer near you</h6>
-            <input class="btn zipcode" id="zipcode" class="zipcode" type="text" value = "" pattern="[0-9]*">
-            <input class="btn search" type="submit" value="Search">
+            <div class="zipcode-wrapper">
+                <div class="errors"></div>
+                <input class="btn zipcode" id="zipcode" type="text" name="address" data-model-bind="address" placeholder="zip code" value="{{#if address}}{{address}}{{/if}}">
+            </div>
+            <button class="btn search btn-submit">Search</button>
+            <!-- <input class="btn search" type="submit" value="Search"> -->
         </form>
     </div>
 </section>
 
 <div class="col-1-1 retail-locations">
 
+    <ol class="results location-list"></ol>
 
-    <ul class="location-list">
+
+    <!-- <ul class="location-list">
         <li data-text="A">
             <h6 class="h9">Sit N Sleep</h6>
             <address>
@@ -93,6 +99,6 @@
                 <a href="" class="directions">Directions</a>
             </address>
         </li>
-    </ul>
+    </ul> -->
 
 </div>

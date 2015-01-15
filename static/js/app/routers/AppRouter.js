@@ -14,7 +14,7 @@ define(function (require, exports, module) {
             'earl-kluft(/)': 'about',
             'method(/)': 'method',
             'kluft-standard(/)': 'kluftStandard',
-            'retailers(/)': 'retailers',
+            'retailers(/)(/:address)': 'retailers',
             'contact(/)': 'contact'
         },
 

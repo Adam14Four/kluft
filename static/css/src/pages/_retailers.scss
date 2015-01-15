@@ -1,5 +1,11 @@
 .retailers.page {
 
+    &.error {
+        .errors {
+            display: block;
+        }
+    }
+
     .intro {
         overflow: visible;
     }
@@ -9,10 +15,9 @@
     }
 
     .masthead-5 { background-image: url(../img/pages/retailers/masthead.jpg); }
-    #map { background-image: url(../img/pages/retailers/map.jpg); }
+    // #map { background-image: url(../img/pages/retailers/map.jpg); }
 
-    #map {
-        @extend %background-cover;
+    .map {
         position: absolute;
         top: 20%;
         left: 10%;
@@ -21,8 +26,27 @@
         padding-bottom: 35%;
     }
 
+    .errors {
+        position: absolute;
+        display: none;
+        right: 0;
+        @include translate3d(0, 200%, 0);
+
+        p {
+            @extend .h8;
+            font-size: 1.2em;
+            text-transform: none;
+            color: red;
+        }
+    }
+
+    .zipcode-wrapper {
+        display: inline-block;
+        position: relative;
+    }
+
     .zipcode-form {
-        pointer-events: none;
+        // pointer-events: none;
     }
 
 }

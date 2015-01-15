@@ -25,6 +25,7 @@ requirejs.config({
 
         // App specific plugins
         'velocity': 'libs/velocity',
+        'async': 'libs/async',
 
         // shortcut to templates
         templates: './templates'
