@@ -457,7 +457,7 @@ th {
 .method.page .mobile-grid .masthead-1 .text-box, .royal-sovereign.page .mobile-grid .masthead-1 .text-box,
 .beyond-luxury.page .mobile-grid .masthead-1 .text-box, .kluft-signature.page .mobile-grid .masthead-1 .text-box,
 .royal-sovereign-latex.page .mobile-grid .masthead-1 .text-box, .about.page .mobile-grid .masthead-1 .text-box,
-.kluft-standard.page .mobile-grid .masthead-1 .text-box, .contact.page .success {
+.kluft-standard.page .mobile-grid .masthead-1 .text-box, .contact.page .masthead .text-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -492,7 +492,7 @@ th {
 }
 
 /* line 130, src/_extends.scss */
-.masthead, .block, .contact.page #map {
+.masthead, .block {
   background-repeat: no-repeat;
   background-position: center center;
   -moz-background-size: cover;
@@ -573,7 +573,7 @@ p.inverted, .p.inverted {
 }
 
 /* line 27, src/_typography.scss */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .h8, .retailers.page .errors p, .contact.page .message, .contact.page .email, .contact.page .errors p, .h9, .retail-locations li:before, .h10, .header a, .footer a {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .h8, .retailers.page .errors p, .h9, .retail-locations li:before, .h10, .header a, .footer a {
   font-weight: 300;
   font-family: "Mrs Eaves OT";
   line-height: 1.2;
@@ -584,7 +584,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .h8, .retailers.page 
   -webkit-font-smoothing: antialiased;
 }
 /* line 37, src/_typography.scss */
-h1.inverted, .h1.inverted, h2.inverted, .h2.inverted, h3.inverted, .h3.inverted, h4.inverted, .h4.inverted, h5.inverted, .h5.inverted, h6.inverted, .h6.inverted, .h7.inverted, .h8.inverted, .retailers.page .errors p.inverted, .contact.page .inverted.message, .contact.page .inverted.email, .contact.page .errors p.inverted, .h9.inverted, .retail-locations li.inverted:before, .h10.inverted, .header a.inverted, .footer a.inverted {
+h1.inverted, .h1.inverted, h2.inverted, .h2.inverted, h3.inverted, .h3.inverted, h4.inverted, .h4.inverted, h5.inverted, .h5.inverted, h6.inverted, .h6.inverted, .h7.inverted, .h8.inverted, .retailers.page .errors p.inverted, .h9.inverted, .retail-locations li.inverted:before, .h10.inverted, .header a.inverted, .footer a.inverted {
   color: #ffffff;
 }
 
@@ -643,13 +643,13 @@ h6.bold, .h6.bold {
 }
 
 /* line 89, src/_typography.scss */
-.h8, .retailers.page .errors p, .contact.page .message, .contact.page .email, .contact.page .errors p {
+.h8, .retailers.page .errors p {
   font-size: 1.6em;
   font-family: "Mrs Eaves Lining OT";
   letter-spacing: 0.41em;
 }
 /* line 94, src/_typography.scss */
-.h8.bold, .retailers.page .errors p.bold, .contact.page .bold.message, .contact.page .bold.email, .contact.page .errors p.bold {
+.h8.bold, .retailers.page .errors p.bold {
   font-family: "Mrs Eaves OT";
 }
 
@@ -1979,7 +1979,7 @@ button {
   margin-left: 33.33%;
 }
 /* line 74, src/pages/_collections.scss */
-.collections.page .h8, .collections.page .retailers.page .errors p, .retailers.page .errors .collections.page p, .collections.page .contact.page .message, .contact.page .collections.page .message, .collections.page .contact.page .email, .contact.page .collections.page .email, .collections.page .contact.page .errors p, .contact.page .errors .collections.page p {
+.collections.page .h8, .collections.page .retailers.page .errors p, .retailers.page .errors .collections.page p {
   line-height: 2;
 }
 
@@ -2228,7 +2228,7 @@ button {
   margin-left: 30%;
 }
 /* line 84, src/pages/_beyond-luxury.scss */
-.beyond-luxury.page .h8, .beyond-luxury.page .retailers.page .errors p, .retailers.page .errors .beyond-luxury.page p, .beyond-luxury.page .contact.page .message, .contact.page .beyond-luxury.page .message, .beyond-luxury.page .contact.page .email, .contact.page .beyond-luxury.page .email, .beyond-luxury.page .contact.page .errors p, .contact.page .errors .beyond-luxury.page p {
+.beyond-luxury.page .h8, .beyond-luxury.page .retailers.page .errors p, .retailers.page .errors .beyond-luxury.page p {
   line-height: 2;
 }
 
@@ -2318,7 +2318,7 @@ button {
   margin-top: 7em;
 }
 /* line 84, src/pages/_kluft-signature.scss */
-.kluft-signature.page .h8, .kluft-signature.page .retailers.page .errors p, .retailers.page .errors .kluft-signature.page p, .kluft-signature.page .contact.page .message, .contact.page .kluft-signature.page .message, .kluft-signature.page .contact.page .email, .contact.page .kluft-signature.page .email, .kluft-signature.page .contact.page .errors p, .contact.page .errors .kluft-signature.page p {
+.kluft-signature.page .h8, .kluft-signature.page .retailers.page .errors p, .retailers.page .errors .kluft-signature.page p {
   line-height: 2;
 }
 
@@ -2365,7 +2365,7 @@ button {
   margin-top: 6em;
 }
 /* line 43, src/pages/_kluft-standard.scss */
-.kluft-standard.page .h8, .kluft-standard.page .retailers.page .errors p, .retailers.page .errors .kluft-standard.page p, .kluft-standard.page .contact.page .message, .contact.page .kluft-standard.page .message, .kluft-standard.page .contact.page .email, .contact.page .kluft-standard.page .email, .kluft-standard.page .contact.page .errors p, .contact.page .errors .kluft-standard.page p {
+.kluft-standard.page .h8, .kluft-standard.page .retailers.page .errors p, .retailers.page .errors .kluft-standard.page p {
   line-height: 2;
 }
 
@@ -2427,7 +2427,7 @@ button {
   margin-top: 6em;
 }
 /* line 59, src/pages/_royal-sovereign.scss */
-.royal-sovereign.page .h8, .royal-sovereign.page .retailers.page .errors p, .retailers.page .errors .royal-sovereign.page p, .royal-sovereign.page .contact.page .message, .contact.page .royal-sovereign.page .message, .royal-sovereign.page .contact.page .email, .contact.page .royal-sovereign.page .email, .royal-sovereign.page .contact.page .errors p, .contact.page .errors .royal-sovereign.page p {
+.royal-sovereign.page .h8, .royal-sovereign.page .retailers.page .errors p, .retailers.page .errors .royal-sovereign.page p {
   line-height: 2;
 }
 
@@ -2489,7 +2489,7 @@ button {
   margin-top: 6em;
 }
 /* line 59, src/pages/_royal-sovereign-latex.scss */
-.royal-sovereign-latex.page .h8, .royal-sovereign-latex.page .retailers.page .errors p, .retailers.page .errors .royal-sovereign-latex.page p, .royal-sovereign-latex.page .contact.page .message, .contact.page .royal-sovereign-latex.page .message, .royal-sovereign-latex.page .contact.page .email, .contact.page .royal-sovereign-latex.page .email, .royal-sovereign-latex.page .contact.page .errors p, .contact.page .errors .royal-sovereign-latex.page p {
+.royal-sovereign-latex.page .h8, .royal-sovereign-latex.page .retailers.page .errors p, .retailers.page .errors .royal-sovereign-latex.page p {
   line-height: 2;
 }
 
@@ -2544,111 +2544,53 @@ button {
   overflow: visible;
 }
 /* line 7, src/pages/_contact.scss */
-.contact.page .headline {
-  padding: 4.5em 0 5em 0;
-}
-/* line 10, src/pages/_contact.scss */
-.contact.page .headline .h9, .contact.page .headline .retail-locations li:before, .retail-locations .contact.page .headline li:before {
-  font-family: "Mrs Eaves OT";
-  letter-spacing: 0.1em;
-}
-/* line 15, src/pages/_contact.scss */
-.contact.page .headline .address-block {
-  width: 50%;
-  margin-left: 50%;
-  text-align: left;
-  margin-bottom: 1.4em;
-}
-/* line 23, src/pages/_contact.scss */
-.contact.page .masthead-5 {
+.contact.page .masthead {
   background-image: url(../img/pages/contact/masthead.jpg);
+  padding-bottom: 27.4%;
 }
-/* line 24, src/pages/_contact.scss */
-.contact.page #map {
-  background-image: url(../img/pages/contact/map.jpg);
+/* line 11, src/pages/_contact.scss */
+.contact.page .masthead .text-box {
+  text-align: center;
+  background-color: transparent;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  max-width: none;
+}
+/* line 20, src/pages/_contact.scss */
+.contact.page .masthead .text-box .text-wrap {
+  padding: 0;
 }
 /* line 26, src/pages/_contact.scss */
-.contact.page #map {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  background-color: black;
-  width: 35%;
-  padding-bottom: 35%;
+.contact.page .form-wrapper {
+  width: 70%;
+  margin: 7em auto 0 auto;
+  max-width: 900px;
 }
-/* line 37, src/pages/_contact.scss */
-.contact.page.success-showing .contact-form {
-  opacity: 0;
-  pointer-events: none;
+/* line 32, src/pages/_contact.scss */
+.contact.page h4 {
+  font-size: 1.6em;
+  font-family: "Mrs Eaves Lining OT";
+  text-transform: none;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
 }
-/* line 42, src/pages/_contact.scss */
-.contact.page.success-showing .success {
-  opacity: 1;
-  visibility: visible;
-}
-/* line 52, src/pages/_contact.scss */
-.contact.page .text-box-left {
-  width: 55%;
-  padding: 3em 0;
-  margin-left: 20%;
-}
-/* line 58, src/pages/_contact.scss */
-.contact.page .message, .contact.page .email {
-  margin: 1em 0;
-  padding: 1em;
-  text-transform: uppercase;
-  width: 100%;
-}
-/* line 66, src/pages/_contact.scss */
-.contact.page label, .contact.page textarea, .contact.page input {
+/* line 40, src/pages/_contact.scss */
+.contact.page .email, .contact.page .message {
   display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  font-size: 1.6em;
+  font-family: "Mrs Eaves Lining OT";
+  text-transform: none;
+  letter-spacing: 0.1em;
+  padding: 1em 1em 1em 2em;
 }
-/* line 70, src/pages/_contact.scss */
-.contact.page .contact-form {
-  width: 60%;
-  margin: 0 auto;
-  position: relative;
-  padding-bottom: 15em;
-  -moz-transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -o-transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -webkit-transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-/* line 78, src/pages/_contact.scss */
-.contact.page .email-wrapper {
-  position: relative;
-}
-/* line 82, src/pages/_contact.scss */
+/* line 51, src/pages/_contact.scss */
 .contact.page .submit {
   float: right;
-  margin-top: 3em;
-  padding: 1.5em 3em;
-}
-/* line 88, src/pages/_contact.scss */
-.contact.page .errors {
-  position: absolute;
-  right: 0;
-  -moz-transform: translate3d(0, -100%, 0);
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
-}
-/* line 93, src/pages/_contact.scss */
-.contact.page .errors p {
-  color: red;
-}
-/* line 99, src/pages/_contact.scss */
-.contact.page .subtitle.large, .contact.page .subtitle {
-  text-transform: uppercase;
-}
-/* line 103, src/pages/_contact.scss */
-.contact.page .success {
-  text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  -moz-transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -o-transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -webkit-transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  padding: 1.4em 2.0em;
+  margin-bottom: 11em;
 }
 
 /* line 9, src/_zindex.scss */
