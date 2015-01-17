@@ -24,3 +24,28 @@
   font-style:   normal;
   font-weight:  300;
 }
+
+@font-face {
+  font-family: 'Mrs Eaves Lining OT';
+  src: url('../fonts/Emigre - Mrs Eaves Lining OT.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Emigre - Mrs Eaves Lining OT.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Emigre - Mrs Eaves Lining OT.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Emigre - Mrs Eaves Lining OT.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Emigre - Mrs Eaves Lining OT.svg#61cb83364504bea286d05a8c77c4672a') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Mrs Eaves OT';
+  src: url('../fonts/Emigre - MrsEavesOT-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Emigre - MrsEavesOT-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Emigre - MrsEavesOT-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Emigre - MrsEavesOT-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Emigre - MrsEavesOT-Bold.svg#7075c86f191f504553411c5f65847e4a') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  700;
+}
+

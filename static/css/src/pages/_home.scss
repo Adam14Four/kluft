@@ -8,17 +8,93 @@
     .block-4 { background-image: url(../img/pages/home/block-4.jpg); }
     .block-5 { background-image: url(../img/pages/home/block-5.jpg); }
 
+    .masthead-1, .masthead-2, .masthead-3 {
+        padding-bottom: 120%;
+
+        @media (min-width: 600px) {
+            padding-bottom: 75%;
+        }
+
+        @media (min-width: 768px) {
+            padding-bottom: 52%;
+        }
+    }
+
+    .masthead-2 {
+
+        .text-box {
+            width: 100%;
+
+            .text-wrap {
+                padding: 2em 1em;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .text-box {
+                width: 90%;
+
+                .text-wrap {
+                    padding: 2em 1em;
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            .text-box {
+                width: 80%;
+
+                .text-wrap {
+                    padding: 3.4em 5em 5.5em 5em;
+                }
+            }
+        }
+
+        @media (min-width: 880px) {
+            .text-box {
+                width: 67%;
+
+                .text-wrap {
+                    padding: 3.4em 5em 5.5em 5em;
+                }
+            }
+        }
+    }
+
     .block-2 {
-        float: right;
         margin-top: 3.5em;
+
+        @media (min-width: 768px) {
+            float: right;
+        }
     }
 
     .block-link {
-        margin: 5em 0 9em 0;
+        margin: 5em 0 5em 0;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+        }
+    }
+
+    .block-text {
+        width: 100%;
+        padding: 0 3em;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+            padding: 0 10em 0 0;
+        }
     }
 
     .block-text-1 {
         margin-top: 6em;
+
+        p:nth-child(2) {
+            margin-top: 2.3em;
+        }
     }
 
     .block-text-2 {

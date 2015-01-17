@@ -4,6 +4,12 @@
 
 .block {
     @extend %background-cover;
+    margin-left: auto;
+    margin-right: auto;
+
+    // &.decoration {
+    //     display: none;
+    // }
 }
 
 .block-double {

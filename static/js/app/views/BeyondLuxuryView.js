@@ -20,15 +20,15 @@ define(function(require, exports, module) {
         },
 
         initialize: function(options) {
-            $(window).on('resize', _.bind(this.setBackgroundSize, this));
+            // $(window).on('resize', _.bind(this.setBackgroundSize, this));
         },
 
         onRender: function() {
-            this.setBackgroundSize();
+            // this.setBackgroundSize();
         },
 
         setBackgroundSize: function() {
-            helpers.setBackgroundSize(this.ui.masthead, $('.header').height());
+            // helpers.setBackgroundSize(this.ui.masthead, $('.header').height());
         }
 
     });

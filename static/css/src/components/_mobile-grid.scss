@@ -1,0 +1,74 @@
+.home.page, .collections.page,
+.method.page, .royal-sovereign.page,
+.beyond-luxury.page, .kluft-signature.page,
+.royal-sovereign-latex.page, .about.page,
+.kluft-standard.page {
+
+    .mobile-grid {
+        display: block;
+        text-align: center;
+
+        .masthead {
+            padding-bottom: 100%;
+        }
+
+        .masthead-1 {
+            .text-box {
+                @extend %absolute-center;
+                width: 90%;
+                right: auto;
+                bottom: auto;
+
+                .text-wrap {
+                    padding: 4em;
+                }
+            }
+        }
+
+        .masthead-4 {
+            padding-bottom: 100%;
+            font-size: 7px;
+
+            .text-box {
+                width: 100%;
+
+                .text-wrap {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+
+        .headline {
+            padding: 5em 0;
+        }
+
+        p:nth-child(2) {
+            margin-top: 1.5em;
+        }
+
+        .block,
+        .block-1,
+        .block-2,
+        .block-3,
+        .block-4,
+        .block-5,
+        .block-6,
+        .block-7,
+        .block-8,
+            {
+            height: 0;
+            width: 95%;
+            padding-bottom: 100%;
+            margin: 2.5%;
+        }
+
+        .block-link, .block-text {
+            height: auto;
+            width: 95%;
+            margin: 2.5%;
+            padding-bottom: 0;
+            padding: 5%;
+        }
+    }
+}

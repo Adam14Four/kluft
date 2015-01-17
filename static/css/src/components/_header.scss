@@ -1,12 +1,32 @@
 .header {
     // height: 170px;
     // position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     text-align: center;
     background-color: $white;
     overflow: hidden;
+    font-size: 7px;
     @include transition(top 0.3s $easeInOut);
+
+    @media (min-width: 480px) {
+        font-size: 8px;
+    }
+
+    // 600px
+    @media (min-width: 600px) {
+        font-size: 9px;
+    }
+
+    // 768px
+    @media (min-width: 768px) {
+        font-size: 10px;
+    }
+
+    // 992px
+    @media (min-width: 992px) {
+    }
 
     &.nav-up {
         // top: -170px;
@@ -14,18 +34,29 @@
 
     .logo {
         @extend %hide-text;
-        display: block;
-        margin: 30px auto 15px auto;
-        width: 118px;
-        height: 73px;
+        width: 11.8em;
+        height: 7.3em;
         background-image: url(../img/logo.svg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        text-align: center;
+        display: inline-block;
+        margin: 1.5em;
+
+        @media (min-width: 880px) {
+            display: block;
+            margin: 3em auto 1.5em auto;
+        }
     }
 
-    nav {
+    .main-nav {
         background-color: $blueDark;
+        display: none;
+
+        @media (min-width: 880px) {
+            display: block;
+        }
     }
 
     ul {

@@ -58,6 +58,12 @@ button {
             @include translate3d(0, -50%, 0);
         }
 
+        &.inverted {
+            &:after {
+                background-image: url(../img/arrow-right-white.png);
+            }
+        }
+
         &:hover {
             &:after {
                 @include translate3d(50%, -50%, 0);

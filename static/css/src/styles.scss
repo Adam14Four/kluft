@@ -50,6 +50,10 @@
     @import "mq/768";
 }
 
+@media (min-width: 880px) {
+    @import "mq/880";
+}
+
 // 992px
 @media (min-width: 992px) {
     @import "mq/992";

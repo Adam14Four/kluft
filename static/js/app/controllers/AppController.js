@@ -66,6 +66,8 @@ define(function(require) {
                 trigger: this.triggerStatus
             });
 
+            $('html').removeClass('menu-is-open');
+
         },
 
         onappReady: function() {

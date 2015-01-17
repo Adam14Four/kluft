@@ -11,8 +11,13 @@
     }
 
     li {
-        display: inline-block;
-        padding: 0 2em;
+        display: block;
+        padding: 1em 2em;
+
+        @media (min-width: 768px) {
+            display: inline-block;
+            padding: 0 2em;
+        }
     }
 
     .h10 {

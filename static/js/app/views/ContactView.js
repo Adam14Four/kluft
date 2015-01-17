@@ -56,11 +56,13 @@ define(function(require, exports, module) {
                         self.onSuccess();
                     }
                 });
+
+                this.onSuccess();
+
             } else {
                 this.showErrors();
             }
 
-            this.onSuccess();
         },
 
         resetErrors: function() {

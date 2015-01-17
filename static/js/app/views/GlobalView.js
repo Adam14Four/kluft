@@ -32,9 +32,6 @@ define(function(require, exports, module) {
             document.addEventListener('touchstart', function() {}, true);
 
             // Prevent elastic bounce in touch-enabled web browsers
-            document.addEventListener('touchmove', function(e) {
-                e.preventDefault();
-            }, false);
 
             // No click delay for iOS
             // FastClick.attach(document.body);

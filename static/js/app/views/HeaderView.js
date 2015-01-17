@@ -15,12 +15,15 @@ define(function(require, exports, module) {
         template: template,
 
         ui: {
+            menuToggle: '.toggle-menu'
         },
 
         events: {
+            'click @ui.menuToggle': 'onClickMenuToggle'
         },
 
         initialize: function(options) {
+
             // this.lastScrollTop = 0;
             // this.winHeight = $(window).height();
             // this.docHeight = $(document).height();
@@ -31,6 +34,9 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
+            if (Modernizr.touch) {
+                this.setMobileMenu();
+            }
             // var self = this;
             // _.bindAll(this, 'hasScrolled');
 
@@ -44,6 +50,21 @@ define(function(require, exports, module) {
             // $(window).scroll(function(event){
             //     self.didScroll = true;
             // });
+        },
+
+        setMobileMenu: function() {
+            var winWidth = $(window).width();
+            var winHeight = $(window).height();
+            var headerHeight = $('#region-header').height();
+
+            $('.mobile-menu').css({
+                height: winHeight - headerHeight,
+                top: headerHeight
+            });
+        },
+
+        onClickMenuToggle: function() {
+            $('html').toggleClass('menu-is-open');
         },
 
         hasScrolled: function() {

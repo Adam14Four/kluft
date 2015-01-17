@@ -36,8 +36,8 @@ $linkColorHover:            lighten($linkColor, 10%) !default;
 
 $sans:                      sans-serif !default;
 $serif:                     serif !default;
-$MrsEavesRoman:             'MrsEavesRoman' !default;
-$MrsEavesBold:              'MrsEavesBold' !default;
+$MrsEavesRoman:             'Mrs Eaves Lining OT' !default;
+$MrsEavesBold:              'Mrs Eaves OT' !default;
 
 $thin:                      100 !default;
 $light:                     300 !default;
@@ -101,3 +101,5 @@ $easeInOutSine:             cubic-bezier(0.445, 0.05, 0.55, 0.95);
 $easeInOutExpo:             cubic-bezier(1, 0, 0, 1);
 $easeInOutCirc:             cubic-bezier(0.785, 0.135, 0.15, 0.86);
 $easeCustom:                cubic-bezier(1.000, 0.000, 0.600, 0.995);
+
+$globalEase:                $easeInOutQuad;
