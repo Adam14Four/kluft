@@ -48,7 +48,7 @@ define(function(require, exports, module) {
                 console.log('NO ERRORS');
 
                 $.ajax({
-                    url: 'http://127.0.0.1:8000/form',
+                    url: window.location.origin + '/form',
                     type: 'post',
                     dataType: 'json',
                     data: this.ui.form.serialize(),
