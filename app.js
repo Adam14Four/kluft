@@ -11,8 +11,8 @@ var bodyParser = require('body-parser');
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'calebjeffrey.dev@gmail.com',
-        pass: 'Kairiangel01'
+        user: 'server.kluft@gmail.com',
+        pass: 'kluft2015'
     }
 });
 
@@ -60,8 +60,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.post('/form', function(req, res) {
     var mailOptions = {
         from: req.body.email, // sender address
-        to: 'caleb@madeinhaus.com', // list of receivers
-        subject: 'Aireloom Form Contact', // Subject line
+        to: 'server.kluft@gmail.com', // list of receivers
+        subject: 'Kluft Form Contact', // Subject line
         text: req.body.message, // plaintext body
         html: req.body.message // html body
     };
