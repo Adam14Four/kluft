@@ -16,7 +16,8 @@ define(function(require, exports, module) {
             email: '.email',
             submitBtn: '.submit',
             form: 'form',
-            errors: '.errors'
+            errors: '.errors',
+            success: '.success'
         },
 
         events: {
@@ -39,7 +40,6 @@ define(function(require, exports, module) {
             this.resetErrors();
 
             if (helpers.validEmail(this.ui.email.val()) !== true) {
-                console.log('ERROR');
                 this.addError('Please enter a valid email address', this.ui.email);
             }
 
@@ -82,10 +82,17 @@ define(function(require, exports, module) {
             errorContainer.text('Please provide a valid email').appendTo(this.ui.errors);
 
             errorContainer.appendTo(this.ui.errors);
+
+            this.$el.addClass('errors-showing');
         },
 
         onSuccess: function() {
+            var successContainer = $('<p>');
+
             this.$el.addClass('success-showing');
+            successContainer.text('Message sent.').appendTo(this.ui.success);
+
+            successContainer.appendTo(this.ui.success);
         }
 
     });

@@ -8,6 +8,23 @@
     .block-4 { background-image: url(../img/pages/home/block-4.jpg); }
     .block-5 { background-image: url(../img/pages/home/block-5.jpg); }
 
+    .earl {
+        position: absolute;
+        top: 4.4%;
+        right: 2.4%;
+        width: 35.7%;
+        height: 91.2%;
+        background-image: url(../img/pages/home/earl.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+
+    }
+
     .masthead-1, .masthead-2, .masthead-3 {
         padding-bottom: 120%;
 
@@ -81,11 +98,11 @@
     .block-text {
         width: 100%;
         padding: 0 3em;
-        text-align: center;
+        text-align: left;
 
         @media (min-width: 768px) {
             text-align: left;
-            padding: 0 10em 0 0;
+            padding: 0 7em 0 0;
         }
     }
 
@@ -93,7 +110,7 @@
         margin-top: 6em;
 
         p:nth-child(2) {
-            margin-top: 2.3em;
+            margin-top: 2em;
         }
     }
 

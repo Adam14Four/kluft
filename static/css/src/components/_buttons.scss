@@ -24,6 +24,7 @@ button {
     padding: 1.5em 3.2em 1.5em 1.9em;
     letter-spacing: 5px;
     border: 2px solid #000000;
+    -webkit-font-smoothing: antialiased;
 
     &.inverted {
         color: $white;
@@ -66,7 +67,7 @@ button {
 
         &:hover {
             &:after {
-                @include translate3d(50%, -50%, 0);
+                @include translate3d(20%, -50%, 0);
             }
         }
     }

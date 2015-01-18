@@ -23,6 +23,7 @@ define(function(require, exports, module) {
         },
 
         initialize: function(options) {
+            $(window).on('resize', _.bind(this.setMobileMenu, this));
 
             // this.lastScrollTop = 0;
             // this.winHeight = $(window).height();
@@ -34,9 +35,7 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
-            if (Modernizr.touch) {
-                this.setMobileMenu();
-            }
+            this.setMobileMenu();
             // var self = this;
             // _.bindAll(this, 'hasScrolled');
 

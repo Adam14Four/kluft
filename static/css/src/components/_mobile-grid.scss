@@ -6,7 +6,9 @@
 
     .mobile-grid {
         display: block;
-        text-align: center;
+        text-align: left;
+        margin-bottom: 10em;
+        overflow: auto;
 
         .masthead {
             padding-bottom: 100%;
@@ -22,6 +24,14 @@
                 .text-wrap {
                     padding: 4em;
                 }
+            }
+        }
+
+        .btn {
+            width: 100%;
+            text-align: center;
+            &:after {
+                display: none;
             }
         }
 

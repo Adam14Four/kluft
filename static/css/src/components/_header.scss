@@ -54,24 +54,27 @@
         background-color: $blueDark;
         display: none;
 
-        @media (min-width: 880px) {
+        @media (min-width: 768px) {
             display: block;
         }
     }
 
     ul {
-        padding: 2em 0;
     }
 
     li {
         display: inline-block;
-        padding: 0 2em;
+        padding: 1.8em 1.0em 1.3em 1.0em;
+
+        @media (min-width: 960px) {
+            padding: 1.8em 2.5em 1.3em 2.5em;
+        }
     }
 
     a {
         @extend .h10;
         font-size: 1.1em;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.2em;
         color: $white;
     }
 }

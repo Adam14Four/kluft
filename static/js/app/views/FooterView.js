@@ -15,15 +15,21 @@ define(function(require, exports, module) {
         template: template,
 
         ui: {
+            scrollBtn: '.back-to-top'
         },
 
         events: {
+            'click @ui.scrollBtn': 'onClickScrollBtn'
         },
 
         initialize: function(options) {
         },
 
         onShow: function() {
+        },
+
+        onClickScrollBtn: function() {
+            helpers.scrollTo('body');
         }
 
     });
