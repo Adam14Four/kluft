@@ -52,14 +52,14 @@ define(function(require, exports, module) {
         },
 
         setMobileMenu: function() {
-            var winWidth = $(window).width();
-            var winHeight = $(window).height();
-            var headerHeight = $('#region-header').height();
+            // var winWidth = $(window).width();
+            // var winHeight = $(window).height();
+            // var headerHeight = $('#region-header').height();
 
-            $('.mobile-menu').css({
-                height: winHeight - headerHeight,
-                top: headerHeight
-            });
+            // $('.mobile-menu').css({
+            //     height: winHeight - headerHeight,
+            //     top: headerHeight
+            // });
         },
 
         onClickMenuToggle: function() {

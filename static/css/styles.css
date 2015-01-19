@@ -708,22 +708,23 @@ html.menu-is-open {
 /* line 23, src/_base.scss */
 html.menu-is-open body {
   overflow: hidden;
+  position: fixed;
 }
 
-/* line 28, src/_base.scss */
+/* line 29, src/_base.scss */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-/* line 34, src/_base.scss */
+/* line 35, src/_base.scss */
 html,
 body {
   height: 100%;
 }
 
-/* line 42, src/_base.scss */
+/* line 43, src/_base.scss */
 body {
   font-size: 10px;
   font-family: "Mrs Eaves Lining OT";
@@ -739,7 +740,7 @@ body {
   font-size: 8px;
 }
 
-/* line 57, src/_base.scss */
+/* line 58, src/_base.scss */
 ul, ol, li {
   margin: 0;
   padding: 0;
@@ -919,6 +920,7 @@ button {
   background-color: #ffffff;
   overflow: hidden;
   font-size: 7px;
+  z-index: 100;
   -moz-transition: top 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: top 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition: top 0.3s cubic-bezier(0.42, 0, 0.58, 1);
@@ -942,7 +944,7 @@ button {
     font-size: 10px;
   }
 }
-/* line 35, src/components/_header.scss */
+/* line 36, src/components/_header.scss */
 .header .logo {
   width: 11.8em;
   height: 7.3em;
@@ -955,35 +957,35 @@ button {
   margin: 1.5em;
 }
 @media (min-width: 880px) {
-  /* line 35, src/components/_header.scss */
+  /* line 36, src/components/_header.scss */
   .header .logo {
     display: block;
     margin: 3em auto 1.5em auto;
   }
 }
-/* line 53, src/components/_header.scss */
+/* line 54, src/components/_header.scss */
 .header .main-nav {
   background-color: #041c2c;
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 53, src/components/_header.scss */
+  /* line 54, src/components/_header.scss */
   .header .main-nav {
     display: block;
   }
 }
-/* line 65, src/components/_header.scss */
+/* line 66, src/components/_header.scss */
 .header li {
   display: inline-block;
   padding: 1.8em 1.0em 1.3em 1.0em;
 }
 @media (min-width: 960px) {
-  /* line 65, src/components/_header.scss */
+  /* line 66, src/components/_header.scss */
   .header li {
     padding: 1.8em 2.5em 1.3em 2.5em;
   }
 }
-/* line 74, src/components/_header.scss */
+/* line 75, src/components/_header.scss */
 .header a {
   font-size: 1.1em;
   letter-spacing: 0.2em;
@@ -1116,6 +1118,9 @@ button {
   position: fixed;
   width: 100%;
   height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: rgba(4, 28, 44, 0.7);
   visibility: hidden;
   opacity: 0;
@@ -1125,15 +1130,13 @@ button {
   -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-/* line 103, src/components/_mobile-header.scss */
+/* line 106, src/components/_mobile-header.scss */
 .mobile-menu nav {
-  position: absolute;
   width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 15em;
 }
 
-/* line 111, src/components/_mobile-header.scss */
+/* line 115, src/components/_mobile-header.scss */
 .mobile-link {
   display: block;
   padding: 0.6em 0;
@@ -1222,7 +1225,7 @@ button {
 .footer .back-to-top:before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 50%;
   width: 72px;
   height: 36px;

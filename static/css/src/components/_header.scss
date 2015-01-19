@@ -8,6 +8,7 @@
     background-color: $white;
     overflow: hidden;
     font-size: 7px;
+    z-index: 100;
     @include transition(top 0.3s $easeInOut);
 
     @media (min-width: 480px) {
