@@ -1,7 +1,7 @@
 .method.page {
 
     .sub-grid {
-        margin: -5.5em 0 13.5em 0;
+        margin: -5.5em auto 13.5em auto;
     }
 
     .masthead-4 { background-image: url(../img/pages/method/masthead.jpg); }
@@ -26,6 +26,7 @@
 
     .block-3 {
         margin-top: 4.5em;
+        margin-left: 0;
     }
 
     .block-text-1 {

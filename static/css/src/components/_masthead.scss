@@ -18,6 +18,11 @@
         right: 12%;
         max-width: 450px;
         background-color: rgba(33, 33, 33, 0.44);
+        @include transition(opacity 0.3s $globalEase);
+
+        &.fade-out {
+            opacity: 0;
+        }
 
         .text-wrap {
             padding: 3.4em 5em 5.5em 5em;

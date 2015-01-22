@@ -9,6 +9,8 @@ define(function(require, exports, module) {
         itemTemplate = require('hbs!templates/retailer'),
         template = require('hbs!templates/retailers');
 
+        require('jquery.viewport');
+
     var ItemView = Marionette.ItemView.extend({
         template: itemTemplate,
         tagName: "li",

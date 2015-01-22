@@ -50,6 +50,11 @@
         font-size: 1.1em;
         letter-spacing: 0.2em;
         color: $white;
+        @include transition(color 0.3s $easeInOut);
+
+        &:hover {
+            color: #D2D3D7;
+        }
     }
 
     .back-to-top {

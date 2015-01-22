@@ -918,7 +918,7 @@ button {
   width: 100%;
   text-align: center;
   background-color: #ffffff;
-  overflow: hidden;
+  overflow: visible;
   font-size: 7px;
   z-index: 100;
   -moz-transition: top 0.3s cubic-bezier(0.42, 0, 0.58, 1);
@@ -990,6 +990,59 @@ button {
   font-size: 1.1em;
   letter-spacing: 0.2em;
   color: #ffffff;
+  -moz-transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+/* line 82, src/components/_header.scss */
+.header a:hover {
+  color: #D2D3D7;
+}
+
+/* line 88, src/components/_header.scss */
+.collection-link {
+  position: relative;
+}
+/* line 91, src/components/_header.scss */
+.no-touch .collection-link:hover .sub-nav {
+  max-height: 600px;
+  padding: 2em 0 1em 0;
+}
+/* line 95, src/components/_header.scss */
+.no-touch .collection-link:hover .sub-nav li {
+  opacity: 1;
+}
+/* line 100, src/components/_header.scss */
+.collection-link .sub-nav {
+  position: absolute;
+  left: 0;
+  padding: 0;
+  background-color: #041c2c;
+  text-align: left;
+  z-index: 30;
+  overflow: hidden;
+  max-height: 0;
+  -moz-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+}
+/* line 111, src/components/_header.scss */
+.collection-link .sub-nav li {
+  display: block;
+  padding: 0.7em 2.6em;
+  opacity: 0;
+  -moz-transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.1s;
+  -o-transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.1s;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-transition-delay: 0.1s;
+  transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.1s;
+}
+/* line 117, src/components/_header.scss */
+.collection-link .sub-nav li a {
+  display: inline-block;
+  line-height: 1.4;
 }
 
 /* line 1, src/components/_mobile-header.scss */
@@ -1118,7 +1171,6 @@ button {
   position: fixed;
   width: 100%;
   height: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(4, 28, 44, 0.7);
@@ -1130,13 +1182,13 @@ button {
   -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-/* line 106, src/components/_mobile-header.scss */
+/* line 102, src/components/_mobile-header.scss */
 .mobile-menu nav {
   width: 100%;
   margin-top: 15em;
 }
 
-/* line 115, src/components/_mobile-header.scss */
+/* line 108, src/components/_mobile-header.scss */
 .mobile-link {
   display: block;
   padding: 0.6em 0;
@@ -1210,18 +1262,26 @@ button {
   font-size: 1.1em;
   letter-spacing: 0.2em;
   color: #ffffff;
+  -moz-transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
 /* line 55, src/components/_footer.scss */
+.footer a:hover, .footer .to-top:hover {
+  color: #D2D3D7;
+}
+/* line 60, src/components/_footer.scss */
 .footer .back-to-top {
   text-align: center;
   position: relative;
   cursor: pointer;
 }
-/* line 60, src/components/_footer.scss */
+/* line 65, src/components/_footer.scss */
 .footer .back-to-top .to-top {
   padding-top: 22px;
 }
-/* line 64, src/components/_footer.scss */
+/* line 69, src/components/_footer.scss */
 .footer .back-to-top:before {
   content: '';
   position: absolute;
@@ -1254,14 +1314,15 @@ button {
 /* line 14, src/components/_columns.scss */
 .col-1-2 {
   width: 100%;
+  overflow: hidden;
 }
 
-/* line 18, src/components/_columns.scss */
+/* line 19, src/components/_columns.scss */
 .col-1-3 {
   width: 100%;
 }
 
-/* line 22, src/components/_columns.scss */
+/* line 23, src/components/_columns.scss */
 .col-2-3 {
   width: 100%;
 }
@@ -1270,6 +1331,12 @@ button {
 .section {
   position: relative;
   overflow: auto;
+}
+
+/* line 6, src/components/_sections.scss */
+.has-max {
+  max-width: 1450px;
+  margin: 0 auto;
 }
 
 /* line 1, src/components/_masthead.scss */
@@ -1292,37 +1359,45 @@ button {
   right: 12%;
   max-width: 450px;
   background-color: rgba(33, 33, 33, 0.44);
+  -moz-transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -o-transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-/* line 22, src/components/_masthead.scss */
+/* line 23, src/components/_masthead.scss */
+.masthead .text-box.fade-out {
+  opacity: 0;
+}
+/* line 27, src/components/_masthead.scss */
 .masthead .text-box .text-wrap {
   padding: 3.4em 5em 5.5em 5em;
 }
-/* line 26, src/components/_masthead.scss */
+/* line 31, src/components/_masthead.scss */
 .masthead .text-box .h4 {
   letter-spacing: 0.33em;
   margin: 0.5em 0 2em 0;
 }
-/* line 31, src/components/_masthead.scss */
+/* line 36, src/components/_masthead.scss */
 .masthead .text-box .h7 {
   text-transform: none;
   letter-spacing: 0.1em;
 }
-/* line 36, src/components/_masthead.scss */
+/* line 41, src/components/_masthead.scss */
 .masthead .text-box .h10, .masthead .text-box .header a, .header .masthead .text-box a, .masthead .text-box .footer a, .footer .masthead .text-box a, .masthead .text-box .footer .to-top, .footer .masthead .text-box .to-top {
   letter-spacing: 0.38em;
 }
-/* line 40, src/components/_masthead.scss */
+/* line 45, src/components/_masthead.scss */
 .masthead .text-box.light {
   background-color: rgba(255, 255, 255, 0.6);
   right: auto;
   left: 12%;
 }
 
-/* line 48, src/components/_masthead.scss */
+/* line 53, src/components/_masthead.scss */
 .masthead-2 {
   padding-bottom: 52%;
 }
-/* line 51, src/components/_masthead.scss */
+/* line 56, src/components/_masthead.scss */
 .masthead-2 .text-box {
   bottom: auto;
   right: auto;
@@ -1331,32 +1406,32 @@ button {
   background-color: rgba(69, 69, 69, 0.5);
   text-align: center;
 }
-/* line 60, src/components/_masthead.scss */
+/* line 65, src/components/_masthead.scss */
 .masthead-2 .text-box .text-wrap {
   padding: 7.5em 5em 5.5em 4.5em;
 }
-/* line 64, src/components/_masthead.scss */
+/* line 69, src/components/_masthead.scss */
 .masthead-2 .text-box .h3 {
   letter-spacing: 0.4em;
 }
-/* line 68, src/components/_masthead.scss */
+/* line 73, src/components/_masthead.scss */
 .masthead-2 .text-box .h7 {
   margin: 1em 0 2.2em 0;
   text-transform: none;
   letter-spacing: 0.1em;
   line-height: 1.7;
 }
-/* line 75, src/components/_masthead.scss */
+/* line 80, src/components/_masthead.scss */
 .masthead-2 .text-box .h10, .masthead-2 .text-box .header a, .header .masthead-2 .text-box a, .masthead-2 .text-box .footer a, .footer .masthead-2 .text-box a, .masthead-2 .text-box .footer .to-top, .footer .masthead-2 .text-box .to-top {
   letter-spacing: 0.38em;
 }
 
-/* line 81, src/components/_masthead.scss */
+/* line 86, src/components/_masthead.scss */
 .masthead-3 {
   padding-bottom: 35%;
 }
 
-/* line 87, src/components/_masthead.scss */
+/* line 92, src/components/_masthead.scss */
 .masthead-4 .text-box {
   bottom: auto;
   right: auto;
@@ -1365,44 +1440,44 @@ button {
   background-color: transparent;
   text-align: center;
 }
-/* line 96, src/components/_masthead.scss */
+/* line 101, src/components/_masthead.scss */
 .masthead-4 .text-box .text-wrap {
   padding: 7.5em 5em 5.5em 4.5em;
 }
-/* line 100, src/components/_masthead.scss */
+/* line 105, src/components/_masthead.scss */
 .masthead-4 .text-box .h3 {
   letter-spacing: 0.4em;
 }
-/* line 104, src/components/_masthead.scss */
+/* line 109, src/components/_masthead.scss */
 .masthead-4 .text-box .h7 {
   margin: 1em 0 2.2em 0;
   text-transform: none;
   letter-spacing: 0.1em;
   line-height: 1.7;
 }
-/* line 111, src/components/_masthead.scss */
+/* line 116, src/components/_masthead.scss */
 .masthead-4 .text-box .h10, .masthead-4 .text-box .header a, .header .masthead-4 .text-box a, .masthead-4 .text-box .footer a, .footer .masthead-4 .text-box a, .masthead-4 .text-box .footer .to-top, .footer .masthead-4 .text-box .to-top {
   letter-spacing: 0.38em;
 }
 
-/* line 117, src/components/_masthead.scss */
+/* line 122, src/components/_masthead.scss */
 .masthead-5 {
   padding-bottom: 35%;
 }
-/* line 120, src/components/_masthead.scss */
+/* line 125, src/components/_masthead.scss */
 .masthead-5 .text-box {
   left: 50%;
   right: auto;
   padding-bottom: 6em;
   background-color: transparent;
 }
-/* line 126, src/components/_masthead.scss */
+/* line 131, src/components/_masthead.scss */
 .masthead-5 .text-box .text-wrap {
   padding: 0;
 }
 
 @media (min-width: 768px) {
-  /* line 132, src/components/_masthead.scss */
+  /* line 137, src/components/_masthead.scss */
   .pull-up {
     margin-top: -4em;
   }
@@ -1641,122 +1716,142 @@ button {
 }
 
 /* line 15, src/components/_grid-blocks.scss */
+.block-image {
+  opacity: 0;
+  -moz-transform: translate3d(0, 10px, 0);
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+  -moz-transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0.3s;
+  -o-transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0.3s;
+  -webkit-transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition-delay: 0.3s;
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0.3s;
+}
+/* line 20, src/components/_grid-blocks.scss */
+.block-image.in-view {
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+/* line 26, src/components/_grid-blocks.scss */
 .block-double {
   margin-top: 1.5em;
 }
-/* line 17, src/components/_grid-blocks.scss */
+/* line 28, src/components/_grid-blocks.scss */
 .block-double .block {
   display: inline-block;
   float: left;
   margin-right: 1.5em;
 }
 
-/* line 24, src/components/_grid-blocks.scss */
+/* line 35, src/components/_grid-blocks.scss */
 .block-40 {
   width: 40%;
 }
 
-/* line 28, src/components/_grid-blocks.scss */
+/* line 39, src/components/_grid-blocks.scss */
 .block-60 {
   width: 60%;
 }
 
-/* line 32, src/components/_grid-blocks.scss */
+/* line 43, src/components/_grid-blocks.scss */
 .block-66 {
   width: 66.66%;
 }
 
-/* line 36, src/components/_grid-blocks.scss */
+/* line 47, src/components/_grid-blocks.scss */
 .block-70 {
   width: 70%;
 }
 
-/* line 40, src/components/_grid-blocks.scss */
+/* line 51, src/components/_grid-blocks.scss */
 .block-86 {
   width: 86%;
   margin-left: 14%;
   padding-bottom: 92%;
 }
 
-/* line 46, src/components/_grid-blocks.scss */
+/* line 57, src/components/_grid-blocks.scss */
 .block-87 {
   width: 87%;
   margin-left: 13%;
   padding-bottom: 123.5%;
 }
 
-/* line 52, src/components/_grid-blocks.scss */
+/* line 63, src/components/_grid-blocks.scss */
 .block-100 {
   width: 100%;
 }
 
-/* line 57, src/components/_grid-blocks.scss */
+/* line 68, src/components/_grid-blocks.scss */
 .aspect-1.block-40 {
   padding-bottom: 40%;
 }
-/* line 60, src/components/_grid-blocks.scss */
+/* line 71, src/components/_grid-blocks.scss */
 .aspect-1.block-60 {
   padding-bottom: 60%;
 }
-/* line 63, src/components/_grid-blocks.scss */
+/* line 74, src/components/_grid-blocks.scss */
 .aspect-1.block-66 {
   padding-bottom: 66.66%;
 }
-/* line 66, src/components/_grid-blocks.scss */
+/* line 77, src/components/_grid-blocks.scss */
 .aspect-1.block-70 {
   padding-bottom: 70%;
 }
 
-/* line 72, src/components/_grid-blocks.scss */
+/* line 83, src/components/_grid-blocks.scss */
 .aspect-58.block-66 {
   padding-bottom: 39%;
 }
-/* line 75, src/components/_grid-blocks.scss */
+/* line 86, src/components/_grid-blocks.scss */
 .aspect-58.block-70 {
   padding-bottom: 58%;
 }
-/* line 78, src/components/_grid-blocks.scss */
+/* line 89, src/components/_grid-blocks.scss */
 .aspect-58.block-100 {
   padding-bottom: 58%;
 }
 
-/* line 87, src/components/_grid-blocks.scss */
+/* line 98, src/components/_grid-blocks.scss */
 .aspect-63.block-100 {
   padding-bottom: 63%;
 }
 
-/* line 93, src/components/_grid-blocks.scss */
+/* line 104, src/components/_grid-blocks.scss */
 .aspect-75.block-66 {
   padding-bottom: 50%;
 }
-/* line 96, src/components/_grid-blocks.scss */
+/* line 107, src/components/_grid-blocks.scss */
 .aspect-75.block-100 {
   padding-bottom: 75%;
 }
 
-/* line 102, src/components/_grid-blocks.scss */
+/* line 113, src/components/_grid-blocks.scss */
 .aspect-87.block-66 {
   padding-bottom: 58%;
 }
-/* line 105, src/components/_grid-blocks.scss */
+/* line 116, src/components/_grid-blocks.scss */
 .aspect-87.block-100 {
   padding-bottom: 87%;
 }
 
-/* line 114, src/components/_grid-blocks.scss */
+/* line 125, src/components/_grid-blocks.scss */
 .aspect-92.block-100 {
   padding-bottom: 92%;
 }
 
-/* line 120, src/components/_grid-blocks.scss */
+/* line 131, src/components/_grid-blocks.scss */
 .aspect-114.block-66 {
   padding-bottom: 76%;
 }
-/* line 123, src/components/_grid-blocks.scss */
+/* line 134, src/components/_grid-blocks.scss */
 .aspect-114.block-70 {
   padding-bottom: 88%;
 }
-/* line 126, src/components/_grid-blocks.scss */
+/* line 137, src/components/_grid-blocks.scss */
 .aspect-114.block-100 {
   padding-bottom: 114%;
 }
@@ -1841,7 +1936,7 @@ button {
 }
 /* line 4, src/pages/_home.scss */
 .home.page .masthead-3 {
-  background-image: url(../img/pages/home/masthead-3.jpg);
+  background-image: url(../img/pages/home/masthead-1.jpg);
 }
 /* line 5, src/pages/_home.scss */
 .home.page .block-1 {
@@ -1897,94 +1992,94 @@ button {
     padding-bottom: 52%;
   }
 }
-/* line 42, src/pages/_home.scss */
+/* line 43, src/pages/_home.scss */
 .home.page .masthead-2 .text-box {
   width: 100%;
 }
-/* line 45, src/pages/_home.scss */
+/* line 46, src/pages/_home.scss */
 .home.page .masthead-2 .text-box .text-wrap {
   padding: 2em 1em;
 }
 @media (min-width: 600px) {
-  /* line 51, src/pages/_home.scss */
+  /* line 52, src/pages/_home.scss */
   .home.page .masthead-2 .text-box {
     width: 90%;
   }
-  /* line 54, src/pages/_home.scss */
+  /* line 55, src/pages/_home.scss */
   .home.page .masthead-2 .text-box .text-wrap {
     padding: 2em 1em;
   }
 }
 @media (min-width: 768px) {
-  /* line 61, src/pages/_home.scss */
+  /* line 62, src/pages/_home.scss */
   .home.page .masthead-2 .text-box {
     width: 80%;
   }
-  /* line 64, src/pages/_home.scss */
+  /* line 65, src/pages/_home.scss */
   .home.page .masthead-2 .text-box .text-wrap {
     padding: 3.4em 5em 5.5em 5em;
   }
 }
 @media (min-width: 880px) {
-  /* line 71, src/pages/_home.scss */
+  /* line 72, src/pages/_home.scss */
   .home.page .masthead-2 .text-box {
     width: 67%;
   }
-  /* line 74, src/pages/_home.scss */
+  /* line 75, src/pages/_home.scss */
   .home.page .masthead-2 .text-box .text-wrap {
     padding: 3.4em 5em 5.5em 5em;
   }
 }
-/* line 81, src/pages/_home.scss */
+/* line 82, src/pages/_home.scss */
 .home.page .block-2 {
   margin-top: 3.5em;
 }
 @media (min-width: 768px) {
-  /* line 81, src/pages/_home.scss */
+  /* line 82, src/pages/_home.scss */
   .home.page .block-2 {
     float: right;
   }
 }
-/* line 89, src/pages/_home.scss */
+/* line 90, src/pages/_home.scss */
 .home.page .block-link {
   margin: 5em 0 5em 0;
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 89, src/pages/_home.scss */
+  /* line 90, src/pages/_home.scss */
   .home.page .block-link {
     text-align: left;
   }
 }
-/* line 98, src/pages/_home.scss */
+/* line 99, src/pages/_home.scss */
 .home.page .block-text {
   width: 100%;
   padding: 0 3em;
   text-align: left;
 }
 @media (min-width: 768px) {
-  /* line 98, src/pages/_home.scss */
+  /* line 99, src/pages/_home.scss */
   .home.page .block-text {
     text-align: left;
     padding: 0 7em 0 0;
   }
 }
-/* line 109, src/pages/_home.scss */
+/* line 110, src/pages/_home.scss */
 .home.page .block-text-1 {
   margin-top: 6em;
 }
-/* line 112, src/pages/_home.scss */
+/* line 113, src/pages/_home.scss */
 .home.page .block-text-1 p:nth-child(2) {
   margin-top: 2em;
 }
-/* line 117, src/pages/_home.scss */
+/* line 118, src/pages/_home.scss */
 .home.page .block-text-2 {
   margin-top: 4.5em;
 }
 
 /* line 3, src/pages/_collections.scss */
 .collections.page .sub-grid {
-  margin: -5.5em 0 13.5em 0;
+  margin: -5.5em auto 13.5em auto;
 }
 /* line 7, src/pages/_collections.scss */
 .collections.page .masthead-4 {
@@ -2100,7 +2195,7 @@ button {
 
 /* line 3, src/pages/_about.scss */
 .about.page .sub-grid {
-  margin: -5.5em 0 13.5em 0;
+  margin: -5.5em auto 13.5em auto;
 }
 /* line 7, src/pages/_about.scss */
 .about.page .masthead-4 {
@@ -2163,7 +2258,7 @@ button {
 
 /* line 3, src/pages/_method.scss */
 .method.page .sub-grid {
-  margin: -5.5em 0 13.5em 0;
+  margin: -5.5em auto 13.5em auto;
 }
 /* line 7, src/pages/_method.scss */
 .method.page .masthead-4 {
@@ -2208,44 +2303,45 @@ button {
 /* line 27, src/pages/_method.scss */
 .method.page .block-3 {
   margin-top: 4.5em;
+  margin-left: 0;
 }
-/* line 31, src/pages/_method.scss */
+/* line 32, src/pages/_method.scss */
 .method.page .block-text-1 {
   width: 66%;
   margin: 7.5em 0 5.5em 34%;
 }
-/* line 35, src/pages/_method.scss */
+/* line 36, src/pages/_method.scss */
 .method.page .block-text-1 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 41, src/pages/_method.scss */
+/* line 42, src/pages/_method.scss */
 .method.page .block-text-2 {
   width: 66%;
   margin: 7.5em 0 5.5em 34%;
 }
-/* line 45, src/pages/_method.scss */
+/* line 46, src/pages/_method.scss */
 .method.page .block-text-2 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 51, src/pages/_method.scss */
+/* line 52, src/pages/_method.scss */
 .method.page .block-text-3 {
   width: 70%;
   margin: 14em 0 5.5em 0;
 }
-/* line 55, src/pages/_method.scss */
+/* line 56, src/pages/_method.scss */
 .method.page .block-text-3 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 61, src/pages/_method.scss */
+/* line 62, src/pages/_method.scss */
 .method.page .block-text-4 {
   width: 70%;
   margin-top: 6.5em;
   margin-bottom: 5.5em;
 }
-/* line 66, src/pages/_method.scss */
+/* line 67, src/pages/_method.scss */
 .method.page .block-text-4 p {
   margin-top: 1.5em;
   line-height: 2.6;
@@ -2253,7 +2349,7 @@ button {
 
 /* line 3, src/pages/_beyond-luxury.scss */
 .beyond-luxury.page .sub-grid {
-  margin: -5.5em 0 13.5em 0;
+  margin: -5.5em auto 13.5em auto;
 }
 /* line 11, src/pages/_beyond-luxury.scss */
 .beyond-luxury.page .masthead .text-box .text-wrap {
@@ -2343,7 +2439,7 @@ button {
 
 /* line 3, src/pages/_kluft-signature.scss */
 .kluft-signature.page .sub-grid {
-  margin: -5.5em 0 13.5em 0;
+  margin: -5.5em auto 13.5em auto;
 }
 /* line 11, src/pages/_kluft-signature.scss */
 .kluft-signature.page .masthead .text-box .text-wrap {
@@ -2433,7 +2529,7 @@ button {
 
 /* line 3, src/pages/_kluft-standard.scss */
 .kluft-standard.page .sub-grid {
-  margin: -5.5em 0 13.5em 0;
+  margin: -5.5em auto 13.5em auto;
 }
 /* line 7, src/pages/_kluft-standard.scss */
 .kluft-standard.page .masthead-4 {
@@ -2484,7 +2580,7 @@ button {
 
 /* line 3, src/pages/_royal-sovereign.scss */
 .royal-sovereign.page .sub-grid {
-  margin: -5.5em 0 13.5em 0;
+  margin: -5.5em auto 13.5em auto;
 }
 /* line 11, src/pages/_royal-sovereign.scss */
 .royal-sovereign.page .masthead .text-box .text-wrap {
@@ -2546,7 +2642,7 @@ button {
 
 /* line 3, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .sub-grid {
-  margin: -5.5em 0 13.5em 0;
+  margin: -5.5em auto 13.5em auto;
 }
 /* line 11, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .masthead .text-box .text-wrap {

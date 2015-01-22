@@ -1,7 +1,7 @@
 .home.page {
     .masthead-1 { background-image: url(../img/pages/home/masthead-1.jpg); }
     .masthead-2 { background-image: url(../img/pages/home/masthead-2.jpg); }
-    .masthead-3 { background-image: url(../img/pages/home/masthead-3.jpg); }
+    .masthead-3 { background-image: url(../img/pages/home/masthead-1.jpg); }
     .block-1 { background-image: url(../img/pages/home/block-1.jpg); }
     .block-2 { background-image: url(../img/pages/home/block-2.jpg); }
     .block-3 { background-image: url(../img/pages/home/block-3.jpg); }
@@ -33,6 +33,7 @@
         }
 
         @media (min-width: 768px) {
+            // background-attachment: fixed;
             padding-bottom: 52%;
         }
     }

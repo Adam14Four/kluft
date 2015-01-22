@@ -12,6 +12,17 @@
     // }
 }
 
+.block-image {
+    opacity: 0;
+    @include translate3d(0, 10px, 0);
+    @include transition(all 0.5s $easeInOut 0.3s);
+
+    &.in-view {
+        @include translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
 .block-double {
     margin-top: 1.5em;
     .block {

@@ -6,6 +6,8 @@ define(function(require, exports, module) {
         constants = require('app/utils/constants'),
         template = require('hbs!templates/contact');
 
+        require('jquery.viewport');
+
     return BaseView.extend({
 
         className: 'contact page',

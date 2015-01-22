@@ -6,6 +6,8 @@ define(function(require, exports, module) {
         constants = require('app/utils/constants'),
         template = require('hbs!templates/about');
 
+        require('jquery.viewport');
+
     return BaseView.extend({
 
         className: 'about page',
@@ -20,16 +22,28 @@ define(function(require, exports, module) {
         },
 
         initialize: function(options) {
-            // $(window).on('resize', _.bind(this.setBackgroundSize, this));
+            $(window).on('scroll.page', _.bind(this.scrollEffects, this));
+            this.window = $(window);
+            this.faded = false;
         },
 
-        onRender: function() {
-            // this.setBackgroundSize();
+        onShow: function() {
+            this.textBox = $('.intro .masthead .text-box');
         },
 
-        setBackgroundSize: function() {
-            // console.log('size it')
-            // helpers.setBackgroundSize(this.ui.masthead, $('.header').height());
+        scrollEffects: function(e) {
+            if (this.window.scrollTop() > 150 && !this.faded) {
+                this.textBox.addClass('fade-out');
+                this.faded = true;
+            } else if (this.window.scrollTop() < 150 && this.faded) {
+                this.textBox.removeClass('fade-out');
+                this.faded = false;
+            }
+            $('.block-image:in-viewport').addClass('in-view');
+        },
+
+        onDestroy: function() {
+            $(window).off('page');
         }
 
     });

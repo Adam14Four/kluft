@@ -25,6 +25,7 @@ requirejs.config({
 
         // App specific plugins
         'velocity': 'libs/velocity',
+        'jquery.viewport': 'libs/jquery.viewport',
         'async': 'libs/async',
 
         // shortcut to templates
@@ -38,6 +39,9 @@ requirejs.config({
             exports: 'Backbone'
         },
         'velocity': {
+            deps: ['jquery']
+        },
+        'jquery.viewport': {
             deps: ['jquery']
         }
     },

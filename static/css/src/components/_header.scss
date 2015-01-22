@@ -6,7 +6,7 @@
     width: 100%;
     text-align: center;
     background-color: $white;
-    overflow: hidden;
+    overflow: visible;
     font-size: 7px;
     z-index: 100;
     @include transition(top 0.3s $easeInOut);
@@ -77,5 +77,48 @@
         font-size: 1.1em;
         letter-spacing: 0.2em;
         color: $white;
+        @include transition(color 0.3s $easeInOut);
+
+        &:hover {
+            color: #D2D3D7;
+        }
+    }
+}
+
+.collection-link {
+    position: relative;
+    .no-touch &:hover {
+        .sub-nav {
+            max-height: 600px;
+            padding: 2em 0 1em 0;
+
+            li {
+                opacity: 1;
+            }
+        }
+    }
+    .sub-nav {
+        position: absolute;
+        left: 0;
+        padding: 0;
+        background-color: $blueDark;
+        text-align: left;
+        z-index: 30;
+        overflow: hidden;
+        max-height: 0;
+        @include transition(all 0.2s $easeInOut);
+
+        li {
+            display: block;
+            padding: 0.7em 2.6em;
+            opacity: 0;
+            @include transition(opacity 0.3s $easeInOutQuad 0.1s);
+
+            a {
+                // font-family: $AvenirLight;
+                display: inline-block;
+                line-height: 1.4;
+            }
+        }
     }
 }
