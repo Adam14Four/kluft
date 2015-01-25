@@ -930,7 +930,7 @@ button {
   /* line 36, src/components/_header.scss */
   .header .logo {
     display: block;
-    margin: 3em auto 1.5em auto;
+    margin: 1.5em auto 1.5em auto;
   }
 }
 /* line 54, src/components/_header.scss */
