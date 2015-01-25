@@ -52,7 +52,8 @@ define(function(require, exports, module) {
         },
 
         events: {
-            'submit @ui.form': 'onFormSubmit'
+            'submit @ui.form': 'onFormSubmit',
+            'focus @ui.inputAddress': 'onFormFocus'
         },
 
         behaviors: {
@@ -75,7 +76,6 @@ define(function(require, exports, module) {
         },
 
         centerLocation: function(view) {
-            //console.log('centerLocation');
             this.ui.results.addClass('location-centered');
             this.triggerMethod('CenterLocation', view.model);
         },
@@ -100,14 +100,24 @@ define(function(require, exports, module) {
         },
 
         onUpdateAddress: function() {
-            if (_.isUndefined(this.model.get('location')) || this.model.get('location') == null) {
+            if (_.isUndefined(this.model.get('location')) || this.model.get('location') === null) {
                 this.ui.inputAddress.val('');
                 return this.$el.removeClass('showing-results');
-            };
+            }
             _.each(this.locations, this.setDistance, this);
             var results = _.sortBy(this.locations, this.sortLocations);
-            console.log(results);
             this.collection.reset(results.slice(0, 3));
+            this.checkResults(results.slice(0, 3));
+        },
+
+        checkResults: function(results) {
+            console.log(results);
+            if (results[0].distance > 60) {
+                console.log('too far away');
+
+                return;
+            }
+
             this.$el.addClass('showing-results');
         },
 
@@ -127,20 +137,19 @@ define(function(require, exports, module) {
 
             var address = $(e.currentTarget).find('input[name=address]').val();
 
-            // this.resetErrors();
+            this.resetErrors();
 
-            // if (this.isFormValid(address)) {
-                this.ui.inputAddress.val(address);
+            if (this.isFormValid(address)) {
+                this.model.set('address', address);
+            } else {
+                console.log('error');
+                this.addError('Please enter a zip code', this.ui.inputAddress);
+                this.showErrors();
+            }
+        },
 
-                channels.globalChannel.trigger('navigate', {
-                    route: '/retailers/' + address,
-                    triggerStatus: true
-                });
-            // } else {
-            //     console.log('error');
-            //     this.addError('Please enter a zip code', this.ui.inputAddress);
-            //     this.showErrors();
-            // }
+        onFormFocus: function() {
+            this.ui.inputAddress.val('');
         },
 
         resetErrors: function() {
@@ -162,12 +171,7 @@ define(function(require, exports, module) {
             errorContainer.appendTo(this.ui.errors);
         },
 
-        onSuccess: function() {
-            this.$el.addClass('success-showing');
-        },
-
         onLocationMarkerClicked: function(location) {
-            //console.log('onLocationMarkerClicked');
             var model = this.collection.get(location);
             model.collection.setActiveModel(model);
         },
@@ -176,6 +180,11 @@ define(function(require, exports, module) {
             var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(parseInt(address, 10));
 
             return isValidZip;
+        },
+
+        handleBackgrounds: function() {
+            var height = this.ui.masthead.innerHeight();
+            this.ui.masthead.parent().css('height', height);
         }
 
     });

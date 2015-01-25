@@ -52,12 +52,12 @@ define(function(require, exports, module) {
         makeMarker: function(location, i) {
             var self = this;
 
-            var iconImage = {
-                url: '/img/get-face-tape/marker-' + (i + 1) + '.png',
-                scaledSize: new GMaps.Size(40, 59),
-                origin: new GMaps.Point(0, 0),
-                anchor: new GMaps.Point(20, 59)
-            };
+            // var iconImage = {
+            //     url: '/img/get-face-tape/marker-' + (i + 1) + '.png',
+            //     scaledSize: new GMaps.Size(40, 59),
+            //     origin: new GMaps.Point(0, 0),
+            //     anchor: new GMaps.Point(20, 59)
+            // };
 
             var latlng = new GMaps.LatLng(location.get('lat'), location.get('lng'));
             this.latLngBounds.extend(latlng);
@@ -65,10 +65,10 @@ define(function(require, exports, module) {
             var marker = new GMaps.Marker({
                 position: latlng,
                 map: this.map,
-                icon: iconImage,
+                // icon: iconImage,
                 title: location.get('title'),
                 visible: true,
-                loaction: location
+                location: location
             });
 
             var map = this.map;
@@ -79,8 +79,6 @@ define(function(require, exports, module) {
 
             this.markers.push(marker);
             location.marker = marker;
-            console.log('make marker');
-
         },
 
         plotLocations: function() {

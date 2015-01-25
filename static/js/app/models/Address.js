@@ -33,7 +33,6 @@ define(function(require, exports, module) {
         setlocationsByResults: function(results, status) {
             if (status == window.google.maps.GeocoderStatus.OK) {
                 this.set('location', results[0].geometry.location);
-                console.log(this.get('location'));
             } else {
                 this.set('location', null);
             }

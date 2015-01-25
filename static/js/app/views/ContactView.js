@@ -95,7 +95,12 @@ define(function(require, exports, module) {
             successContainer.text('Message sent.').appendTo(this.ui.success);
 
             successContainer.appendTo(this.ui.success);
-        }
+        },
+
+        handleBackgrounds: function() {
+            var height = this.ui.masthead.innerHeight();
+            this.ui.masthead.parent().css('height', height);
+        },
 
     });
 });

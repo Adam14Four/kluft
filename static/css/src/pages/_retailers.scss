@@ -15,7 +15,10 @@
     }
 
     .masthead-5 { background-image: url(../img/pages/retailers/masthead.jpg); }
-    // #map { background-image: url(../img/pages/retailers/map.jpg); }
+
+    .masthead .text-box {
+        max-width: 550px;
+    }
 
     .map {
         position: absolute;

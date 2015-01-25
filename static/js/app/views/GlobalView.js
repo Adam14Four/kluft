@@ -20,7 +20,7 @@ define(function(require, exports, module) {
         initialize: function() {
 
             // Javascript is ready... go!
-            this.$el.removeClass(constants.INITING_CLASS);
+            // this.$el.removeClass(constants.INITING_CLASS);
 
             // Check aspect ratio onResize and throw a warning if necessary
             // this.checkAspectRatio();

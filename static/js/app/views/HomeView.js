@@ -6,6 +6,7 @@ define(function(require, exports, module) {
         constants = require('app/utils/constants'),
         template = require('hbs!templates/home');
 
+        require('stellar');
         require('jquery.viewport');
 
     return BaseView.extend({
@@ -15,7 +16,8 @@ define(function(require, exports, module) {
         template: template,
 
         ui: {
-            masthead: '.intro .masthead'
+            masthead: '.intro .masthead',
+            allMastheads: '.masthead'
         },
 
         events: {
@@ -23,12 +25,24 @@ define(function(require, exports, module) {
 
         initialize: function(options) {
             $(window).on('scroll.page', _.bind(this.scrollEffects, this));
+            $(window).on('resize.page', _.bind(this.handleBackgrounds, this));
             this.window = $(window);
             this.faded = false;
         },
 
         onShow: function() {
             this.textBox = $('.intro .masthead .text-box');
+            // $('.grid .intro').stellar();
+            $.stellar({
+                horizontalScrolling: false,
+                verticalOffset: 0,
+                horizontalOffset: 0,
+                responsive: true
+            });
+
+            // $.stellar('refresh');
+
+            this.handleBackgrounds();
         },
 
         scrollEffects: function(e) {
@@ -40,6 +54,13 @@ define(function(require, exports, module) {
                 this.faded = false;
             }
             $('.block-image:in-viewport').addClass('in-view');
+        },
+
+        handleBackgrounds: function() {
+            var height = this.ui.masthead.innerHeight();
+            this.ui.allMastheads.each(function(){
+                $(this).parent().css('height', height);
+            });
         },
 
         onDestroy: function() {

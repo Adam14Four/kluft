@@ -11,8 +11,12 @@ define(function(require, exports, module) {
             this.each(function(model) {
                 if (model === activeModel) return;
                 model.set('active', false);
-            })
-        }
+            });
+        },
+
+        onReset: function() {
+            console.log('reset');
+        },
 
     });
 });

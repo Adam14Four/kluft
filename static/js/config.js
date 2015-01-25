@@ -27,6 +27,7 @@ requirejs.config({
         'velocity': 'libs/velocity',
         'jquery.viewport': 'libs/jquery.viewport',
         'async': 'libs/async',
+        'stellar': 'libs/stellar',
 
         // shortcut to templates
         templates: './templates'
@@ -42,6 +43,9 @@ requirejs.config({
             deps: ['jquery']
         },
         'jquery.viewport': {
+            deps: ['jquery']
+        },
+        'stellar': {
             deps: ['jquery']
         }
     },

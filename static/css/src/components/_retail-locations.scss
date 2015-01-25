@@ -1,4 +1,12 @@
 .retail-locations {
+    opacity: 0;
+    visibility:hidden;
+    @include transition(all 0.3s $easeInOut);
+
+    .showing-results & {
+        opacity: 1;
+        visibility: visible;
+    }
 
     li {
         position: relative;

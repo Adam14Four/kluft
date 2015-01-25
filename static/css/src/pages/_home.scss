@@ -8,6 +8,18 @@
     .block-4 { background-image: url(../img/pages/home/block-4.jpg); }
     .block-5 { background-image: url(../img/pages/home/block-5.jpg); }
 
+    .grid .section {
+        overflow: hidden;
+
+        &:last-child {
+            padding-bottom: 12em;
+        }
+    }
+
+    .masthead {
+        // background-attachment: fixed;
+    }
+
     .earl {
         position: absolute;
         top: 4.4%;

@@ -35,7 +35,7 @@ define(function(require) {
         initialize: function() {
             var self = this;
 
-            app.firstLoad = true;
+            app.onload = true;
             this.bootstrap();
         },
 
@@ -77,7 +77,8 @@ define(function(require) {
             $('.preloader').velocity({
                 opacity: 0
             }, {
-                duration: 500,
+                delay: 500,
+                duration: 600,
                 display: 'none'
             });
 
@@ -141,15 +142,10 @@ define(function(require) {
             this.address = this.address || new Address();
             this.address.set('address', address);
 
-            console.log(this.address)
-
-            // console.log(app.contentRegion)
-
-            // if (app.contentRegion.currentView === this.retailersView && app.regionMain.currentView !== null) {
+            // if (app.contentRegion.currentView === this.retailersView && app.contentRegion.currentView !== null) {
+            //     console.log('already open');
             //     return;
             // }
-
-            console.log(app)
 
             this.retailersView = new RetailersView({
                 model: this.address,

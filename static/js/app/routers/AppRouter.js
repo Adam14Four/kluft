@@ -16,6 +16,7 @@ define(function (require, exports, module) {
             'kluft-standard(/)': 'kluftStandard',
             'retailers(/)(/:address)': 'retailers',
             'contact(/)': 'contact'
+
         },
 
         controller: new AppController()
