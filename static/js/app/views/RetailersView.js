@@ -112,11 +112,11 @@ define(function(require, exports, module) {
 
         checkResults: function(results) {
             console.log(results);
-            if (results[0].distance > 60) {
-                console.log('too far away');
+            // if (results[0].distance > 60) {
+            //     console.log('too far away');
 
-                return;
-            }
+            //     return;
+            // }
 
             this.$el.addClass('showing-results');
         },
