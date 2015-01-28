@@ -1463,15 +1463,28 @@ button {
 }
 
 /* line 5, src/components/_grid.scss */
+.mobile-grid {
+  font-size: 10px;
+}
+/* line 8, src/components/_grid.scss */
+.mobile-grid .block-text {
+  font-size: 12px;
+}
+/* line 12, src/components/_grid.scss */
+.mobile-grid .masthead .text-box {
+  font-size: 12px;
+}
+
+/* line 17, src/components/_grid.scss */
 .headline {
   padding: 9em 0 5em 0;
   text-align: center;
 }
-/* line 9, src/components/_grid.scss */
+/* line 21, src/components/_grid.scss */
 .headline h3 {
   letter-spacing: 0.4em;
 }
-/* line 13, src/components/_grid.scss */
+/* line 25, src/components/_grid.scss */
 .headline h6 {
   margin-top: 0.8em;
   font-size: 1.9em;
@@ -1499,7 +1512,7 @@ button {
 .beyond-luxury.page .mobile-grid .masthead, .kluft-signature.page .mobile-grid .masthead,
 .royal-sovereign-latex.page .mobile-grid .masthead, .about.page .mobile-grid .masthead,
 .kluft-standard.page .mobile-grid .masthead {
-  padding-bottom: 100%;
+  padding-bottom: 120%;
 }
 /* line 18, src/components/_mobile-grid.scss */
 .home.page .mobile-grid .masthead-1 .text-box, .collections.page .mobile-grid .masthead-1 .text-box,
@@ -1552,8 +1565,9 @@ button {
 .royal-sovereign-latex.page .mobile-grid .masthead-4 .text-box, .about.page .mobile-grid .masthead-4 .text-box,
 .kluft-standard.page .mobile-grid .masthead-4 .text-box {
   width: 100%;
+  font-size: 8px;
 }
-/* line 45, src/components/_mobile-grid.scss */
+/* line 46, src/components/_mobile-grid.scss */
 .home.page .mobile-grid .masthead-4 .text-box .text-wrap, .collections.page .mobile-grid .masthead-4 .text-box .text-wrap,
 .method.page .mobile-grid .masthead-4 .text-box .text-wrap, .royal-sovereign.page .mobile-grid .masthead-4 .text-box .text-wrap,
 .beyond-luxury.page .mobile-grid .masthead-4 .text-box .text-wrap, .kluft-signature.page .mobile-grid .masthead-4 .text-box .text-wrap,
@@ -1562,7 +1576,7 @@ button {
   width: 100%;
   padding: 0;
 }
-/* line 52, src/components/_mobile-grid.scss */
+/* line 53, src/components/_mobile-grid.scss */
 .home.page .mobile-grid .headline, .collections.page .mobile-grid .headline,
 .method.page .mobile-grid .headline, .royal-sovereign.page .mobile-grid .headline,
 .beyond-luxury.page .mobile-grid .headline, .kluft-signature.page .mobile-grid .headline,
@@ -1570,7 +1584,7 @@ button {
 .kluft-standard.page .mobile-grid .headline {
   padding: 5em 0;
 }
-/* line 56, src/components/_mobile-grid.scss */
+/* line 57, src/components/_mobile-grid.scss */
 .home.page .mobile-grid p:nth-child(2), .collections.page .mobile-grid p:nth-child(2),
 .method.page .mobile-grid p:nth-child(2), .royal-sovereign.page .mobile-grid p:nth-child(2),
 .beyond-luxury.page .mobile-grid p:nth-child(2), .kluft-signature.page .mobile-grid p:nth-child(2),
@@ -1578,7 +1592,7 @@ button {
 .kluft-standard.page .mobile-grid p:nth-child(2) {
   margin-top: 1.5em;
 }
-/* line 60, src/components/_mobile-grid.scss */
+/* line 61, src/components/_mobile-grid.scss */
 .home.page .mobile-grid .block,
 .home.page .mobile-grid .block-1,
 .home.page .mobile-grid .block-2,
@@ -1661,7 +1675,7 @@ button {
   padding-bottom: 100%;
   margin: 2.5%;
 }
-/* line 76, src/components/_mobile-grid.scss */
+/* line 77, src/components/_mobile-grid.scss */
 .home.page .mobile-grid .block-link, .home.page .mobile-grid .block-text, .collections.page .mobile-grid .block-link, .collections.page .mobile-grid .block-text,
 .method.page .mobile-grid .block-link,
 .method.page .mobile-grid .block-text, .royal-sovereign.page .mobile-grid .block-link, .royal-sovereign.page .mobile-grid .block-text,

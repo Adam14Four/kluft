@@ -16,7 +16,7 @@ define(function(require, exports, module) {
         template: template,
 
         ui: {
-            masthead: '.intro .masthead'
+            masthead: '.grid .intro .masthead'
         },
 
         events: {
@@ -31,7 +31,7 @@ define(function(require, exports, module) {
 
         onShow: function() {
             $.stellar('refresh');
-            this.textBox = $('.intro .masthead .text-box');
+            this.textBox = $('.grid .intro .masthead .text-box');
 
             $.stellar({
                 horizontalScrolling: false,

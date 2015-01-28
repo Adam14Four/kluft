@@ -16,7 +16,7 @@ define(function(require, exports, module) {
         template: template,
 
         ui: {
-            masthead: '.intro .masthead'
+            masthead: '.grid .intro .masthead'
         },
 
         events: {
