@@ -45,6 +45,10 @@
         display: inline-block;
         margin: 1.5em;
 
+        .menu-is-open.touch & {
+            margin-left: -4.0em;
+        }
+
         @media (min-width: 880px) {
             display: block;
             margin: 1.5em auto 1.5em auto;
