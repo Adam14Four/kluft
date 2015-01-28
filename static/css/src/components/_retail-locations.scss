@@ -1,6 +1,7 @@
 .retail-locations {
     opacity: 0;
     visibility:hidden;
+    overflow-x: hidden;
     @include transition(all 0.3s $easeInOut);
 
     .showing-results & {
@@ -11,7 +12,6 @@
     li {
         position: relative;
         padding: 2em 0 4em;
-        margin-left: 20%;
 
         &:before {
             @extend .h9;
@@ -23,6 +23,37 @@
             content: attr(data-text);
             background-color: $black;
             color: $white;
+        }
+
+        &:nth-child(1) {
+            &:before {
+                content: 'A'
+            }
+        }
+        &:nth-child(2) {
+            &:before {
+                content: 'B'
+            }
+        }
+        &:nth-child(3) {
+            &:before {
+                content: 'C'
+            }
+        }
+        &:nth-child(4) {
+            &:before {
+                content: 'D'
+            }
+        }
+        &:nth-child(5) {
+            &:before {
+                content: 'E'
+            }
+        }
+        &:nth-child(6) {
+            &:before {
+                content: 'F'
+            }
         }
     }
 
@@ -47,21 +78,8 @@
 
     .location-list {
         padding: 8em 0 15em;
-    }
-
-    @media (min-width: 600px) {
-        .location-list {
-            width: 80%;
-            margin-left: 20%;
-        }
-
-        li {
-            margin-left: 0;
-            display: inline-block;
-            &:nth-child(odd) {
-                margin-right: 27%;
-            }
-        }
+        width: 80%;
+        margin: 0 auto;
     }
 }
 

@@ -11,7 +11,7 @@ define(function(require, exports, module) {
 
         defaults: {
             zoom: 12,
-            center: [34.09541, -117.56289]
+
         },
 
         ui: {
@@ -29,6 +29,7 @@ define(function(require, exports, module) {
             this.removeAllMarkers();
             this.checkResize();
             var location = this.view.model.get('location');
+            console.log(location)
             this.map.setCenter(location);
             this.plotLocations();
         },
@@ -90,7 +91,32 @@ define(function(require, exports, module) {
         },
 
         showInitialMap: function() {
-            this.map.setCenter(new GMaps.LatLng(34.09541, -117.56289));
+            var center = new GMaps.LatLng(34.09541, -117.56289);
+            var offcenter = new GMaps.LatLng(34.02541, -117.56289);
+            this.map.setCenter(offcenter);
+
+            var self = this;
+            var latlng = center;
+
+            this.latLngBounds = new GMaps.LatLngBounds();
+            this.latLngBounds.extend(latlng);
+
+            var marker = new GMaps.Marker({
+                position: latlng,
+                map: this.map,
+                visible: true,
+                location: location
+            });
+
+            var map = this.map;
+
+            this.markers.push(marker);
+            location.marker = marker;
+        },
+
+        mapStyles: function() {
+            this.mapStyles = [{"featureType":"administrative","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"administrative.locality","elementType":"geometry.stroke","stylers":[{"visibility":"on"}]},{"featureType":"administrative.locality","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"weight":"0.36"},{"gamma":"1.43"},{"lightness":"17"},{"saturation":"14"}]},{"featureType":"landscape.man_made","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"lightness":"0"}]},{"featureType":"landscape.natural.terrain","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"lightness":"40"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"lightness":"0"},{"weight":"1.00"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"lightness":"26"}]}];
+            this.map.setOptions({ styles: this.mapStyles });
         },
 
         checkResize: function() {
