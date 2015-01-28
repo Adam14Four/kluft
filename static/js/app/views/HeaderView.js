@@ -24,31 +24,10 @@ define(function(require, exports, module) {
 
         initialize: function(options) {
             $(window).on('resize', _.bind(this.setMobileMenu, this));
-
-            // this.lastScrollTop = 0;
-            // this.winHeight = $(window).height();
-            // this.docHeight = $(document).height();
-            // this.didScroll = false;
-            // this.delta = 5;
-            // this.navbarHeight = this.$el.outerHeight();
-
         },
 
         onShow: function() {
             this.setMobileMenu();
-            // var self = this;
-            // _.bindAll(this, 'hasScrolled');
-
-            // setInterval(function() {
-            //     if (self.didScroll) {
-            //         self.hasScrolled();
-            //         self.didScroll = false;
-            //     }
-            // }, 250);
-
-            // $(window).scroll(function(event){
-            //     self.didScroll = true;
-            // });
         },
 
         setMobileMenu: function() {

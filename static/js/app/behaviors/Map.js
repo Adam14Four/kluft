@@ -93,7 +93,7 @@ define(function(require, exports, module) {
         showInitialMap: function() {
             var center = new GMaps.LatLng(34.09541, -117.56289);
             var offcenter = new GMaps.LatLng(34.02541, -117.56289);
-            this.map.setCenter(offcenter);
+            this.map.setCenter(center);
 
             var self = this;
             var latlng = center;
