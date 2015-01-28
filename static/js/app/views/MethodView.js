@@ -30,6 +30,7 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
+            $.stellar('refresh');
             this.textBox = $('.intro .masthead .text-box');
 
             $.stellar({
@@ -38,8 +39,6 @@ define(function(require, exports, module) {
                 horizontalOffset: 0,
                 responsive: true
             });
-
-            $.stellar('refresh');
 
             this.handleBackgrounds();
         },

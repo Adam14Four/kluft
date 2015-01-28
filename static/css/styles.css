@@ -2103,7 +2103,7 @@ button {
 }
 /* line 14, src/pages/_collections.scss */
 .collections.page .masthead-4 {
-  padding-bottom: 35.2%;
+  padding-bottom: 42.2%;
 }
 /* line 17, src/pages/_collections.scss */
 .collections.page .masthead-4 h2 {
@@ -2212,39 +2212,40 @@ button {
 /* line 12, src/pages/_about.scss */
 .about.page .block-3 {
   margin-top: 4.5em;
+  margin-left: 0;
 }
-/* line 16, src/pages/_about.scss */
+/* line 17, src/pages/_about.scss */
 .about.page .block-text-1 {
   margin-top: 7.5em;
   margin-left: 17%;
 }
-/* line 20, src/pages/_about.scss */
+/* line 21, src/pages/_about.scss */
 .about.page .block-text-1 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 26, src/pages/_about.scss */
+/* line 27, src/pages/_about.scss */
 .about.page .block-text-2 {
   margin-top: 6.5em;
   margin-left: 17%;
 }
-/* line 30, src/pages/_about.scss */
+/* line 31, src/pages/_about.scss */
 .about.page .block-text-2 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 36, src/pages/_about.scss */
+/* line 37, src/pages/_about.scss */
 .about.page .block-text-3 {
   margin: 17.7em 0 9em 0;
   width: 80%;
 }
-/* line 40, src/pages/_about.scss */
+/* line 41, src/pages/_about.scss */
 .about.page .block-text-3 .h6 {
   line-height: 1.5;
   letter-spacing: 0.42em;
   text-transform: uppercase;
 }
-/* line 45, src/pages/_about.scss */
+/* line 46, src/pages/_about.scss */
 .about.page .block-text-3 .h7 {
   margin-top: 1.6em;
   font-size: 1.8em;
@@ -2286,7 +2287,7 @@ button {
 }
 /* line 15, src/pages/_method.scss */
 .method.page .masthead-4 {
-  padding-bottom: 35.2%;
+  padding-bottom: 42.2%;
 }
 /* line 19, src/pages/_method.scss */
 .method.page .h8, .method.page .retailers.page .errors p, .retailers.page .errors .method.page p {
@@ -2529,7 +2530,7 @@ button {
 }
 /* line 7, src/pages/_kluft-standard.scss */
 .kluft-standard.page .masthead-4 {
-  padding-bottom: 35.2%;
+  padding-bottom: 42.2%;
 }
 /* line 10, src/pages/_kluft-standard.scss */
 .kluft-standard.page .masthead-4 .text-box {
@@ -2755,7 +2756,7 @@ button {
 /* line 7, src/pages/_contact.scss */
 .contact.page .masthead {
   background-image: url(../img/pages/contact/masthead.jpg);
-  padding-bottom: 27.4%;
+  padding-bottom: 37.4%;
 }
 /* line 11, src/pages/_contact.scss */
 .contact.page .masthead .text-box {

@@ -30,6 +30,7 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
+            $.stellar('refresh');
             this.textBox = $('.intro .masthead .text-box');
 
             $.stellar({
@@ -39,16 +40,16 @@ define(function(require, exports, module) {
                 responsive: true
             });
 
-            $.stellar('refresh');
+
 
             this.handleBackgrounds();
         },
 
         scrollEffects: function(e) {
-            if (this.window.scrollTop() > 150 && !this.faded) {
+            if (this.window.scrollTop() > 250 && !this.faded) {
                 this.textBox.addClass('fade-out');
                 this.faded = true;
-            } else if (this.window.scrollTop() < 150 && this.faded) {
+            } else if (this.window.scrollTop() < 250 && this.faded) {
                 this.textBox.removeClass('fade-out');
                 this.faded = false;
             }

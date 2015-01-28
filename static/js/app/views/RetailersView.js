@@ -106,8 +106,8 @@ define(function(require, exports, module) {
             }
             _.each(this.locations, this.setDistance, this);
             var results = _.sortBy(this.locations, this.sortLocations);
-            this.collection.reset(results.slice(0, 3));
-            this.checkResults(results.slice(0, 3));
+            this.collection.reset(results.slice(0, 6));
+            this.checkResults(results.slice(0, 6));
         },
 
         checkResults: function(results) {
@@ -141,6 +141,7 @@ define(function(require, exports, module) {
 
             if (this.isFormValid(address)) {
                 this.model.set('address', address);
+                console.log(address);
             } else {
                 console.log('error');
                 this.addError('Please enter a zip code', this.ui.inputAddress);
