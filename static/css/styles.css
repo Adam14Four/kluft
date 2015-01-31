@@ -1469,17 +1469,21 @@ button {
 .mobile-grid .block-text {
   font-size: 12px;
 }
+/* line 10, src/components/_grid.scss */
+.mobile-grid .block-text p {
+  font-size: 1.3em;
+}
 
-/* line 13, src/components/_grid.scss */
+/* line 17, src/components/_grid.scss */
 .headline {
   padding: 9em 0 5em 0;
   text-align: center;
 }
-/* line 17, src/components/_grid.scss */
+/* line 21, src/components/_grid.scss */
 .headline h3 {
   letter-spacing: 0.4em;
 }
-/* line 21, src/components/_grid.scss */
+/* line 25, src/components/_grid.scss */
 .headline h6 {
   margin-top: 0.8em;
   font-size: 1.9em;
@@ -2694,52 +2698,54 @@ button {
 .royal-sovereign-latex.page .masthead .text-box h4 {
   margin: 0.5em 0 0.5em 0;
   line-height: 1.3;
+  text-shadow: rgba(255, 255, 255, 0.86275) 1px 2px 26.46px;
 }
-/* line 20, src/pages/_royal-sovereign-latex.scss */
+/* line 21, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .masthead .text-box .h7 {
   line-height: 2;
+  text-shadow: rgba(255, 255, 255, 0.86275) 1px 2px 26.46px;
 }
-/* line 27, src/pages/_royal-sovereign-latex.scss */
+/* line 29, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .masthead {
   background-image: url(../img/pages/royal-sovereign-latex/masthead.jpg);
 }
-/* line 28, src/pages/_royal-sovereign-latex.scss */
+/* line 30, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .block-1 {
   background-image: url(../img/pages/royal-sovereign-latex/block-1.jpg);
 }
-/* line 29, src/pages/_royal-sovereign-latex.scss */
+/* line 31, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .block-2 {
   background-image: url(../img/pages/royal-sovereign-latex/block-2.jpg);
 }
-/* line 31, src/pages/_royal-sovereign-latex.scss */
+/* line 33, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .block-1 {
   margin: 3.0em 0 0 30%;
 }
-/* line 35, src/pages/_royal-sovereign-latex.scss */
+/* line 37, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .block-text-1 {
   width: 70%;
   margin: 14em 0 2.6em 30%;
 }
-/* line 39, src/pages/_royal-sovereign-latex.scss */
+/* line 41, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .block-text-1 p {
   margin-top: 1em;
   line-height: 2.6;
 }
-/* line 45, src/pages/_royal-sovereign-latex.scss */
+/* line 47, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .block-text-2 {
   width: 70%;
   margin: 8em 0 2.6em 0;
 }
-/* line 49, src/pages/_royal-sovereign-latex.scss */
+/* line 51, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .block-text-2 p {
   margin-top: 1em;
   line-height: 2.6;
 }
-/* line 55, src/pages/_royal-sovereign-latex.scss */
+/* line 57, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .block-link-1 {
   margin-top: 6em;
 }
-/* line 59, src/pages/_royal-sovereign-latex.scss */
+/* line 61, src/pages/_royal-sovereign-latex.scss */
 .royal-sovereign-latex.page .h8, .royal-sovereign-latex.page .retailers.page .errors p, .retailers.page .errors .royal-sovereign-latex.page p {
   line-height: 2;
 }

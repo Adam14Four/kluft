@@ -36,6 +36,7 @@ define(function(require, exports, module) {
         },
 
         onFormSubmit: function(event) {
+            console.log('SUBMIT')
             event.stopPropagation();
             event.preventDefault();
 
