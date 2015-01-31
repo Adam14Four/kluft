@@ -7,9 +7,38 @@
     margin-left: auto;
     margin-right: auto;
 
-    // &.decoration {
-    //     display: none;
-    // }
+    &:hover {
+        .overlay {
+            opacity: 1;
+        }
+    }
+
+    .overlay-link {
+        @extend %spread;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        background-color: rgba(21, 21, 21, 0.5);
+        opacity: 0;
+        @include transition(all 0.3s $easeInOut);
+
+        h4 {
+            font-family: $MrsEavesBold;
+            font-size: 1.6em;
+            color: $white;
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.5;
+            @extend %absolute-center;
+        }
+
+    }
 }
 
 .block-image {

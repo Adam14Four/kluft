@@ -433,7 +433,7 @@ th {
 }
 
 /* line 42, src/_extends.scss */
-.preloader {
+.preloader, .block .overlay-link {
   position: absolute;
   top: 0;
   right: 0;
@@ -449,7 +449,7 @@ th {
 .method.page .mobile-grid .masthead-1 .text-box, .royal-sovereign.page .mobile-grid .masthead-1 .text-box,
 .beyond-luxury.page .mobile-grid .masthead-1 .text-box, .kluft-signature.page .mobile-grid .masthead-1 .text-box,
 .royal-sovereign-latex.page .mobile-grid .masthead-1 .text-box, .about.page .mobile-grid .masthead-1 .text-box,
-.kluft-standard.page .mobile-grid .masthead-1 .text-box, .contact.page .masthead .text-box {
+.kluft-standard.page .mobile-grid .masthead-1 .text-box, .block .overlay h4, .contact.page .masthead .text-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1697,8 +1697,36 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
+/* line 11, src/components/_grid-blocks.scss */
+.block:hover .overlay {
+  opacity: 1;
+}
+/* line 20, src/components/_grid-blocks.scss */
+.block .overlay {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(21, 21, 21, 0.5);
+  opacity: 0;
+  -moz-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+/* line 30, src/components/_grid-blocks.scss */
+.block .overlay h4 {
+  font-family: "Mrs Eaves OT";
+  font-size: 1.6em;
+  color: #ffffff;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
+}
 
-/* line 15, src/components/_grid-blocks.scss */
+/* line 44, src/components/_grid-blocks.scss */
 .block-image {
   opacity: 0;
   -moz-transform: translate3d(0, 10px, 0);
@@ -1710,7 +1738,7 @@ button {
   -webkit-transition-delay: 0.3s;
   transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0.3s;
 }
-/* line 20, src/components/_grid-blocks.scss */
+/* line 49, src/components/_grid-blocks.scss */
 .block-image.in-view {
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
@@ -1718,123 +1746,123 @@ button {
   opacity: 1;
 }
 
-/* line 26, src/components/_grid-blocks.scss */
+/* line 55, src/components/_grid-blocks.scss */
 .block-double {
   margin-top: 1.5em;
 }
-/* line 28, src/components/_grid-blocks.scss */
+/* line 57, src/components/_grid-blocks.scss */
 .block-double .block {
   display: inline-block;
   float: left;
   margin-right: 1.5em;
 }
 
-/* line 35, src/components/_grid-blocks.scss */
+/* line 64, src/components/_grid-blocks.scss */
 .block-40 {
   width: 40%;
 }
 
-/* line 39, src/components/_grid-blocks.scss */
+/* line 68, src/components/_grid-blocks.scss */
 .block-60 {
   width: 60%;
 }
 
-/* line 43, src/components/_grid-blocks.scss */
+/* line 72, src/components/_grid-blocks.scss */
 .block-66 {
   width: 66.66%;
 }
 
-/* line 47, src/components/_grid-blocks.scss */
+/* line 76, src/components/_grid-blocks.scss */
 .block-70 {
   width: 70%;
 }
 
-/* line 51, src/components/_grid-blocks.scss */
+/* line 80, src/components/_grid-blocks.scss */
 .block-86 {
   width: 86%;
   margin-left: 14%;
   padding-bottom: 92%;
 }
 
-/* line 57, src/components/_grid-blocks.scss */
+/* line 86, src/components/_grid-blocks.scss */
 .block-87 {
   width: 87%;
   margin-left: 13%;
   padding-bottom: 123.5%;
 }
 
-/* line 63, src/components/_grid-blocks.scss */
+/* line 92, src/components/_grid-blocks.scss */
 .block-100 {
   width: 100%;
 }
 
-/* line 68, src/components/_grid-blocks.scss */
+/* line 97, src/components/_grid-blocks.scss */
 .aspect-1.block-40 {
   padding-bottom: 40%;
 }
-/* line 71, src/components/_grid-blocks.scss */
+/* line 100, src/components/_grid-blocks.scss */
 .aspect-1.block-60 {
   padding-bottom: 60%;
 }
-/* line 74, src/components/_grid-blocks.scss */
+/* line 103, src/components/_grid-blocks.scss */
 .aspect-1.block-66 {
   padding-bottom: 66.66%;
 }
-/* line 77, src/components/_grid-blocks.scss */
+/* line 106, src/components/_grid-blocks.scss */
 .aspect-1.block-70 {
   padding-bottom: 70%;
 }
 
-/* line 83, src/components/_grid-blocks.scss */
+/* line 112, src/components/_grid-blocks.scss */
 .aspect-58.block-66 {
   padding-bottom: 39%;
 }
-/* line 86, src/components/_grid-blocks.scss */
+/* line 115, src/components/_grid-blocks.scss */
 .aspect-58.block-70 {
   padding-bottom: 58%;
 }
-/* line 89, src/components/_grid-blocks.scss */
+/* line 118, src/components/_grid-blocks.scss */
 .aspect-58.block-100 {
   padding-bottom: 58%;
 }
 
-/* line 98, src/components/_grid-blocks.scss */
+/* line 127, src/components/_grid-blocks.scss */
 .aspect-63.block-100 {
   padding-bottom: 63%;
 }
 
-/* line 104, src/components/_grid-blocks.scss */
+/* line 133, src/components/_grid-blocks.scss */
 .aspect-75.block-66 {
   padding-bottom: 50%;
 }
-/* line 107, src/components/_grid-blocks.scss */
+/* line 136, src/components/_grid-blocks.scss */
 .aspect-75.block-100 {
   padding-bottom: 75%;
 }
 
-/* line 113, src/components/_grid-blocks.scss */
+/* line 142, src/components/_grid-blocks.scss */
 .aspect-87.block-66 {
   padding-bottom: 58%;
 }
-/* line 116, src/components/_grid-blocks.scss */
+/* line 145, src/components/_grid-blocks.scss */
 .aspect-87.block-100 {
   padding-bottom: 87%;
 }
 
-/* line 125, src/components/_grid-blocks.scss */
+/* line 154, src/components/_grid-blocks.scss */
 .aspect-92.block-100 {
   padding-bottom: 92%;
 }
 
-/* line 131, src/components/_grid-blocks.scss */
+/* line 160, src/components/_grid-blocks.scss */
 .aspect-114.block-66 {
   padding-bottom: 76%;
 }
-/* line 134, src/components/_grid-blocks.scss */
+/* line 163, src/components/_grid-blocks.scss */
 .aspect-114.block-70 {
   padding-bottom: 88%;
 }
-/* line 137, src/components/_grid-blocks.scss */
+/* line 166, src/components/_grid-blocks.scss */
 .aspect-114.block-100 {
   padding-bottom: 114%;
 }
