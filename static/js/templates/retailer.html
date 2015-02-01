@@ -1,9 +1,9 @@
 <h6 class="h9">{{title}}</h6>
 <address>
     {{street}}</br>
-    {{#if street2}}{{street2}}</br>{{/if}}
     {{city}}, {{state}} {{zip}}</br>
     {{phone}}</br>
+    {{#if url}}<a href="{{url}}">{{url}}</a></br>{{/if}}
     {{#if distance}} <span class="distance">{{round distance 1}} miles</span>{{/if}}
     <a href="https://maps.google.com?daddr={{street}}{{street2}}{{city}}{{state}}{{zip}}" class="directions" target="_blank">Directions</a>
 </address>

@@ -1443,18 +1443,35 @@ button {
 }
 /* line 125, src/components/_masthead.scss */
 .masthead-5 .text-box {
-  left: 50%;
-  right: auto;
-  padding-bottom: 6em;
   background-color: transparent;
+  right: auto;
+  bottom: auto;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  transform: translate3d(-50%, -50%, 0);
 }
-/* line 131, src/components/_masthead.scss */
+/* line 136, src/components/_masthead.scss */
 .masthead-5 .text-box .text-wrap {
   padding: 0;
 }
+@media (min-width: 768px) {
+  /* line 142, src/components/_masthead.scss */
+  .masthead-5 .text-box {
+    transform: translate3d(0, 0, 0);
+    text-align: left;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    padding-bottom: 6em;
+    background-color: transparent;
+  }
+}
 
 @media (min-width: 768px) {
-  /* line 137, src/components/_masthead.scss */
+  /* line 154, src/components/_masthead.scss */
   .pull-up {
     margin-top: -4em;
   }
@@ -2897,6 +2914,10 @@ button {
   max-width: 900px;
 }
 /* line 32, src/pages/_contact.scss */
+.contact.page .btn.zipcode {
+  padding: 1.3em 5.4em 1.3em 2em;
+}
+/* line 36, src/pages/_contact.scss */
 .contact.page h4 {
   font-size: 1.6em;
   font-family: "Mrs Eaves Lining OT";
@@ -2904,7 +2925,7 @@ button {
   letter-spacing: 0.1em;
   margin-bottom: 40px;
 }
-/* line 40, src/pages/_contact.scss */
+/* line 44, src/pages/_contact.scss */
 .contact.page .email, .contact.page .message {
   display: block;
   width: 100%;
@@ -2915,29 +2936,29 @@ button {
   letter-spacing: 0.1em;
   padding: 1em 1em 1em 2em;
 }
-/* line 51, src/pages/_contact.scss */
+/* line 55, src/pages/_contact.scss */
 .contact.page .submit {
   float: right;
   padding: 1.4em 2.0em;
   margin-bottom: 11em;
 }
-/* line 57, src/pages/_contact.scss */
+/* line 61, src/pages/_contact.scss */
 .contact.page .errors, .contact.page .success {
   float: left;
   margin-top: 1em;
 }
-/* line 62, src/pages/_contact.scss */
+/* line 66, src/pages/_contact.scss */
 .contact.page .errors p:before, .contact.page .success p:before {
   content: '';
   position: absolute;
   background-size: cover;
 }
 
-/* line 75, src/pages/_contact.scss */
+/* line 79, src/pages/_contact.scss */
 .errors-showing .errors p {
   margin-left: 40px;
 }
-/* line 78, src/pages/_contact.scss */
+/* line 82, src/pages/_contact.scss */
 .errors-showing .errors p:before {
   width: 26px;
   height: 26px;
@@ -2945,11 +2966,11 @@ button {
   background-image: url(../img/failure.png);
 }
 
-/* line 92, src/pages/_contact.scss */
+/* line 96, src/pages/_contact.scss */
 .success-showing .success p {
   margin-left: 50px;
 }
-/* line 95, src/pages/_contact.scss */
+/* line 99, src/pages/_contact.scss */
 .success-showing .success p:before {
   width: 37px;
   height: 26px;
