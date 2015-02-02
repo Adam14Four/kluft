@@ -19,7 +19,9 @@ define(function(require, exports, module) {
             submitBtn: '.submit',
             form: 'form',
             errors: '.errors',
-            success: '.success'
+            success: '.success',
+            'masthead': '.grid .intro .masthead',
+            'intro': '.intro'
         },
 
         events: {
@@ -27,9 +29,27 @@ define(function(require, exports, module) {
         },
 
         initialize: function(options) {
+            $(window).on('scroll.page', _.bind(this.scrollEffects, this));
+            $(window).on('resize.page', _.bind(this.handleBackgrounds, this));
+            this.window = $(window);
+            this.faded = false;
+        },
+
+        scrollEffects: function(e) {
+            this.scrollPos = this.window.scrollTop();
+
+            if (this.window.scrollTop() > 150 && !this.faded) {
+                this.textBox.addClass('fade-out');
+                this.faded = true;
+            } else if (this.window.scrollTop() < 150 && this.faded) {
+                this.textBox.removeClass('fade-out');
+                this.faded = false;
+            }
+            $('.block-image:in-viewport').addClass('in-view');
         },
 
         onShow: function() {
+            this.textBox = $('.intro .masthead .text-box');
         },
 
         setBackgroundSize: function() {

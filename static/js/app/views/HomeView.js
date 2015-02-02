@@ -17,7 +17,8 @@ define(function(require, exports, module) {
 
         ui: {
             masthead: '.grid .intro .masthead',
-            allMastheads: '.grid .masthead'
+            allMastheads: '.grid .masthead',
+            intro: '.intro'
         },
 
         events: {
@@ -28,12 +29,13 @@ define(function(require, exports, module) {
             $(window).on('resize.page', _.bind(this.handleBackgrounds, this));
             this.window = $(window);
             this.faded = false;
+            this.scrollPos = 0;
         },
 
         onShow: function() {
             $.stellar('refresh');
-            this.textBox = $('.intro .masthead .text-box');
-            // $('.grid .intro').stellar();
+            this.textBox = $('.intro .masthead .h10');
+            $('.grid .intro').stellar();
             $.stellar({
                 horizontalScrolling: false,
                 verticalOffset: 0,
@@ -47,6 +49,8 @@ define(function(require, exports, module) {
         },
 
         scrollEffects: function(e) {
+            this.scrollPos = this.window.scrollTop();
+
             if (this.window.scrollTop() > 150 && !this.faded) {
                 this.textBox.addClass('fade-out');
                 this.faded = true;

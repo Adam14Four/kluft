@@ -16,8 +16,8 @@
         }
     }
 
-    .masthead {
-        // background-attachment: fixed;
+    .h10 {
+        @include transition(opacity 0.3s $easeInOut);
     }
 
     .earl {
@@ -38,16 +38,31 @@
     }
 
     .masthead-1, .masthead-2, .masthead-3 {
-        padding-bottom: 120%;
+        // padding-bottom: 120%;
 
-        @media (min-width: 600px) {
-            padding-bottom: 75%;
-        }
+        // @media (min-width: 600px) {
+        //     padding-bottom: 75%;
+        // }
 
-        @media (min-width: 768px) {
-            // background-attachment: fixed;
-            padding-bottom: 52%;
-        }
+        // @media (min-width: 768px) {
+        //     // background-attachment: fixed;
+        //     padding-bottom: 52%;
+        // }
+    }
+
+    .masthead-1 {
+        height: 500px;
+        // position: fixed;
+        background-attachment: fixed;
+    }
+
+    .intro {
+        // height: 500px;
+        // position: fixed;
+    }
+
+    .second-intro {
+        // top: 500px;
     }
 
     .masthead-2 {

@@ -48,7 +48,9 @@ define(function(require, exports, module) {
             'results': '.results',
             'form': '.js-search',
             'inputAddress': 'input[name=address]',
-            'errors': '.errors'
+            'errors': '.errors',
+            'masthead': '.grid .intro .masthead',
+            'intro': '.intro'
         },
 
         events: {
@@ -91,12 +93,30 @@ define(function(require, exports, module) {
         initialize: function() {
             this.locations = locations;
             this.listenTo(this.model, 'change:location', this.onUpdateAddress);
+            $(window).on('scroll.page', _.bind(this.scrollEffects, this));
+            $(window).on('resize.page', _.bind(this.handleBackgrounds, this));
+            this.window = $(window);
+            this.faded = false;
         },
 
         onShow: function() {
             if (!_.isUndefined(this.model.get('location'))) {
                 this.model.trigger('change:location');
             }
+            this.textBox = $('.intro .masthead .text-box');
+        },
+
+        scrollEffects: function(e) {
+            this.scrollPos = this.window.scrollTop();
+
+            if (this.window.scrollTop() > 150 && !this.faded) {
+                this.textBox.addClass('fade-out');
+                this.faded = true;
+            } else if (this.window.scrollTop() < 150 && this.faded) {
+                this.textBox.removeClass('fade-out');
+                this.faded = false;
+            }
+            $('.block-image:in-viewport').addClass('in-view');
         },
 
         onUpdateAddress: function() {
