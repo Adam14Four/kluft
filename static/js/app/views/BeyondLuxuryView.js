@@ -32,6 +32,7 @@ define(function(require, exports, module) {
         onShow: function() {
             $.stellar('refresh');
             this.textBox = $('.intro .masthead .text-box');
+            $('.block-image:in-viewport').addClass('in-view');
 
             $.stellar({
                 horizontalScrolling: false,

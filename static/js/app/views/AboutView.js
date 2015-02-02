@@ -41,7 +41,7 @@ define(function(require, exports, module) {
             });
 
 
-
+            $('.block-image:in-viewport').addClass('in-view');
             this.handleBackgrounds();
         },
 

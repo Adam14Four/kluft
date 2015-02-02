@@ -39,7 +39,7 @@ define(function(require, exports, module) {
                 horizontalOffset: 0,
                 responsive: true
             });
-
+            $('.block-image:in-viewport').addClass('in-view');
 
 
             this.handleBackgrounds();

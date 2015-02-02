@@ -50,6 +50,7 @@ define(function(require, exports, module) {
 
         onShow: function() {
             this.textBox = $('.intro .masthead .text-box');
+            $('.block-image:in-viewport').addClass('in-view');
         },
 
         setBackgroundSize: function() {

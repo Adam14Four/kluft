@@ -1326,7 +1326,7 @@ button {
 }
 /* line 9, src/components/_masthead.scss */
 .masthead.masthead-short {
-  height: 350px;
+  height: 400px;
   overflow: visible;
 }
 /* line 17, src/components/_masthead.scss */
@@ -2042,11 +2042,6 @@ button {
   .home.page .earl {
     display: block;
   }
-}
-/* line 53, src/pages/_home.scss */
-.home.page .masthead-1 {
-  height: 500px;
-  background-attachment: fixed;
 }
 /* line 70, src/pages/_home.scss */
 .home.page .masthead-2 .text-box {

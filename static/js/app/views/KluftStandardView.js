@@ -24,25 +24,26 @@ define(function(require, exports, module) {
 
         initialize: function(options) {
             $(window).on('scroll.page', _.bind(this.scrollEffects, this));
-            // $(window).on('resize.page', _.bind(this.handleBackgrounds, this));
+            $(window).on('resize.page', _.bind(this.handleBackgrounds, this));
             this.window = $(window);
             this.faded = false;
         },
 
         onShow: function() {
-            // $.stellar('refresh');
+            $.stellar('refresh');
             this.textBox = $('.intro .masthead .text-box');
+            $('.block-image:in-viewport').addClass('in-view');
 
-            // $.stellar({
-            //     horizontalScrolling: false,
-            //     verticalOffset: 0,
-            //     horizontalOffset: 0,
-            //     responsive: true
-            // });
+            $.stellar({
+                horizontalScrolling: false,
+                verticalOffset: 0,
+                horizontalOffset: 0,
+                responsive: true
+            });
 
 
 
-            // this.handleBackgrounds();
+            this.handleBackgrounds();
         },
 
         scrollEffects: function(e) {

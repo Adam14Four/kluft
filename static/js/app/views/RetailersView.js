@@ -104,6 +104,7 @@ define(function(require, exports, module) {
                 this.model.trigger('change:location');
             }
             this.textBox = $('.intro .masthead .text-box');
+            $('.block-image:in-viewport').addClass('in-view');
         },
 
         scrollEffects: function(e) {

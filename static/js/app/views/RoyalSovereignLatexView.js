@@ -40,7 +40,7 @@ define(function(require, exports, module) {
                 responsive: true
             });
 
-
+            $('.block-image:in-viewport').addClass('in-view');
 
             this.handleBackgrounds();
         },
