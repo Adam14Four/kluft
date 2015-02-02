@@ -50,11 +50,13 @@ define(function(require, exports, module) {
             'inputAddress': 'input[name=address]',
             'errors': '.errors',
             'masthead': '.grid .intro .masthead',
-            'intro': '.intro'
+            'intro': '.intro',
+            'submitBtn': '.submit'
         },
 
         events: {
             'submit @ui.form': 'onFormSubmit',
+            'click @ui.submitBtn': 'onFormSubmit',
             'focus @ui.inputAddress': 'onFormFocus'
         },
 
