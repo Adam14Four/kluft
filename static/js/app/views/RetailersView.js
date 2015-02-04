@@ -55,8 +55,8 @@ define(function(require, exports, module) {
         },
 
         events: {
-            'submit @ui.form': 'onFormSubmit',
-            'click @ui.submitBtn': 'onFormSubmit',
+            // 'submit @ui.form': 'onFormSubmit',
+            // 'click @ui.submitBtn': 'onFormSubmit',
             'focus @ui.inputAddress': 'onFormFocus'
         },
 
@@ -102,11 +102,19 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
+            var self = this;
             if (!_.isUndefined(this.model.get('location'))) {
                 this.model.trigger('change:location');
             }
             this.textBox = $('.intro .masthead .text-box');
             $('.block-image:in-viewport').addClass('in-view');
+
+            this.ui.form = $('form');
+            this.ui.form.on('submit', function(e) {
+                e.preventDefault();
+                self.onFormSubmit(e);
+                return false;
+            });
         },
 
         scrollEffects: function(e) {
@@ -159,13 +167,14 @@ define(function(require, exports, module) {
             e.stopPropagation();
             e.preventDefault();
 
+            console.log('form submit')
+
             var address = $(e.currentTarget).find('input[name=address]').val();
 
             this.resetErrors();
 
             if (this.isFormValid(address)) {
                 this.model.set('address', address);
-                console.log(address);
             } else {
                 console.log('error');
                 this.addError('Please enter a zip code', this.ui.inputAddress);
