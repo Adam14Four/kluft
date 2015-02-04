@@ -29,7 +29,10 @@ define(function(require, exports, module) {
             this.removeAllMarkers();
             this.checkResize();
             var location = this.view.model.get('location');
-            console.log(location)
+            if (!location) {
+                this.showInitialMap();
+                return;
+            }
             this.map.setCenter(location);
             this.plotLocations();
         },
