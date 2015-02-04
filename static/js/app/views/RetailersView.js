@@ -156,6 +156,7 @@ define(function(require, exports, module) {
         },
 
         onFormSubmit: function(e) {
+            e.stopPropagation();
             e.preventDefault();
 
             var address = $(e.currentTarget).find('input[name=address]').val();
