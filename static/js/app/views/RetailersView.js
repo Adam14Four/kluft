@@ -18,19 +18,19 @@ define(function(require, exports, module) {
             'change:active': 'setActiveClass'
         },
         events: {
-            'click': 'onClick'
+            // 'click': 'onClick'
         },
         setActiveClass: function() {
-            if (this.model.get('active')) {
-                this.trigger('center:location');
-                this.$el.addClass('active');
-            } else {
-                this.$el.removeClass('active');
-            }
+            // if (this.model.get('active')) {
+            //     this.trigger('center:location');
+            //     this.$el.addClass('active');
+            // } else {
+            //     this.$el.removeClass('active');
+            // }
         },
         onClick: function() {
-            this.model.collection.setActiveModel(this.model);
-            this.trigger('center:location');
+            // this.model.collection.setActiveModel(this.model);
+            // this.trigger('center:location');
         }
     });
 
