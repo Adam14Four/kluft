@@ -86,27 +86,23 @@ define(function(require, exports, module) {
             var mapOptions = this.options;
             var self = this;
             this.map = new GMaps.Map(self.ui.map.get(0), mapOptions);
-            this.showInitialMap();
-            this.checkResize();
+            // this.checkResize();
+            setTimeout(function(){
+                self.showInitialMap();
+            }, 1500);
         },
 
         showInitialMap: function() {
             var center = new GMaps.LatLng(34.09541, -117.56289);
-            var offcenter = new GMaps.LatLng(34.02541, -117.56289);
-            this.map.setCenter(center);
-
-            var self = this;
             var latlng = center;
-
-            this.latLngBounds = new GMaps.LatLngBounds();
-            this.latLngBounds.extend(latlng);
-
             var marker = new GMaps.Marker({
                 position: latlng,
                 map: this.map,
                 visible: true,
                 location: location
             });
+
+            this.map.setCenter(center);
 
             var map = this.map;
 
