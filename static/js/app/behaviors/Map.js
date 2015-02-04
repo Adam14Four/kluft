@@ -86,7 +86,7 @@ define(function(require, exports, module) {
             var mapOptions = this.options;
             var self = this;
             this.map = new GMaps.Map(self.ui.map.get(0), mapOptions);
-            // this.checkResize();
+            this.mapStyles();
             setTimeout(function(){
                 self.showInitialMap();
             }, 1500);
