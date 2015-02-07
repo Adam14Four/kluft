@@ -743,39 +743,41 @@ ul, ol, li {
 .app {
   min-height: 100%;
   position: relative;
+  top: 0;
+  width: 100%;
 }
 
-/* line 17, src/_layout.scss */
+/* line 19, src/_layout.scss */
 .page {
   -moz-transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
   transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
 }
-/* line 22, src/_layout.scss */
+/* line 24, src/_layout.scss */
 .page:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 28, src/_layout.scss */
+/* line 30, src/_layout.scss */
 .views-transitioning .page {
   -moz-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
-/* line 36, src/_layout.scss */
+/* line 38, src/_layout.scss */
 .page.before-transition {
   visibility: hidden;
   opacity: 0;
 }
-/* line 40, src/_layout.scss */
+/* line 42, src/_layout.scss */
 .page.transitioning-in {
   visibility: visible;
   opacity: 1;
 }
-/* line 44, src/_layout.scss */
+/* line 46, src/_layout.scss */
 .page.transitioning-out {
   opacity: 0;
 }
@@ -884,7 +886,7 @@ button {
 
 /* line 1, src/components/_header.scss */
 .header {
-  position: relative;
+  position: absolute;
   top: 0;
   width: 100%;
   text-align: center;
@@ -2309,7 +2311,7 @@ button {
 
 /* line 3, src/pages/_method.scss */
 .method.page .sub-grid {
-  margin: -5.5em auto 13.5em auto;
+  margin: 0em auto 13.5em auto;
 }
 /* line 7, src/pages/_method.scss */
 .method.page .masthead-4 {
@@ -2340,55 +2342,81 @@ button {
   background-image: url(../img/pages/method/block-6.jpg);
 }
 /* line 19, src/pages/_method.scss */
+.method.page section:nth-child(2) {
+  top: 500px;
+}
+/* line 23, src/pages/_method.scss */
+.method.page .intro {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+/* line 29, src/pages/_method.scss */
+.method.page .masthead {
+  background-attachment: scroll;
+}
+/* line 32, src/pages/_method.scss */
+.method.page .masthead .text-box {
+  margin-top: 100px;
+}
+/* line 37, src/pages/_method.scss */
+.method.page .masthead.masthead-short {
+  height: 500px;
+}
+/* line 41, src/pages/_method.scss */
+.method.page .section {
+  background-color: #ffffff;
+}
+/* line 45, src/pages/_method.scss */
 .method.page .h8, .method.page .retailers.page .errors p, .retailers.page .errors .method.page p {
   line-height: 2;
 }
-/* line 23, src/pages/_method.scss */
+/* line 49, src/pages/_method.scss */
 .method.page .block-2 {
   margin-left: 34%;
 }
-/* line 27, src/pages/_method.scss */
+/* line 53, src/pages/_method.scss */
 .method.page .block-3 {
   margin-top: 4.5em;
   margin-left: 0;
 }
-/* line 32, src/pages/_method.scss */
+/* line 58, src/pages/_method.scss */
 .method.page .block-text-1 {
   width: 66%;
   margin: 7.5em 0 5.5em 34%;
 }
-/* line 36, src/pages/_method.scss */
+/* line 62, src/pages/_method.scss */
 .method.page .block-text-1 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 42, src/pages/_method.scss */
+/* line 68, src/pages/_method.scss */
 .method.page .block-text-2 {
   width: 66%;
   margin: 7.5em 0 5.5em 34%;
 }
-/* line 46, src/pages/_method.scss */
+/* line 72, src/pages/_method.scss */
 .method.page .block-text-2 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 52, src/pages/_method.scss */
+/* line 78, src/pages/_method.scss */
 .method.page .block-text-3 {
   width: 70%;
   margin: 14em 0 5.5em 0;
 }
-/* line 56, src/pages/_method.scss */
+/* line 82, src/pages/_method.scss */
 .method.page .block-text-3 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 62, src/pages/_method.scss */
+/* line 88, src/pages/_method.scss */
 .method.page .block-text-4 {
   width: 70%;
   margin-top: 6.5em;
   margin-bottom: 5.5em;
 }
-/* line 67, src/pages/_method.scss */
+/* line 93, src/pages/_method.scss */
 .method.page .block-text-4 p {
   margin-top: 1.5em;
   line-height: 2.6;

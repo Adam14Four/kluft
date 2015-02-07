@@ -1,7 +1,7 @@
 .method.page {
 
     .sub-grid {
-        margin: -5.5em auto 13.5em auto;
+        margin: 0em auto 13.5em auto;
     }
 
     .masthead-4 { background-image: url(../img/pages/method/masthead.jpg); }
@@ -14,6 +14,32 @@
 
     .masthead-4 {
         // padding-bottom: 42.2%;
+    }
+
+    section:nth-child(2) {
+        top: 500px;
+    }
+
+    .intro {
+        width: 100%;
+        position: fixed;
+        top: 0;
+    }
+
+    .masthead {
+        background-attachment: scroll;
+
+        .text-box {
+            margin-top: 100px;
+        }
+    }
+
+    .masthead.masthead-short {
+        height: 500px;
+    }
+
+    .section {
+        background-color: $white;
     }
 
     .h8 {
