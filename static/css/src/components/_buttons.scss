@@ -81,11 +81,12 @@ button {
 
     &.zipcode {
         position: relative;
-        padding: 1.3em 5.4em;
+        padding: 1.3em 7em 1.3em 2em;
         letter-spacing: 2px;
         border: 1px solid #b7b7b7;
         color: $black;
         margin-right: 1em;
+        font-family: $MrsEavesRoman;
     }
 
 }

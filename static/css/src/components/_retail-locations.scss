@@ -12,48 +12,50 @@
     li {
         position: relative;
         padding: 2em 0 4em;
+        &:nth-child(1) {
+            .address-wrap:before {
+                content: 'A'
+            }
+        }
+        &:nth-child(2) {
+            .address-wrap:before {
+                content: 'B'
+            }
+        }
+        &:nth-child(3) {
+            .address-wrap:before {
+                content: 'C'
+            }
+        }
+        &:nth-child(4) {
+            .address-wrap:before {
+                content: 'D'
+            }
+        }
+        &:nth-child(5) {
+            .address-wrap:before {
+                content: 'E'
+            }
+        }
+        &:nth-child(6) {
+            .address-wrap:before {
+                content: 'F'
+            }
+        }
+    }
 
+    .address-wrap {
+        padding-left: 7.7em;
         &:before {
             @extend .h9;
             position: absolute;
             display: block;
             top: 1.6em;
-            left: -5.7em;
+            left: 0;
             padding: 0.9em 1.1em;
             content: attr(data-text);
             background-color: $black;
             color: $white;
-        }
-
-        &:nth-child(1) {
-            &:before {
-                content: 'A'
-            }
-        }
-        &:nth-child(2) {
-            &:before {
-                content: 'B'
-            }
-        }
-        &:nth-child(3) {
-            &:before {
-                content: 'C'
-            }
-        }
-        &:nth-child(4) {
-            &:before {
-                content: 'D'
-            }
-        }
-        &:nth-child(5) {
-            &:before {
-                content: 'E'
-            }
-        }
-        &:nth-child(6) {
-            &:before {
-                content: 'F'
-            }
         }
     }
 
@@ -63,7 +65,8 @@
 
     .h9 {
         font-family: $MrsEavesBold;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.2em;
+        margin-bottom: 8px;
     }
 
     // li:nth-child(odd) {
@@ -71,6 +74,16 @@
     //         max-width: 75%;
     //     }
     // }
+
+    address {
+        font-family: $MrsEavesRoman;
+        font-size: 1.3em;
+        font-style: normal;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        line-height: 1.5;
+        opacity: 0.8;
+    }
 
     .distance {
         text-transform: none;
@@ -84,6 +97,7 @@
 
     .location-list {
         padding: 8em 0 15em;
+        padding-top: 3em;
         width: 80%;
         margin: 0 auto;
     }

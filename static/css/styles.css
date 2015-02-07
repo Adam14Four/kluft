@@ -565,7 +565,7 @@ p.inverted, .p.inverted {
 }
 
 /* line 27, src/_typography.scss */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .h8, .retailers.page .errors p, .h9, .retail-locations li:before, .h10, .header a, .footer a, .footer .to-top {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .h8, .retailers.page .errors p, .h9, .retail-locations .address-wrap:before, .h10, .header a, .footer a, .footer .to-top {
   font-weight: 300;
   font-family: "Mrs Eaves OT";
   line-height: 1.2;
@@ -576,7 +576,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .h8, .retailers.page 
   -webkit-font-smoothing: antialiased;
 }
 /* line 37, src/_typography.scss */
-h1.inverted, .h1.inverted, h2.inverted, .h2.inverted, h3.inverted, .h3.inverted, h4.inverted, .h4.inverted, h5.inverted, .h5.inverted, h6.inverted, .h6.inverted, .h7.inverted, .h8.inverted, .retailers.page .errors p.inverted, .h9.inverted, .retail-locations li.inverted:before, .h10.inverted, .header a.inverted, .footer a.inverted, .footer .inverted.to-top {
+h1.inverted, .h1.inverted, h2.inverted, .h2.inverted, h3.inverted, .h3.inverted, h4.inverted, .h4.inverted, h5.inverted, .h5.inverted, h6.inverted, .h6.inverted, .h7.inverted, .h8.inverted, .retailers.page .errors p.inverted, .h9.inverted, .retail-locations .inverted.address-wrap:before, .h10.inverted, .header a.inverted, .footer a.inverted, .footer .inverted.to-top {
   color: #ffffff;
 }
 
@@ -646,7 +646,7 @@ h6.bold, .h6.bold {
 }
 
 /* line 99, src/_typography.scss */
-.h9, .retail-locations li:before {
+.h9, .retail-locations .address-wrap:before {
   font-size: 1.4em;
   font-family: "Mrs Eaves Lining OT";
   letter-spacing: 0.5em;
@@ -863,11 +863,12 @@ button {
 /* line 82, src/components/_buttons.scss */
 .btn.zipcode {
   position: relative;
-  padding: 1.3em 5.4em;
+  padding: 1.3em 7em 1.3em 2em;
   letter-spacing: 2px;
   border: 1px solid #b7b7b7;
   color: #000000;
   margin-right: 1em;
+  font-family: "Mrs Eaves Lining OT";
 }
 
 /* line 5, src/components/_preloader.scss */
@@ -1918,62 +1919,78 @@ button {
   padding: 2em 0 4em;
 }
 /* line 16, src/components/_retail-locations.scss */
-.retail-locations li:before {
+.retail-locations li:nth-child(1) .address-wrap:before {
+  content: "A";
+}
+/* line 21, src/components/_retail-locations.scss */
+.retail-locations li:nth-child(2) .address-wrap:before {
+  content: "B";
+}
+/* line 26, src/components/_retail-locations.scss */
+.retail-locations li:nth-child(3) .address-wrap:before {
+  content: "C";
+}
+/* line 31, src/components/_retail-locations.scss */
+.retail-locations li:nth-child(4) .address-wrap:before {
+  content: "D";
+}
+/* line 36, src/components/_retail-locations.scss */
+.retail-locations li:nth-child(5) .address-wrap:before {
+  content: "E";
+}
+/* line 41, src/components/_retail-locations.scss */
+.retail-locations li:nth-child(6) .address-wrap:before {
+  content: "F";
+}
+/* line 47, src/components/_retail-locations.scss */
+.retail-locations .address-wrap {
+  padding-left: 7.7em;
+}
+/* line 49, src/components/_retail-locations.scss */
+.retail-locations .address-wrap:before {
   position: absolute;
   display: block;
   top: 1.6em;
-  left: -5.7em;
+  left: 0;
   padding: 0.9em 1.1em;
   content: attr(data-text);
   background-color: #000000;
   color: #ffffff;
 }
-/* line 29, src/components/_retail-locations.scss */
-.retail-locations li:nth-child(1):before {
-  content: "A";
-}
-/* line 34, src/components/_retail-locations.scss */
-.retail-locations li:nth-child(2):before {
-  content: "B";
-}
-/* line 39, src/components/_retail-locations.scss */
-.retail-locations li:nth-child(3):before {
-  content: "C";
-}
-/* line 44, src/components/_retail-locations.scss */
-.retail-locations li:nth-child(4):before {
-  content: "D";
-}
-/* line 49, src/components/_retail-locations.scss */
-.retail-locations li:nth-child(5):before {
-  content: "E";
-}
-/* line 54, src/components/_retail-locations.scss */
-.retail-locations li:nth-child(6):before {
-  content: "F";
-}
-/* line 60, src/components/_retail-locations.scss */
+/* line 62, src/components/_retail-locations.scss */
 .retail-locations span {
   display: block;
 }
-/* line 64, src/components/_retail-locations.scss */
-.retail-locations .h9, .retail-locations li:before {
+/* line 66, src/components/_retail-locations.scss */
+.retail-locations .h9, .retail-locations .address-wrap:before {
   font-family: "Mrs Eaves OT";
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
+  margin-bottom: 8px;
 }
-/* line 75, src/components/_retail-locations.scss */
+/* line 78, src/components/_retail-locations.scss */
+.retail-locations address {
+  font-family: "Mrs Eaves Lining OT";
+  font-size: 1.3em;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+/* line 88, src/components/_retail-locations.scss */
 .retail-locations .distance {
   text-transform: none;
 }
-/* line 79, src/components/_retail-locations.scss */
+/* line 92, src/components/_retail-locations.scss */
 .retail-locations .directions {
   text-decoration: underline;
   color: #041c2c;
   text-transform: none;
 }
-/* line 85, src/components/_retail-locations.scss */
+/* line 98, src/components/_retail-locations.scss */
 .retail-locations .location-list {
   padding: 8em 0 15em;
+  padding-top: 3em;
   width: 80%;
   margin: 0 auto;
 }
@@ -2738,29 +2755,38 @@ button {
 .retailers.page .intro {
   overflow: visible;
 }
-/* line 13, src/pages/_retailers.scss */
-.retailers.page .headline {
-  padding: 4.5em 0 5em 0;
+/* line 12, src/pages/_retailers.scss */
+.retailers.page .intro h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
-/* line 17, src/pages/_retailers.scss */
+/* line 18, src/pages/_retailers.scss */
+.retailers.page .headline {
+  padding: 2.6em 0 5em 0;
+}
+/* line 22, src/pages/_retailers.scss */
 .retailers.page .masthead-5 {
   background-image: url(../img/pages/retailers/masthead.jpg);
 }
-/* line 19, src/pages/_retailers.scss */
+/* line 24, src/pages/_retailers.scss */
 .retailers.page .masthead .text-box {
   max-width: 550px;
 }
-/* line 23, src/pages/_retailers.scss */
+/* line 28, src/pages/_retailers.scss */
 .retailers.page .map {
   position: absolute;
   top: 20%;
   left: 10%;
-  background-color: black;
   width: 35%;
   padding-bottom: 35%;
   display: none;
+  overflow: hidden;
+  z-index: 0;
+  min-height: 400px;
+  max-height: 470px;
+  background-color: #ffffff !important;
 }
-/* line 33, src/pages/_retailers.scss */
+/* line 43, src/pages/_retailers.scss */
 .retailers.page .errors {
   position: absolute;
   display: none;
@@ -2769,80 +2795,86 @@ button {
   -webkit-transform: translate3d(0, 200%, 0);
   transform: translate3d(0, 200%, 0);
 }
-/* line 39, src/pages/_retailers.scss */
+/* line 49, src/pages/_retailers.scss */
 .retailers.page .errors p {
   font-size: 1.2em;
   text-transform: none;
   color: red;
 }
-/* line 47, src/pages/_retailers.scss */
+/* line 57, src/pages/_retailers.scss */
 .retailers.page .search {
   margin-top: 1.5em;
 }
 @media (min-width: 780px) {
-  /* line 47, src/pages/_retailers.scss */
+  /* line 57, src/pages/_retailers.scss */
   .retailers.page .search {
     margin-top: 0;
   }
 }
-/* line 54, src/pages/_retailers.scss */
+/* line 64, src/pages/_retailers.scss */
 .retailers.page .zipcode-wrapper {
   display: inline-block;
   position: relative;
 }
-/* line 59, src/pages/_retailers.scss */
+/* line 69, src/pages/_retailers.scss */
 .retailers.page .zipcode-form {
   width: 70%;
   margin: 0 auto;
   overflow: hidden;
 }
-/* line 65, src/pages/_retailers.scss */
+/* line 74, src/pages/_retailers.scss */
+.retailers.page .zipcode-form h6 {
+  letter-spacing: 0.38em;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+/* line 81, src/pages/_retailers.scss */
 .retailers.page .location-list {
   width: 70%;
 }
-/* line 68, src/pages/_retailers.scss */
+/* line 84, src/pages/_retailers.scss */
 .retailers.page .location-list li {
   display: block;
   width: 100%;
 }
-/* line 72, src/pages/_retailers.scss */
+/* line 88, src/pages/_retailers.scss */
 .retailers.page .location-list li:before {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 79, src/pages/_retailers.scss */
+  /* line 95, src/pages/_retailers.scss */
   .retailers.page .map {
     display: block;
   }
-  /* line 83, src/pages/_retailers.scss */
+  /* line 99, src/pages/_retailers.scss */
   .retailers.page .zipcode-form {
     width: 50%;
     margin-left: 50%;
     overflow: hidden;
   }
-  /* line 88, src/pages/_retailers.scss */
+  /* line 104, src/pages/_retailers.scss */
   .retailers.page .location-list {
     width: 75%;
   }
-  /* line 91, src/pages/_retailers.scss */
+  /* line 107, src/pages/_retailers.scss */
   .retailers.page .location-list li {
     display: inline-block;
     width: 50%;
   }
 }
 @media (min-width: 900px) {
-  /* line 102, src/pages/_retailers.scss */
+  /* line 118, src/pages/_retailers.scss */
   .retailers.page .location-list {
     width: 75%;
     margin-left: 15%;
   }
-  /* line 106, src/pages/_retailers.scss */
+  /* line 122, src/pages/_retailers.scss */
   .retailers.page .location-list li {
     display: inline-block;
     width: 35%;
-    margin-right: 100px;
+    margin-right: 12%;
   }
-  /* line 111, src/pages/_retailers.scss */
+  /* line 127, src/pages/_retailers.scss */
   .retailers.page .location-list li:before {
     display: block;
   }
