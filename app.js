@@ -39,11 +39,17 @@ app.post('/form', function(req, res) {
         }, function(err, json) {
             if (err) { return console.error(err); }
             console.log(json);
+            sendgrid.send({
+                to: req.body.email,
+                from: 'QandA@ESKluft.com',
+                subject: 'Re: Kluftmattress contact',
+                text: 'Thank you for your message, a representative will contact you within 24-48hrs'
+            });
         });
 });
 
 app.get('*', function(req, res){
-    res.sendfile(__dirname + '/static/index.html');
+    res.sendFile(__dirname + '/static/index.html');
 });
 
 // listen
