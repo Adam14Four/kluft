@@ -5,8 +5,6 @@
 .app {
     min-height: 100%;
     position: relative;
-    top: 0;
-    width: 100%;
 }
 
 #region-content {
@@ -44,6 +42,13 @@
         opacity: 1;
     }
     &.transitioning-out {
+        opacity: 0;
+    }
+}
+
+section {
+    @include transition(opacity 0.3s $easeInOut);
+    &.is-loading {
         opacity: 0;
     }
 }

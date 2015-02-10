@@ -6,7 +6,6 @@ define(function(require, exports, module) {
         constants = require('app/utils/constants'),
         template = require('hbs!templates/beyond-luxury');
 
-        require('stellar');
         require('jquery.viewport');
 
     return BaseView.extend({
@@ -16,54 +15,20 @@ define(function(require, exports, module) {
         template: template,
 
         ui: {
-            masthead: '.grid .intro .masthead'
-        },
-
-        events: {
+            parallaxBg: '.parallax-bg',
+            textbox: '.parallax-bg .text-box'
         },
 
         initialize: function(options) {
-            $(window).on('scroll.page', _.bind(this.scrollEffects, this));
-            $(window).on('resize.page', _.bind(this.handleBackgrounds, this));
             this.window = $(window);
+            this.window.on('scroll.luxury', _.bind(this.scrollEffects, this));
+            this.window.on('resize.luxury', _.bind(this.onResize, this));
+
             this.faded = false;
         },
 
-        onShow: function() {
-            $.stellar('refresh');
-            this.textBox = $('.intro .masthead .text-box');
-            $('.block-image:in-viewport').addClass('in-view');
-
-            $.stellar({
-                horizontalScrolling: false,
-                verticalOffset: 0,
-                horizontalOffset: 0,
-                responsive: true
-            });
-
-
-
-            this.handleBackgrounds();
-        },
-
-        scrollEffects: function(e) {
-            if (this.window.scrollTop() > 250 && !this.faded) {
-                this.textBox.addClass('fade-out');
-                this.faded = true;
-            } else if (this.window.scrollTop() < 250 && this.faded) {
-                this.textBox.removeClass('fade-out');
-                this.faded = false;
-            }
-            $('.block-image:in-viewport').addClass('in-view');
-        },
-
-        handleBackgrounds: function() {
-            var height = this.ui.masthead.innerHeight();
-            this.ui.masthead.parent().css('height', height);
-        },
-
         onDestroy: function() {
-            $(window).off('page');
+            this.window.off('.luxury');
         }
 
     });

@@ -15,6 +15,8 @@ define(function(require, exports, module) {
         template: template,
 
         ui: {
+            parallaxBg: '.parallax-bg',
+            textbox: '.parallax-bg .text-box',
             email: '.email',
             submitBtn: '.submit',
             form: 'form',
@@ -29,35 +31,18 @@ define(function(require, exports, module) {
         },
 
         initialize: function(options) {
-            $(window).on('scroll.page', _.bind(this.scrollEffects, this));
-            $(window).on('resize.page', _.bind(this.handleBackgrounds, this));
             this.window = $(window);
+            this.window.on('scroll.contact', _.bind(this.scrollEffects, this));
+            this.window.on('resize.contact', _.bind(this.onResize, this));
+
             this.faded = false;
         },
 
-        scrollEffects: function(e) {
-            this.scrollPos = this.window.scrollTop();
-
-            if (this.window.scrollTop() > 150 && !this.faded) {
-                this.textBox.addClass('fade-out');
-                this.faded = true;
-            } else if (this.window.scrollTop() < 150 && this.faded) {
-                this.textBox.removeClass('fade-out');
-                this.faded = false;
-            }
-            $('.block-image:in-viewport').addClass('in-view');
-        },
-
-        onShow: function() {
-            this.textBox = $('.intro .masthead .text-box');
-            $('.block-image:in-viewport').addClass('in-view');
-        },
-
-        setBackgroundSize: function() {
+        onDestroy: function() {
+            this.window.off('.contact');
         },
 
         onFormSubmit: function(event) {
-            console.log('SUBMIT')
             event.stopPropagation();
             event.preventDefault();
 
@@ -117,12 +102,7 @@ define(function(require, exports, module) {
             successContainer.text('Message sent.').appendTo(this.ui.success);
 
             successContainer.appendTo(this.ui.success);
-        },
-
-        handleBackgrounds: function() {
-            var height = this.ui.masthead.innerHeight();
-            this.ui.masthead.parent().css('height', height);
-        },
+        }
 
     });
 });

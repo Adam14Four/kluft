@@ -45,6 +45,8 @@ define(function(require, exports, module) {
         childView: ItemView,
 
         ui: {
+            'parallaxBg': '.parallax-bg',
+            'textbox': '.parallax-bg .text-box',
             'results': '.results',
             'form': '.js-search',
             'inputAddress': 'input[name=address]',
@@ -95,9 +97,10 @@ define(function(require, exports, module) {
         initialize: function() {
             this.locations = locations;
             this.listenTo(this.model, 'change:location', this.onUpdateAddress);
-            $(window).on('scroll.page', _.bind(this.scrollEffects, this));
-            $(window).on('resize.page', _.bind(this.handleBackgrounds, this));
             this.window = $(window);
+            this.window.on('scroll.retail', _.bind(this.scrollEffects, this));
+            this.window.on('resize.retail', _.bind(this.onResize, this));
+
             this.faded = false;
         },
 
@@ -106,8 +109,6 @@ define(function(require, exports, module) {
             if (!_.isUndefined(this.model.get('location'))) {
                 this.model.trigger('change:location');
             }
-            this.textBox = $('.intro .masthead .text-box');
-            $('.block-image:in-viewport').addClass('in-view');
 
             this.ui.form = $('form');
             this.ui.form.on('submit', function(e) {
@@ -115,19 +116,37 @@ define(function(require, exports, module) {
                 self.onFormSubmit(e);
                 return false;
             });
+
+            $(window).scrollTop($(window).scrollTop()+1);
+            this.delegateEvents();
+            this.scrollEffects();
+            this.onResize();
+
+            setTimeout(function(){
+                $('section').removeClass('is-loading');
+            }, 300);
         },
 
         scrollEffects: function(e) {
-            this.scrollPos = this.window.scrollTop();
+            var scrolledY =  this.window.scrollTop();
 
-            if (this.window.scrollTop() > 150 && !this.faded) {
-                this.textBox.addClass('fade-out');
+            if (scrolledY > 150 && !this.faded) {
+                this.ui.textbox.addClass('fade-out');
                 this.faded = true;
-            } else if (this.window.scrollTop() < 150 && this.faded) {
-                this.textBox.removeClass('fade-out');
+            } else if (scrolledY < 150 && this.faded) {
+                this.ui.textbox.removeClass('fade-out');
                 this.faded = false;
             }
+
             $('.block-image:in-viewport').addClass('in-view');
+            this.ui.parallaxBg.css('background-position', '50% ' + scrolledY + 'px');
+
+        },
+
+        onResize: function() {
+            var headerHeight = $('#region-header').height();
+            this.$el.css('margin-top', '-' + headerHeight + 'px');
+            this.ui.textbox.css('margin-top', headerHeight/2);
         },
 
         onUpdateAddress: function() {
@@ -216,9 +235,8 @@ define(function(require, exports, module) {
             return isValidZip;
         },
 
-        handleBackgrounds: function() {
-            var height = this.ui.masthead.innerHeight();
-            this.ui.masthead.parent().css('height', height);
+        onDestroy: function() {
+            this.window.off('.retail');
         }
 
     });

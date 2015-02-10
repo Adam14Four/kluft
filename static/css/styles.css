@@ -743,42 +743,52 @@ ul, ol, li {
 .app {
   min-height: 100%;
   position: relative;
-  top: 0;
-  width: 100%;
 }
 
-/* line 19, src/_layout.scss */
+/* line 17, src/_layout.scss */
 .page {
   -moz-transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
   transition: opacity 0.1s cubic-bezier(0.42, 0, 0.58, 1);
 }
-/* line 24, src/_layout.scss */
+/* line 22, src/_layout.scss */
 .page:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 30, src/_layout.scss */
+/* line 28, src/_layout.scss */
 .views-transitioning .page {
   -moz-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), visibility 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
-/* line 38, src/_layout.scss */
+/* line 36, src/_layout.scss */
 .page.before-transition {
   visibility: hidden;
   opacity: 0;
 }
-/* line 42, src/_layout.scss */
+/* line 40, src/_layout.scss */
 .page.transitioning-in {
   visibility: visible;
   opacity: 1;
 }
-/* line 46, src/_layout.scss */
+/* line 44, src/_layout.scss */
 .page.transitioning-out {
+  opacity: 0;
+}
+
+/* line 49, src/_layout.scss */
+section {
+  -moz-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+/* line 51, src/_layout.scss */
+section.is-loading {
   opacity: 0;
 }
 
@@ -886,7 +896,7 @@ button {
 
 /* line 1, src/components/_header.scss */
 .header {
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   text-align: center;
@@ -894,6 +904,7 @@ button {
   overflow: visible;
   font-size: 7px;
   z-index: 100;
+  padding-top: 1.5em;
   -moz-transition: top 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: top 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition: top 0.3s cubic-bezier(0.42, 0, 0.58, 1);
@@ -917,7 +928,7 @@ button {
     font-size: 10px;
   }
 }
-/* line 36, src/components/_header.scss */
+/* line 35, src/components/_header.scss */
 .header .logo {
   width: 11.8em;
   height: 7.3em;
@@ -927,42 +938,42 @@ button {
   background-repeat: no-repeat;
   text-align: center;
   display: inline-block;
-  margin: 1.5em;
+  margin: 0 1.5em 1.5em 1.5em;
 }
-/* line 48, src/components/_header.scss */
+/* line 47, src/components/_header.scss */
 .menu-is-open.touch .header .logo {
   margin-left: -4.0em;
 }
 @media (min-width: 880px) {
-  /* line 36, src/components/_header.scss */
+  /* line 35, src/components/_header.scss */
   .header .logo {
     display: block;
-    margin: 1.5em auto 1.5em auto;
+    margin: 0 auto 1.5em auto;
   }
 }
-/* line 58, src/components/_header.scss */
+/* line 57, src/components/_header.scss */
 .header .main-nav {
   background-color: #041c2c;
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 58, src/components/_header.scss */
+  /* line 57, src/components/_header.scss */
   .header .main-nav {
     display: block;
   }
 }
-/* line 70, src/components/_header.scss */
+/* line 69, src/components/_header.scss */
 .header li {
   display: inline-block;
   padding: 1.8em 1.0em 1.3em 1.0em;
 }
 @media (min-width: 960px) {
-  /* line 70, src/components/_header.scss */
+  /* line 69, src/components/_header.scss */
   .header li {
     padding: 1.8em 2.5em 1.3em 2.5em;
   }
 }
-/* line 79, src/components/_header.scss */
+/* line 78, src/components/_header.scss */
 .header a {
   font-size: 1.1em;
   letter-spacing: 0.2em;
@@ -972,25 +983,25 @@ button {
   -webkit-transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
-/* line 86, src/components/_header.scss */
+/* line 85, src/components/_header.scss */
 .header a:hover {
   color: #D2D3D7;
 }
 
-/* line 92, src/components/_header.scss */
+/* line 91, src/components/_header.scss */
 .collection-link {
   position: relative;
 }
-/* line 95, src/components/_header.scss */
+/* line 94, src/components/_header.scss */
 .no-touch .collection-link:hover .sub-nav {
   max-height: 600px;
   padding: 2em 0 1em 0;
 }
-/* line 99, src/components/_header.scss */
+/* line 98, src/components/_header.scss */
 .no-touch .collection-link:hover .sub-nav li {
   opacity: 1;
 }
-/* line 104, src/components/_header.scss */
+/* line 103, src/components/_header.scss */
 .collection-link .sub-nav {
   position: absolute;
   left: 0;
@@ -1005,7 +1016,7 @@ button {
   -webkit-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
 }
-/* line 115, src/components/_header.scss */
+/* line 114, src/components/_header.scss */
 .collection-link .sub-nav li {
   display: block;
   padding: 0.7em 2.6em;
@@ -1016,7 +1027,7 @@ button {
   -webkit-transition-delay: 0.1s;
   transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.1s;
 }
-/* line 121, src/components/_header.scss */
+/* line 120, src/components/_header.scss */
 .collection-link .sub-nav li a {
   display: inline-block;
   line-height: 1.4;
@@ -1323,22 +1334,21 @@ button {
 .masthead {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 650px;
   overflow: hidden;
-  background-attachment: fixed;
 }
-/* line 9, src/components/_masthead.scss */
+/* line 8, src/components/_masthead.scss */
 .masthead.masthead-short {
-  height: 400px;
+  height: 500px;
   overflow: visible;
 }
-/* line 17, src/components/_masthead.scss */
+/* line 16, src/components/_masthead.scss */
 .masthead .scroll {
   bottom: 30px;
   top: auto;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
-/* line 24, src/components/_masthead.scss */
+/* line 23, src/components/_masthead.scss */
 .masthead .text-box {
   position: absolute;
   bottom: 0;
@@ -1350,36 +1360,36 @@ button {
   -webkit-transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-/* line 32, src/components/_masthead.scss */
+/* line 31, src/components/_masthead.scss */
 .masthead .text-box.fade-out {
   opacity: 0;
 }
-/* line 36, src/components/_masthead.scss */
+/* line 35, src/components/_masthead.scss */
 .masthead .text-box .text-wrap {
   padding: 3.4em 5em 5.5em 5em;
 }
-/* line 40, src/components/_masthead.scss */
+/* line 39, src/components/_masthead.scss */
 .masthead .text-box .h4 {
   letter-spacing: 0.33em;
   margin: 0.5em 0 2em 0;
 }
-/* line 45, src/components/_masthead.scss */
+/* line 44, src/components/_masthead.scss */
 .masthead .text-box .h7 {
   text-transform: none;
   letter-spacing: 0.1em;
 }
-/* line 50, src/components/_masthead.scss */
+/* line 49, src/components/_masthead.scss */
 .masthead .text-box .h10, .masthead .text-box .header a, .header .masthead .text-box a, .masthead .text-box .footer a, .footer .masthead .text-box a, .masthead .text-box .footer .to-top, .footer .masthead .text-box .to-top {
   letter-spacing: 0.38em;
 }
-/* line 54, src/components/_masthead.scss */
+/* line 53, src/components/_masthead.scss */
 .masthead .text-box.light {
   background-color: rgba(255, 255, 255, 0.6);
   right: auto;
   left: 12%;
 }
 
-/* line 65, src/components/_masthead.scss */
+/* line 64, src/components/_masthead.scss */
 .masthead-2 .text-box {
   bottom: auto;
   right: auto;
@@ -1388,27 +1398,27 @@ button {
   background-color: rgba(69, 69, 69, 0.5);
   text-align: center;
 }
-/* line 74, src/components/_masthead.scss */
+/* line 73, src/components/_masthead.scss */
 .masthead-2 .text-box .text-wrap {
   padding: 7.5em 5em 5.5em 4.5em;
 }
-/* line 78, src/components/_masthead.scss */
+/* line 77, src/components/_masthead.scss */
 .masthead-2 .text-box .h3 {
   letter-spacing: 0.4em;
 }
-/* line 82, src/components/_masthead.scss */
+/* line 81, src/components/_masthead.scss */
 .masthead-2 .text-box .h7 {
   margin: 1em 0 2.2em 0;
   text-transform: none;
   letter-spacing: 0.1em;
   line-height: 1.7;
 }
-/* line 89, src/components/_masthead.scss */
+/* line 88, src/components/_masthead.scss */
 .masthead-2 .text-box .h10, .masthead-2 .text-box .header a, .header .masthead-2 .text-box a, .masthead-2 .text-box .footer a, .footer .masthead-2 .text-box a, .masthead-2 .text-box .footer .to-top, .footer .masthead-2 .text-box .to-top {
   letter-spacing: 0.38em;
 }
 
-/* line 101, src/components/_masthead.scss */
+/* line 100, src/components/_masthead.scss */
 .masthead-4 .text-box {
   bottom: auto;
   right: auto;
@@ -1417,27 +1427,27 @@ button {
   background-color: transparent;
   text-align: center;
 }
-/* line 110, src/components/_masthead.scss */
+/* line 109, src/components/_masthead.scss */
 .masthead-4 .text-box .text-wrap {
   padding: 7.5em 5em 5.5em 4.5em;
 }
-/* line 114, src/components/_masthead.scss */
+/* line 113, src/components/_masthead.scss */
 .masthead-4 .text-box .h3 {
   letter-spacing: 0.4em;
 }
-/* line 118, src/components/_masthead.scss */
+/* line 117, src/components/_masthead.scss */
 .masthead-4 .text-box .h7 {
   margin: 1em 0 2.2em 0;
   text-transform: none;
   letter-spacing: 0.1em;
   line-height: 1.7;
 }
-/* line 125, src/components/_masthead.scss */
+/* line 124, src/components/_masthead.scss */
 .masthead-4 .text-box .h10, .masthead-4 .text-box .header a, .header .masthead-4 .text-box a, .masthead-4 .text-box .footer a, .footer .masthead-4 .text-box a, .masthead-4 .text-box .footer .to-top, .footer .masthead-4 .text-box .to-top {
   letter-spacing: 0.38em;
 }
 
-/* line 134, src/components/_masthead.scss */
+/* line 133, src/components/_masthead.scss */
 .masthead-5 .text-box {
   background-color: transparent;
   right: auto;
@@ -1449,12 +1459,12 @@ button {
   padding: 0;
   transform: translate3d(-50%, -50%, 0);
 }
-/* line 145, src/components/_masthead.scss */
+/* line 144, src/components/_masthead.scss */
 .masthead-5 .text-box .text-wrap {
   padding: 0;
 }
 @media (min-width: 768px) {
-  /* line 151, src/components/_masthead.scss */
+  /* line 150, src/components/_masthead.scss */
   .masthead-5 .text-box {
     transform: translate3d(0, 0, 0);
     text-align: left;
@@ -1467,13 +1477,13 @@ button {
 }
 
 @media (min-width: 768px) {
-  /* line 163, src/components/_masthead.scss */
+  /* line 162, src/components/_masthead.scss */
   .pull-up {
     margin-top: -4em;
   }
 }
 
-/* line 171, src/components/_masthead.scss */
+/* line 170, src/components/_masthead.scss */
 .fade-out {
   opacity: 0;
 }
@@ -2311,7 +2321,7 @@ button {
 
 /* line 3, src/pages/_method.scss */
 .method.page .sub-grid {
-  margin: 0em auto 13.5em auto;
+  margin: -5.5em auto 13.5em auto;
 }
 /* line 7, src/pages/_method.scss */
 .method.page .masthead-4 {
@@ -2342,81 +2352,55 @@ button {
   background-image: url(../img/pages/method/block-6.jpg);
 }
 /* line 19, src/pages/_method.scss */
-.method.page section:nth-child(2) {
-  top: 500px;
-}
-/* line 23, src/pages/_method.scss */
-.method.page .intro {
-  width: 100%;
-  position: fixed;
-  top: 0;
-}
-/* line 29, src/pages/_method.scss */
-.method.page .masthead {
-  background-attachment: scroll;
-}
-/* line 32, src/pages/_method.scss */
-.method.page .masthead .text-box {
-  margin-top: 100px;
-}
-/* line 37, src/pages/_method.scss */
-.method.page .masthead.masthead-short {
-  height: 500px;
-}
-/* line 41, src/pages/_method.scss */
-.method.page .section {
-  background-color: #ffffff;
-}
-/* line 45, src/pages/_method.scss */
 .method.page .h8, .method.page .retailers.page .errors p, .retailers.page .errors .method.page p {
   line-height: 2;
 }
-/* line 49, src/pages/_method.scss */
+/* line 23, src/pages/_method.scss */
 .method.page .block-2 {
   margin-left: 34%;
 }
-/* line 53, src/pages/_method.scss */
+/* line 27, src/pages/_method.scss */
 .method.page .block-3 {
   margin-top: 4.5em;
   margin-left: 0;
 }
-/* line 58, src/pages/_method.scss */
+/* line 32, src/pages/_method.scss */
 .method.page .block-text-1 {
   width: 66%;
   margin: 7.5em 0 5.5em 34%;
 }
-/* line 62, src/pages/_method.scss */
+/* line 36, src/pages/_method.scss */
 .method.page .block-text-1 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 68, src/pages/_method.scss */
+/* line 42, src/pages/_method.scss */
 .method.page .block-text-2 {
   width: 66%;
   margin: 7.5em 0 5.5em 34%;
 }
-/* line 72, src/pages/_method.scss */
+/* line 46, src/pages/_method.scss */
 .method.page .block-text-2 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 78, src/pages/_method.scss */
+/* line 52, src/pages/_method.scss */
 .method.page .block-text-3 {
   width: 70%;
   margin: 14em 0 5.5em 0;
 }
-/* line 82, src/pages/_method.scss */
+/* line 56, src/pages/_method.scss */
 .method.page .block-text-3 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 88, src/pages/_method.scss */
+/* line 62, src/pages/_method.scss */
 .method.page .block-text-4 {
   width: 70%;
   margin-top: 6.5em;
   margin-bottom: 5.5em;
 }
-/* line 93, src/pages/_method.scss */
+/* line 67, src/pages/_method.scss */
 .method.page .block-text-4 p {
   margin-top: 1.5em;
   line-height: 2.6;
