@@ -4,6 +4,7 @@ define(function(require, exports, module) {
         channels = require('app/channels'),
         helpers = require('app/utils/helpers'),
         constants = require('app/utils/constants'),
+        Map = require('app/behaviors/Map'),
         template = require('hbs!templates/contact');
 
         require('jquery.viewport');
@@ -24,6 +25,12 @@ define(function(require, exports, module) {
             success: '.success',
             'masthead': '.grid .intro .masthead',
             'intro': '.intro'
+        },
+
+        behaviors: {
+            Map: {
+                behaviorClass: Map
+            }
         },
 
         events: {

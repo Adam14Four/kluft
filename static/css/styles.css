@@ -2893,14 +2893,50 @@ button {
 }
 
 /* line 3, src/pages/_contact.scss */
+.contact.page .map {
+  width: 100%;
+  height: 375px;
+  background-color: white;
+}
+/* line 9, src/pages/_contact.scss */
+.contact.page .address {
+  width: 70%;
+  margin: 15em auto 5em auto;
+  max-width: 900px;
+}
+/* line 14, src/pages/_contact.scss */
+.contact.page .address .title {
+  font-family: "Mrs Eaves OT";
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 0.095em;
+}
+/* line 21, src/pages/_contact.scss */
+.contact.page .address address {
+  font-size: 10px;
+}
+/* line 25, src/pages/_contact.scss */
+.contact.page .address span {
+  font-family: "Mrs Eaves Lining OT";
+  font-size: 1.4em;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+}
+/* line 34, src/pages/_contact.scss */
 .contact.page .intro {
   overflow: visible;
 }
-/* line 7, src/pages/_contact.scss */
+/* line 37, src/pages/_contact.scss */
+.contact.page .intro h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+/* line 43, src/pages/_contact.scss */
 .contact.page .masthead {
   background-image: url(../img/pages/contact/masthead.jpg);
 }
-/* line 11, src/pages/_contact.scss */
+/* line 47, src/pages/_contact.scss */
 .contact.page .masthead .text-box {
   text-align: center;
   background-color: transparent;
@@ -2909,21 +2945,21 @@ button {
   width: 100%;
   max-width: none;
 }
-/* line 20, src/pages/_contact.scss */
+/* line 56, src/pages/_contact.scss */
 .contact.page .masthead .text-box .text-wrap {
   padding: 0;
 }
-/* line 26, src/pages/_contact.scss */
+/* line 62, src/pages/_contact.scss */
 .contact.page .form-wrapper {
   width: 70%;
   margin: 5em auto 0 auto;
   max-width: 900px;
 }
-/* line 32, src/pages/_contact.scss */
+/* line 68, src/pages/_contact.scss */
 .contact.page .btn.zipcode {
   padding: 1.3em 5.4em 1.3em 2em;
 }
-/* line 36, src/pages/_contact.scss */
+/* line 72, src/pages/_contact.scss */
 .contact.page h4 {
   font-size: 1.6em;
   font-family: "Mrs Eaves Lining OT";
@@ -2931,7 +2967,7 @@ button {
   letter-spacing: 0.1em;
   margin-bottom: 40px;
 }
-/* line 44, src/pages/_contact.scss */
+/* line 80, src/pages/_contact.scss */
 .contact.page .email, .contact.page .message {
   display: block;
   width: 100%;
@@ -2942,29 +2978,29 @@ button {
   letter-spacing: 0.1em;
   padding: 1em 1em 1em 2em;
 }
-/* line 55, src/pages/_contact.scss */
+/* line 91, src/pages/_contact.scss */
 .contact.page .submit {
   float: right;
   padding: 1.4em 2.0em;
   margin-bottom: 11em;
 }
-/* line 61, src/pages/_contact.scss */
+/* line 97, src/pages/_contact.scss */
 .contact.page .errors, .contact.page .success {
   float: left;
   margin-top: 1em;
 }
-/* line 66, src/pages/_contact.scss */
+/* line 102, src/pages/_contact.scss */
 .contact.page .errors p:before, .contact.page .success p:before {
   content: '';
   position: absolute;
   background-size: cover;
 }
 
-/* line 79, src/pages/_contact.scss */
+/* line 115, src/pages/_contact.scss */
 .errors-showing .errors p {
   margin-left: 40px;
 }
-/* line 82, src/pages/_contact.scss */
+/* line 118, src/pages/_contact.scss */
 .errors-showing .errors p:before {
   width: 26px;
   height: 26px;
@@ -2972,11 +3008,11 @@ button {
   background-image: url(../img/failure.png);
 }
 
-/* line 96, src/pages/_contact.scss */
+/* line 132, src/pages/_contact.scss */
 .success-showing .success p {
   margin-left: 50px;
 }
-/* line 99, src/pages/_contact.scss */
+/* line 135, src/pages/_contact.scss */
 .success-showing .success p:before {
   width: 37px;
   height: 26px;
