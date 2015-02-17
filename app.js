@@ -43,7 +43,7 @@ app.post('/form', function(req, res) {
                 to: req.body.email,
                 from: 'QandA@ESKluft.com',
                 subject: 'Re: Kluftmattress contact',
-                text: 'Thank you for your message, a representative will contact you within 24-48hrs'
+                text: 'Hello,\nThank you for reaching out to E.S. Kluft & Company. Your query is important to us.\nWe typically answer emails within 2 business days of receiving them. Our business hours are Monday through Friday 10AM – 6PM PST.\n\nSincerely,\nThe E.S. Kluft & Company team'
             });
         });
 });
