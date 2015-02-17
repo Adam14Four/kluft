@@ -16,6 +16,10 @@
         }
     }
 
+    .mobile-grid .masthead-2 {
+        height: 0px;
+    }
+
     .h10 {
         @include transition(opacity 0.3s $easeInOut);
     }

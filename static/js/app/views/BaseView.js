@@ -33,14 +33,18 @@ define(function(require, exports, module) {
             }
 
             $('.block-image:in-viewport').addClass('in-view');
-            this.ui.parallaxBg.css('background-position', '50% ' + scrolledY + 'px');
+            if (!Modernizr.touch) {
+                this.ui.parallaxBg.css('background-position', '50% ' + scrolledY + 'px');
+            }
 
         },
 
         onResize: function() {
-            var headerHeight = $('#region-header').height();
-            this.$el.css('margin-top', '-' + headerHeight + 'px');
-            this.ui.textbox.css('margin-top', headerHeight/2);
+            if (!Modernizr.touch) {
+                var headerHeight = $('#region-header').height();
+                this.$el.css('margin-top', '-' + headerHeight + 'px');
+                this.ui.textbox.css('margin-top', headerHeight/2);
+            }
         }
 
     });
