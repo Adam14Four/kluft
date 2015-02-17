@@ -2787,10 +2787,9 @@ button {
 /* line 28, src/pages/_retailers.scss */
 .retailers.page .map {
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 10%;
   width: 35%;
-  padding-bottom: 35%;
   display: none;
   overflow: hidden;
   z-index: 0;
@@ -2798,7 +2797,7 @@ button {
   max-height: 470px;
   background-color: #ffffff !important;
 }
-/* line 43, src/pages/_retailers.scss */
+/* line 42, src/pages/_retailers.scss */
 .retailers.page .errors {
   position: absolute;
   display: none;
@@ -2807,86 +2806,86 @@ button {
   -webkit-transform: translate3d(0, 200%, 0);
   transform: translate3d(0, 200%, 0);
 }
-/* line 49, src/pages/_retailers.scss */
+/* line 48, src/pages/_retailers.scss */
 .retailers.page .errors p {
   font-size: 1.2em;
   text-transform: none;
   color: red;
 }
-/* line 57, src/pages/_retailers.scss */
+/* line 56, src/pages/_retailers.scss */
 .retailers.page .search {
   margin-top: 1.5em;
 }
 @media (min-width: 780px) {
-  /* line 57, src/pages/_retailers.scss */
+  /* line 56, src/pages/_retailers.scss */
   .retailers.page .search {
     margin-top: 0;
   }
 }
-/* line 64, src/pages/_retailers.scss */
+/* line 63, src/pages/_retailers.scss */
 .retailers.page .zipcode-wrapper {
   display: inline-block;
   position: relative;
 }
-/* line 69, src/pages/_retailers.scss */
+/* line 68, src/pages/_retailers.scss */
 .retailers.page .zipcode-form {
   width: 70%;
   margin: 0 auto;
   overflow: hidden;
 }
-/* line 74, src/pages/_retailers.scss */
+/* line 73, src/pages/_retailers.scss */
 .retailers.page .zipcode-form h6 {
   letter-spacing: 0.38em;
   font-size: 1.2em;
   text-transform: uppercase;
 }
-/* line 81, src/pages/_retailers.scss */
+/* line 80, src/pages/_retailers.scss */
 .retailers.page .location-list {
   width: 70%;
 }
-/* line 84, src/pages/_retailers.scss */
+/* line 83, src/pages/_retailers.scss */
 .retailers.page .location-list li {
   display: block;
   width: 100%;
 }
-/* line 88, src/pages/_retailers.scss */
+/* line 87, src/pages/_retailers.scss */
 .retailers.page .location-list li:before {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 95, src/pages/_retailers.scss */
+  /* line 94, src/pages/_retailers.scss */
   .retailers.page .map {
     display: block;
   }
-  /* line 99, src/pages/_retailers.scss */
+  /* line 98, src/pages/_retailers.scss */
   .retailers.page .zipcode-form {
     width: 50%;
     margin-left: 50%;
     overflow: hidden;
   }
-  /* line 104, src/pages/_retailers.scss */
+  /* line 103, src/pages/_retailers.scss */
   .retailers.page .location-list {
     width: 75%;
   }
-  /* line 107, src/pages/_retailers.scss */
+  /* line 106, src/pages/_retailers.scss */
   .retailers.page .location-list li {
     display: inline-block;
     width: 50%;
   }
 }
 @media (min-width: 900px) {
-  /* line 118, src/pages/_retailers.scss */
+  /* line 117, src/pages/_retailers.scss */
   .retailers.page .location-list {
     width: 75%;
     margin-left: 15%;
   }
-  /* line 122, src/pages/_retailers.scss */
+  /* line 121, src/pages/_retailers.scss */
   .retailers.page .location-list li {
     display: inline-block;
     width: 35%;
     margin-right: 12%;
   }
-  /* line 127, src/pages/_retailers.scss */
+  /* line 126, src/pages/_retailers.scss */
   .retailers.page .location-list li:before {
     display: block;
   }
