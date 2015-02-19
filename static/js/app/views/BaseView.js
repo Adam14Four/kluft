@@ -13,8 +13,8 @@ define(function(require, exports, module) {
             $(window).scrollTop($(window).scrollTop()+1);
             this.bindUIElements();
             this.delegateEvents();
-            this.scrollEffects();
             this.onResize();
+            this.scrollEffects();
 
             setTimeout(function(){
                 $('section').removeClass('is-loading');
@@ -34,7 +34,7 @@ define(function(require, exports, module) {
 
             $('.block-image:in-viewport').addClass('in-view');
             if (!Modernizr.touch) {
-                this.ui.parallaxBg.css('background-position', '50% ' + scrolledY + 'px');
+                this.ui.parallaxBg.css('background-position', '50% ' + (this.bgYOffset + scrolledY) + 'px');
             }
 
         },
@@ -45,6 +45,22 @@ define(function(require, exports, module) {
                 this.$el.css('margin-top', '-' + headerHeight + 'px');
                 this.ui.textbox.css('margin-top', headerHeight/2);
             }
+
+            this.winWidth = $(window).width();
+
+            if (this.winWidth >= 960 && this.winWidth < 1100) {
+                this.bgYOffset = -60;
+            } else if (this.winWidth >= 1100 && this.winWidth < 1300) {
+                this.bgYOffset = -100;
+            } else if (this.winWidth >= 1300 && this.winWidth < 1500) {
+                this.bgYOffset = -150;
+            } else if (this.winWidth >= 1500) {
+                this.bgYOffset = -200;
+            } else {
+                this.bgYOffset = 0;
+            }
+
+            this.scrollEffects();
         }
 
     });

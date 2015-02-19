@@ -1336,8 +1336,9 @@ button {
   width: 100%;
   height: 600px;
   overflow: hidden;
+  background-position: 50% 100%;
 }
-/* line 8, src/components/_masthead.scss */
+/* line 9, src/components/_masthead.scss */
 .masthead.masthead-short {
   height: 500px;
   overflow: visible;
@@ -1346,25 +1347,27 @@ button {
   /* line 1, src/components/_masthead.scss */
   .masthead {
     height: 650px;
+    background-position: 50% 100%;
   }
 }
 @media (min-width: 1500px) {
   /* line 1, src/components/_masthead.scss */
   .masthead {
     height: 700px;
+    background-position: 50% 100%;
   }
-  /* line 18, src/components/_masthead.scss */
+  /* line 21, src/components/_masthead.scss */
   .masthead.masthead-short {
     height: 600px;
   }
 }
-/* line 23, src/components/_masthead.scss */
+/* line 26, src/components/_masthead.scss */
 .masthead .scroll {
   bottom: 30px;
   top: auto;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
-/* line 30, src/components/_masthead.scss */
+/* line 33, src/components/_masthead.scss */
 .masthead .text-box {
   position: absolute;
   bottom: 0;
@@ -1376,36 +1379,36 @@ button {
   -webkit-transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-/* line 38, src/components/_masthead.scss */
+/* line 41, src/components/_masthead.scss */
 .masthead .text-box.fade-out {
   opacity: 0;
 }
-/* line 42, src/components/_masthead.scss */
+/* line 45, src/components/_masthead.scss */
 .masthead .text-box .text-wrap {
   padding: 3.4em 5em 5.5em 5em;
 }
-/* line 46, src/components/_masthead.scss */
+/* line 49, src/components/_masthead.scss */
 .masthead .text-box .h4 {
   letter-spacing: 0.33em;
   margin: 0.5em 0 2em 0;
 }
-/* line 51, src/components/_masthead.scss */
+/* line 54, src/components/_masthead.scss */
 .masthead .text-box .h7 {
   text-transform: none;
   letter-spacing: 0.1em;
 }
-/* line 56, src/components/_masthead.scss */
+/* line 59, src/components/_masthead.scss */
 .masthead .text-box .h10, .masthead .text-box .header a, .header .masthead .text-box a, .masthead .text-box .footer a, .footer .masthead .text-box a, .masthead .text-box .footer .to-top, .footer .masthead .text-box .to-top {
   letter-spacing: 0.38em;
 }
-/* line 60, src/components/_masthead.scss */
+/* line 63, src/components/_masthead.scss */
 .masthead .text-box.light {
   background-color: rgba(255, 255, 255, 0.6);
   right: auto;
   left: 12%;
 }
 
-/* line 71, src/components/_masthead.scss */
+/* line 74, src/components/_masthead.scss */
 .masthead-2 .text-box {
   bottom: auto;
   right: auto;
@@ -1414,27 +1417,27 @@ button {
   background-color: rgba(69, 69, 69, 0.5);
   text-align: center;
 }
-/* line 80, src/components/_masthead.scss */
+/* line 83, src/components/_masthead.scss */
 .masthead-2 .text-box .text-wrap {
   padding: 7.5em 5em 5.5em 4.5em;
 }
-/* line 84, src/components/_masthead.scss */
+/* line 87, src/components/_masthead.scss */
 .masthead-2 .text-box .h3 {
   letter-spacing: 0.4em;
 }
-/* line 88, src/components/_masthead.scss */
+/* line 91, src/components/_masthead.scss */
 .masthead-2 .text-box .h7 {
   margin: 1em 0 2.2em 0;
   text-transform: none;
   letter-spacing: 0.1em;
   line-height: 1.7;
 }
-/* line 95, src/components/_masthead.scss */
+/* line 98, src/components/_masthead.scss */
 .masthead-2 .text-box .h10, .masthead-2 .text-box .header a, .header .masthead-2 .text-box a, .masthead-2 .text-box .footer a, .footer .masthead-2 .text-box a, .masthead-2 .text-box .footer .to-top, .footer .masthead-2 .text-box .to-top {
   letter-spacing: 0.38em;
 }
 
-/* line 107, src/components/_masthead.scss */
+/* line 110, src/components/_masthead.scss */
 .masthead-4 .text-box {
   bottom: auto;
   right: auto;
@@ -1443,27 +1446,27 @@ button {
   background-color: transparent;
   text-align: center;
 }
-/* line 116, src/components/_masthead.scss */
+/* line 119, src/components/_masthead.scss */
 .masthead-4 .text-box .text-wrap {
   padding: 7.5em 5em 5.5em 4.5em;
 }
-/* line 120, src/components/_masthead.scss */
+/* line 123, src/components/_masthead.scss */
 .masthead-4 .text-box .h3 {
   letter-spacing: 0.4em;
 }
-/* line 124, src/components/_masthead.scss */
+/* line 127, src/components/_masthead.scss */
 .masthead-4 .text-box .h7 {
   margin: 1em 0 2.2em 0;
   text-transform: none;
   letter-spacing: 0.1em;
   line-height: 1.7;
 }
-/* line 131, src/components/_masthead.scss */
+/* line 134, src/components/_masthead.scss */
 .masthead-4 .text-box .h10, .masthead-4 .text-box .header a, .header .masthead-4 .text-box a, .masthead-4 .text-box .footer a, .footer .masthead-4 .text-box a, .masthead-4 .text-box .footer .to-top, .footer .masthead-4 .text-box .to-top {
   letter-spacing: 0.38em;
 }
 
-/* line 140, src/components/_masthead.scss */
+/* line 143, src/components/_masthead.scss */
 .masthead-5 .text-box {
   background-color: transparent;
   right: auto;
@@ -1475,12 +1478,12 @@ button {
   padding: 0;
   transform: translate3d(-50%, -50%, 0);
 }
-/* line 151, src/components/_masthead.scss */
+/* line 154, src/components/_masthead.scss */
 .masthead-5 .text-box .text-wrap {
   padding: 0;
 }
 @media (min-width: 768px) {
-  /* line 157, src/components/_masthead.scss */
+  /* line 160, src/components/_masthead.scss */
   .masthead-5 .text-box {
     transform: translate3d(0, 0, 0);
     text-align: left;
@@ -1492,14 +1495,38 @@ button {
   }
 }
 
+@media (min-width: 960px) {
+  /* line 173, src/components/_masthead.scss */
+  .masthead-1, .masthead-4 {
+    background-position: 50% -60px;
+  }
+}
+@media (min-width: 1100px) {
+  /* line 179, src/components/_masthead.scss */
+  .masthead-1, .masthead-4 {
+    background-position: 50% -100px;
+  }
+}
+@media (min-width: 1300px) {
+  /* line 185, src/components/_masthead.scss */
+  .masthead-1, .masthead-4 {
+    background-position: 50% -150px;
+  }
+}
+@media (min-width: 1500px) {
+  /* line 191, src/components/_masthead.scss */
+  .masthead-1, .masthead-4 {
+    background-position: 50% -200px;
+  }
+}
 @media (min-width: 768px) {
-  /* line 169, src/components/_masthead.scss */
+  /* line 196, src/components/_masthead.scss */
   .pull-up {
     margin-top: -4em;
   }
 }
 
-/* line 177, src/components/_masthead.scss */
+/* line 204, src/components/_masthead.scss */
 .fade-out {
   opacity: 0;
 }

@@ -15,7 +15,8 @@ define(function (require, exports, module) {
             'method(/)': 'method',
             'kluft-standard(/)': 'kluftStandard',
             'retailers(/)(/:address)': 'retailers',
-            'contact(/)': 'contact'
+            'contact(/)': 'contact',
+            '*default': 'default'
 
         },
 

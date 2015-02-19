@@ -142,11 +142,6 @@ define(function(require) {
             this.address = this.address || new Address();
             this.address.set('address', address);
 
-            // if (app.contentRegion.currentView === this.retailersView && app.contentRegion.currentView !== null) {
-            //     console.log('already open');
-            //     return;
-            // }
-
             this.retailersView = new RetailersView({
                 model: this.address,
                 collection: new Addresses({})
@@ -159,6 +154,10 @@ define(function(require) {
             this.contactView = new ContactView();
 
             app.contentRegion.transitionToView(this.contactView);
+        },
+
+        default: function() {
+            this.index();
         }
 
     });
