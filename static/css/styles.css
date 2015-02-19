@@ -2968,21 +2968,22 @@ button {
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.11em;
+  white-space: nowrap;
 }
-/* line 34, src/pages/_contact.scss */
+/* line 35, src/pages/_contact.scss */
 .contact.page .intro {
   overflow: visible;
 }
-/* line 37, src/pages/_contact.scss */
+/* line 38, src/pages/_contact.scss */
 .contact.page .intro h2 {
   color: #ffffff;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
-/* line 43, src/pages/_contact.scss */
+/* line 44, src/pages/_contact.scss */
 .contact.page .masthead {
   background-image: url(../img/pages/contact/masthead.jpg);
 }
-/* line 47, src/pages/_contact.scss */
+/* line 48, src/pages/_contact.scss */
 .contact.page .masthead .text-box {
   text-align: center;
   background-color: transparent;
@@ -2991,21 +2992,22 @@ button {
   width: 100%;
   max-width: none;
 }
-/* line 56, src/pages/_contact.scss */
+/* line 57, src/pages/_contact.scss */
 .contact.page .masthead .text-box .text-wrap {
   padding: 0;
 }
-/* line 62, src/pages/_contact.scss */
+/* line 63, src/pages/_contact.scss */
 .contact.page .form-wrapper {
   width: 70%;
   margin: 5em auto 0 auto;
   max-width: 900px;
+  font-size: 10px;
 }
-/* line 68, src/pages/_contact.scss */
+/* line 70, src/pages/_contact.scss */
 .contact.page .btn.zipcode {
   padding: 1.3em 5.4em 1.3em 2em;
 }
-/* line 72, src/pages/_contact.scss */
+/* line 74, src/pages/_contact.scss */
 .contact.page h4 {
   font-size: 1.6em;
   font-family: "Mrs Eaves Lining OT";
@@ -3013,7 +3015,7 @@ button {
   letter-spacing: 0.1em;
   margin-bottom: 40px;
 }
-/* line 80, src/pages/_contact.scss */
+/* line 82, src/pages/_contact.scss */
 .contact.page .email, .contact.page .message {
   display: block;
   width: 100%;
@@ -3024,29 +3026,29 @@ button {
   letter-spacing: 0.1em;
   padding: 1em 1em 1em 2em;
 }
-/* line 91, src/pages/_contact.scss */
+/* line 93, src/pages/_contact.scss */
 .contact.page .submit {
   float: right;
   padding: 1.4em 2.0em;
   margin-bottom: 11em;
 }
-/* line 97, src/pages/_contact.scss */
+/* line 99, src/pages/_contact.scss */
 .contact.page .errors, .contact.page .success {
   float: left;
   margin-top: 1em;
 }
-/* line 102, src/pages/_contact.scss */
+/* line 104, src/pages/_contact.scss */
 .contact.page .errors p:before, .contact.page .success p:before {
   content: '';
   position: absolute;
   background-size: cover;
 }
 
-/* line 115, src/pages/_contact.scss */
+/* line 117, src/pages/_contact.scss */
 .errors-showing .errors p {
   margin-left: 40px;
 }
-/* line 118, src/pages/_contact.scss */
+/* line 120, src/pages/_contact.scss */
 .errors-showing .errors p:before {
   width: 26px;
   height: 26px;
@@ -3054,11 +3056,11 @@ button {
   background-image: url(../img/failure.png);
 }
 
-/* line 132, src/pages/_contact.scss */
+/* line 134, src/pages/_contact.scss */
 .success-showing .success p {
   margin-left: 50px;
 }
-/* line 135, src/pages/_contact.scss */
+/* line 137, src/pages/_contact.scss */
 .success-showing .success p:before {
   width: 37px;
   height: 26px;
