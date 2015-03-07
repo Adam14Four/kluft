@@ -181,7 +181,7 @@ define(function(require, exports, module) {
         },
 
         checkResults: function(results) {
-            console.log(results);
+            // console.log(results);
             // if (results[0].distance > 60) {
             //     console.log('too far away');
 
@@ -206,9 +206,8 @@ define(function(require, exports, module) {
             e.stopPropagation();
             e.preventDefault();
 
-            console.log('form submit')
-
             var address = $(e.currentTarget).find('input[name=address]').val();
+            ga('send', 'retailer-search', address);
 
             this.resetErrors();
 

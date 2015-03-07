@@ -84,7 +84,7 @@ define(function(require) {
 
         },
 
-        index: function() {
+        home: function() {
             this.homeView = new HomeView();
 
             app.contentRegion.transitionToView(this.homeView);
@@ -120,7 +120,7 @@ define(function(require) {
             app.contentRegion.transitionToView(this.royalSovereignLatexView);
         },
 
-        about: function() {
+        earlSKluft: function() {
             this.aboutView = new AboutView();
 
             app.contentRegion.transitionToView(this.aboutView);
@@ -157,7 +157,7 @@ define(function(require) {
         },
 
         default: function() {
-            this.index();
+            this.home();
         }
 
     });
