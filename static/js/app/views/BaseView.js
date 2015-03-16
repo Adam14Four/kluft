@@ -34,7 +34,7 @@ define(function(require, exports, module) {
 
             $('.block-image:in-viewport').addClass('in-view');
             if (!Modernizr.touch) {
-                this.ui.parallaxBg.css('background-position', '50% ' + (this.bgYOffset + scrolledY) + 'px');
+                this.ui.parallaxBg.css('background-position', '50% ' + (this.bgYOffset + parseInt(-scrolledY / 6)) + 'px');
             }
 
         },
