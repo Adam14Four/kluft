@@ -249,9 +249,8 @@ define(function(require, exports, module) {
         },
 
         isFormValid: function (address) {
-            var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(parseInt(address, 10));
-
-            return isValidZip;
+            console.log(address)
+            return (/(^\d{5}$)|(^\d{5}-\d{4}$)/).test(address);
         },
 
         onDestroy: function() {
