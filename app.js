@@ -57,7 +57,7 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
 }));
 app.use(multipart());
 app.use(session({
-    secret: 'aireloomAdmin',
+    secret: 'hadouken',
     saveUninitialized: false,
     resave: false
 }));
