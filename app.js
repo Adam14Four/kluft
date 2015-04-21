@@ -5,10 +5,37 @@ var express = require('express'),
     methodOverride = require('method-override'),
     path = require('path'),
     bodyParser = require('body-parser'),
-    sendgrid  = require('sendgrid')('calebjeffrey', 'Kairiangel01');
+    config = require('./server/config'),
+    session = require('express-session'),
+    exphbs = require('express-handlebars'),
+    multipart = require('connect-multiparty'),
+    flash = require('connect-flash');
 
 // create express instance
 var app = express();
+
+// adding handlebars
+app.set('views', path.join(__dirname + '/server', 'view'));
+app.engine('hbs', exphbs({
+    extname: '.hbs',
+    defaultLayout: 'main',
+    layoutsDir: "./server/view/layouts/",
+    partialsDir: "./server/view/partials/",
+    helpers: {
+        pagination: function(pages, current, section) {
+            var content = "";
+            for (var i = 1; i < pages + 1; i++) {
+                if (i != current)
+                    content += '<li><a href="/cms/' + section + '/page/' + i + ' ">' + i + '</a></li>'
+                else
+                    content += '<li class="active"><a href="/cms/' + section + '/page/' + i + ' ">' + i + '</a></li>'
+            };
+            return content
+        }
+    }
+}));
+app.set('view engine', '.hbs');
+
 
 // static folder setup
 app.use(express.static(path.join(__dirname, './static/')));
@@ -24,32 +51,32 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use( bodyParser.json() );       // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-  extended: true
+app.use(bodyParser.json()); // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
+    extended: true
+}));
+app.use(multipart());
+app.use(session({
+    secret: 'aireloomAdmin',
+    saveUninitialized: false,
+    resave: false
 }));
 
-app.post('/form', function(req, res) {
-
-    sendgrid.send({
-        to:       'QandA@ESKluft.com',
-        from:     req.body.email,
-        subject:  'Kluft Form Contact',
-        text:     req.body.message
-        }, function(err, json) {
-            if (err) { return console.error(err); }
-            console.log(json);
-            sendgrid.send({
-                to: req.body.email,
-                from: 'QandA@ESKluft.com',
-                subject: 'Re: your Kluft request',
-                text: 'Hello,\nThank you for reaching out to E.S. Kluft & Company. Your query is important to us.\nWe typically answer emails within 2 business days of receiving them. Our business hours are Monday through Friday 10AM – 6PM PST.\n\nSincerely,\nThe E.S. Kluft & Company team'
-            });
-        });
+app.use(flash());
+app.use(function(req, res, next) {
+    // if there's a flash message in the session request,
+    // make it available in the response, then delete it
+    res.locals.sessionFlash = req.session.sessionFlash;
+    delete req.session.sessionFlash;
+    next();
 });
 
-app.get('*', function(req, res){
-    res.sendFile(__dirname + '/static/index.html');
+// load database
+var db = new require('./server/database')();
+db.on('done', function() {
+    // load all the routes
+    var router = require('./server/route/index');
+    app.use(router);
 });
 
 // listen

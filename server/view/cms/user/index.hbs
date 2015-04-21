@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="page-header col-md-10">
+            <h3>Users</h3>
+        </div>
+        <div class="page-header col-md-2">
+            <a href="/cms/user/new" class="btn btn-primary">Create a new User</a>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+
+        <tbody class="table-hover">
+            {{#each user}}
+            <tr>
+                <td class="col-md-10">{{username}}</td>
+                <td class="col-md-1"><a href="/cms/user/{{_id}}/destroy" class="btn btn-danger">Delete</a> </td>
+                <!--<td class="col-md-1"><a href="/cms/user/{{_id}}/edit" class="btn btn-primary">Edit</a></td>-->
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+ <script>
+        window.onload = function() {
+            $('.btn-danger').on('click', function(evt) {
+                 if (!confirm('Are you sure?')) evt.preventDefault();
+            });
+        }
+        </script>
+ 

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{title}}</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="/css/admin.css">
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+    </head>
+    <body>
+        <div class="wrap">
+            <nav id="header" class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="container">
+
+                    {{!-- Back Button --}}
+                    <a href="/" class="navbar-backtobrand hidden-xs">
+                        <span class="glyphicon glyphicon-arrow-left"></span>
+                    </a>
+
+                    {{!-- Menu Icon and Title --}}
+                    <div class="navbar-header">
+                        <button type="button" data-toggle="collapse" data-target=".navbar-headernav-collapse" class="navbar-toggle">
+                            <span class="sr-only">Toggle section navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span></button>
+                            <a href="/cms" class="active navbar-brand">KLUFT</a>
+                    </div>
+
+                    {{#if title}}
+
+                    {{!-- Menu --}}
+                    <div class="collapse navbar-collapse navbar-headernav-collapse">
+
+                        {{!-- Menu Itens --}}
+                        <ul class="nav navbar-nav">
+                            <li class="false"><a href="/cms/location">Location</a></li>
+                            <li class="false"><a href="/cms/user">Users</a></li>
+                        </ul>
+
+                        {{!-- Logout Button --}}
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="divider"></li>
+                            <li><a href="/cms/signout" class="signout">Sign Out</a></li>
+                        </ul>
+
+                    </div>
+
+                    {{/if}}
+
+                </div>
+            </nav>
+
+            <div class="body">
+
+            {{#if title}}
+
+                <div class="container">
+                    {{#if info}}
+                    <div class="fade in alert alert-info">
+                        <button class="close" type="button" data-dismiss="alert">×</button>
+                        <ul>
+                        {{#each inf in info }}
+                            <li>{{ inf }}</li>
+                        {{/each}}
+                        </ul>
+                    </div>
+                    {{/if}}
+
+                    {{#if error.length}}
+                    <div class="fade in alert alert-danger">
+                        <button class="close" type="button" data-dismiss="alert">×</button>
+                        <ul>
+                        {{#each error in errors }}
+                            <li>{{ error }}</li>
+                        {{/each}}
+                        </ul>
+                    </div>
+                    {{/if}}
+
+                    {{# if message.length }}
+                    <div class="fade in alert alert-success">
+                        <button class="close" type="button" data-dismiss="alert">×</button>
+                        <ul>
+                            <li>{{ message}}</li>
+                        </ul>
+                    </div>
+                    {{/if}}
+
+                    {{# if warning}}
+                    <div class="fade in alert alert-warning">
+                        <button class="close" type="button" data-dismiss="alert">×</button>
+                        <ul>
+                        {{#each warn in warning}}
+                            <li>{{ warn }}</li>
+                        {{/each}}
+                        </ul>
+                    </div>
+                {{/if}}
+
+                </div>
+
+                {{{body}}}
+
+            {{else}}
+
+                {{{body}}}
+
+            {{/if}}
+
+            </div>
+
+            <div id="footer">
+                <div class="container">
+                    <p>Back to <a href="#" target="_blank">top</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="fb-root"></div>
+        <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="http://isocra.com/js/jquery.tablednd.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.3.1/moment-timezone.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
