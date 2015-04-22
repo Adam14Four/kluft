@@ -1,5 +1,6 @@
 define(function(require, exports, module) {
     var $ = require('jquery'),
+        app = require('app/app'),
         Marionette = require('marionette'),
         channels = require('app/channels'),
         helpers = require('app/utils/helpers'),
@@ -95,7 +96,7 @@ define(function(require, exports, module) {
         },
 
         initialize: function() {
-            this.locations = locations;
+            this.locations = app.locations;
             this.listenTo(this.model, 'change:location', this.onUpdateAddress);
             this.window = $(window);
             this.window.on('scroll.retail', _.bind(this.scrollEffects, this));

@@ -36,10 +36,13 @@ define(function(require) {
             var self = this;
 
             app.onload = true;
+            app.isReady = false;
+            app.waitingForLocations = false;
             this.bootstrap();
         },
 
         bootstrap: function() {
+            var self = this;
             channels.globalChannel.on( 'navigate', this.navigate, this );
 
             this.globalView = new GlobalView();
@@ -48,8 +51,20 @@ define(function(require) {
 
             app.headerRegion.show(this.headerView);
             app.footerRegion.show(this.footerView);
+            // this.onAppReady();
 
-            this.onappReady();
+            $.ajax({
+                url: '/api/v1/location',
+                }).done(function(data) {
+                    var newData = _.each(data, function(location) {
+                        location.zip = parseInt(location.zip, 10);
+                        location.lat = location.geo[0];
+                        location.lng = location.geo[1];
+                    });
+
+                    app.locations = newData;
+                    self.onAppReady();
+            });
         },
 
         navigate: function(options) {
@@ -68,9 +83,16 @@ define(function(require) {
 
             $('html').removeClass('menu-is-open');
 
+            window.app = app
+
         },
 
-        onappReady: function() {
+        onAppReady: function() {
+            app.isReady = true;
+
+            if (app.waitingForLocations) {
+                this.retailers();
+            }
             // JS is inited and ready
             $('body').removeClass(constants.INITING_CLASS);
 
@@ -139,15 +161,20 @@ define(function(require) {
         },
 
         retailers: function(address) {
-            this.address = this.address || new Address();
-            this.address.set('address', address);
 
-            this.retailersView = new RetailersView({
-                model: this.address,
-                collection: new Addresses({})
-            });
+            if (app.isReady) {
+                this.address = this.address || new Address();
+                this.address.set('address', address);
 
-            app.contentRegion.transitionToView(this.retailersView);
+                this.retailersView = new RetailersView({
+                    model: this.address,
+                    collection: new Addresses({})
+                });
+
+                app.contentRegion.transitionToView(this.retailersView);
+            } else {
+                app.waitingForLocations = true;
+            }
         },
 
         contact: function() {
