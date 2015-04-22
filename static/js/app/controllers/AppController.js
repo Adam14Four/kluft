@@ -56,6 +56,7 @@ define(function(require) {
             $.ajax({
                 url: '/api/v1/location',
                 }).done(function(data) {
+                    console.log(data);
                     var newData = _.each(data, function(location) {
                         location.zip = parseInt(location.zip, 10);
                         location.lat = location.geo[0];
@@ -83,7 +84,7 @@ define(function(require) {
 
             $('html').removeClass('menu-is-open');
 
-            window.app = app
+            window.app = app;
 
         },
 
