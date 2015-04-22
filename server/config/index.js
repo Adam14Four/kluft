@@ -10,12 +10,12 @@ var config = function() {
         },
         "db": {
             "prefix": "mongodb://",
-            "user": "heroku_app33289949",
-            "password": "3lq8382g6bv82r4ki96is9qq69",
-            "host": "ds061721.mongolab.com:61721/heroku_app33289949"
+            "user": "heroku_app33332395",
+            "password": "icfguqap4qvq24skvl29e9afb4",
+            "host": "ds031711.mongolab.com:31711/heroku_app33332395"
         }
-    }
-    
+    };
+
     return config;
 };
 
