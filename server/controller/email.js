@@ -2,10 +2,11 @@ var config = require('../config'),
     sendgrid  = require('sendgrid')(config.sendgrid.user,config.sendgrid.Kairiangel01);
 
 exports.send = function (req, res) {
+    var emailID = Math.floor(Math.random() * 1000) + 1;
 	sendgrid.send({
         to: 'QandA@ESKluft.com',
         from: req.body.email,
-        subject: 'Kluft Form Contact',
+        subject: 'Kluft Form Contact ID#' + emailID,
         text: req.body.message
     }, function(err, json) {
         if (err) return console.error(err);

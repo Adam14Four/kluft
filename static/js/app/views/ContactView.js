@@ -22,6 +22,7 @@ define(function(require, exports, module) {
             submitBtn: '.submit',
             form: 'form',
             errors: '.errors',
+            message: '.message',
             success: '.success',
             'masthead': '.grid .intro .masthead',
             'intro': '.intro'
@@ -109,6 +110,8 @@ define(function(require, exports, module) {
             successContainer.text('Message sent.').appendTo(this.ui.success);
 
             successContainer.appendTo(this.ui.success);
+
+            this.ui.message.add(this.ui.email).val('');
         }
 
     });
