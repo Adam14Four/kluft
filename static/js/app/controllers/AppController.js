@@ -51,21 +51,21 @@ define(function(require) {
 
             app.headerRegion.show(this.headerView);
             app.footerRegion.show(this.footerView);
-            // this.onAppReady();
+            this.onAppReady();
 
-            $.ajax({
-                url: '/api/v1/location',
-                }).done(function(data) {
-                    console.log(data);
-                    var newData = _.each(data, function(location) {
-                        location.zip = parseInt(location.zip, 10);
-                        location.lat = location.geo[0];
-                        location.lng = location.geo[1];
-                    });
+            // $.ajax({
+            //     url: '/api/v1/location',
+            //     }).done(function(data) {
+            //         console.log(data);
+            //         var newData = _.each(data, function(location) {
+            //             location.zip = parseInt(location.zip, 10);
+            //             location.lat = location.geo[0];
+            //             location.lng = location.geo[1];
+            //         });
 
-                    app.locations = newData;
-                    self.onAppReady();
-            });
+            //         app.locations = newData;
+            //         self.onAppReady();
+            // });
         },
 
         navigate: function(options) {
@@ -89,21 +89,21 @@ define(function(require) {
         },
 
         onAppReady: function() {
-            // app.isReady = true;
+            app.isReady = true;
 
-            // if (app.waitingForLocations) {
-            //     this.retailers();
-            // }
-            // // JS is inited and ready
-            // $('body').removeClass(constants.INITING_CLASS);
+            if (app.waitingForLocations) {
+                this.retailers();
+            }
+            // JS is inited and ready
+            $('body').removeClass(constants.INITING_CLASS);
 
-            // $('.preloader').velocity({
-            //     opacity: 0
-            // }, {
-            //     delay: 500,
-            //     duration: 600,
-            //     display: 'none'
-            // });
+            $('.preloader').velocity({
+                opacity: 0
+            }, {
+                delay: 500,
+                duration: 600,
+                display: 'none'
+            });
 
         },
 
