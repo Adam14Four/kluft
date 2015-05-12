@@ -6,16 +6,16 @@ define(function (require, exports, module) {
 
         appRoutes: {
             '(/)': 'home',
-            'collections(/)': 'collections',
-            'collections(/):beyond-luxury(/)': 'beyondLuxury',
-            'collections(/):kluft-signature(/)': 'kluftSignature',
-            'collections(/):royal-sovereign(/)': 'royalSovereign',
-            'collections(/):royal-sovereign-latex(/)': 'royalSovereignLatex',
-            'earl-kluft(/)': 'earlSKluft',
-            'method(/)': 'method',
-            'kluft-standard(/)': 'kluftStandard',
-            'retailers(/)(/:address)': 'retailers',
-            'contact(/)': 'contact',
+            // 'collections(/)': 'collections',
+            // 'collections(/):beyond-luxury(/)': 'beyondLuxury',
+            // 'collections(/):kluft-signature(/)': 'kluftSignature',
+            // 'collections(/):royal-sovereign(/)': 'royalSovereign',
+            // 'collections(/):royal-sovereign-latex(/)': 'royalSovereignLatex',
+            // 'earl-kluft(/)': 'earlSKluft',
+            // 'method(/)': 'method',
+            // 'kluft-standard(/)': 'kluftStandard',
+            // 'retailers(/)(/:address)': 'retailers',
+            // 'contact(/)': 'contact',
             '*default': 'default'
 
         },

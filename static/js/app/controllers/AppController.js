@@ -89,21 +89,21 @@ define(function(require) {
         },
 
         onAppReady: function() {
-            app.isReady = true;
+            // app.isReady = true;
 
-            if (app.waitingForLocations) {
-                this.retailers();
-            }
-            // JS is inited and ready
-            $('body').removeClass(constants.INITING_CLASS);
+            // if (app.waitingForLocations) {
+            //     this.retailers();
+            // }
+            // // JS is inited and ready
+            // $('body').removeClass(constants.INITING_CLASS);
 
-            $('.preloader').velocity({
-                opacity: 0
-            }, {
-                delay: 500,
-                duration: 600,
-                display: 'none'
-            });
+            // $('.preloader').velocity({
+            //     opacity: 0
+            // }, {
+            //     delay: 500,
+            //     duration: 600,
+            //     display: 'none'
+            // });
 
         },
 
