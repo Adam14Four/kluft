@@ -9,6 +9,8 @@ var express = require('express'),
     session = require('express-session'),
     exphbs = require('express-handlebars'),
     multipart = require('connect-multiparty'),
+    MongoStore = require('connect-mongo')(session),
+    mongoose = require('mongoose'),
     flash = require('connect-flash');
 
 // create express instance
@@ -56,11 +58,18 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
     extended: true
 }));
 app.use(multipart());
-app.use(session({
-    secret: 'hadouken',
+
+var db = new require('./server/database')();
+db.on('done', function() {
+    app.use(session({
+    secret: 'kluftAdmin',
+    store: new MongoStore({
+            mongooseConnection: mongoose.connection
+        }),
     saveUninitialized: false,
     resave: false
 }));
+
 
 app.use(flash());
 app.use(function(req, res, next) {
@@ -72,8 +81,7 @@ app.use(function(req, res, next) {
 });
 
 // load database
-var db = new require('./server/database')();
-db.on('done', function() {
+
     // load all the routes
     var router = require('./server/route/index');
     app.use(router);
