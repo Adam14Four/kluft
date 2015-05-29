@@ -53,19 +53,19 @@ define(function(require) {
             app.footerRegion.show(this.footerView);
             // this.onAppReady();
 
-            $.ajax({
-                url: '/api/v1/location',
-                }).done(function(data) {
-                    console.log(data);
-                    var newData = _.each(data, function(location) {
-                        location.zip = parseInt(location.zip, 10);
-                        location.lat = location.geo[0];
-                        location.lng = location.geo[1];
-                    });
+            // $.ajax({
+            //     url: '/api/v1/location',
+            //     }).done(function(data) {
+            //         console.log(data);
+            //         var newData = _.each(data, function(location) {
+            //             location.zip = parseInt(location.zip, 10);
+            //             location.lat = location.geo[0];
+            //             location.lng = location.geo[1];
+            //         });
 
-                    app.locations = newData;
-                    self.onAppReady();
-            });
+            //         app.locations = newData;
+            //         self.onAppReady();
+            // });
         },
 
         navigate: function(options) {
