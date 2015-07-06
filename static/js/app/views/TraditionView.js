@@ -4,7 +4,7 @@ define(function(require, exports, module) {
         channels = require('app/channels'),
         helpers = require('app/utils/helpers'),
         constants = require('app/utils/constants'),
-        template = require('hbs!templates/about');
+        template = require('hbs!templates/tradition');
 
         require('jquery.viewport');
 

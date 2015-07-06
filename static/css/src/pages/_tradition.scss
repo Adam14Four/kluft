@@ -2,6 +2,7 @@
 
     .sub-grid {
         margin: -5.5em auto 13.5em auto;
+        max-width: 930px;
     }
 
     .masthead-4 { background-image: url(../img/pages/about/masthead.jpg); }
@@ -15,8 +16,9 @@
     }
 
     .block-text-1 {
-        margin-top: 7.5em;
-        margin-left: 17%;
+        margin-top: 14.5em;
+        margin-left: 15%;
+        width: 80%;
 
         p {
             margin-top: 1.5em;
@@ -25,29 +27,14 @@
     }
 
     .block-text-2 {
-        margin-top: 6.5em;
-        margin-left: 17%;
+        margin-top: 14.5em;
+        margin-right: 15%;
+        margin-left: 5%;
+        width: 80%;
 
         p {
             margin-top: 1.5em;
             line-height: 2.6;
-        }
-    }
-
-    .block-text-3 {
-        margin: 17.7em 0 9em 0;
-        width: 80%;
-
-        .h6 {
-            line-height: 1.5;
-            letter-spacing: 0.42em;
-            text-transform: uppercase;
-        }
-        .h7 {
-            margin-top: 1.6em;
-            font-size: 1.8em;
-            letter-spacing: 0.1em;
-            text-transform: none;
         }
     }
 }

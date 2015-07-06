@@ -2302,68 +2302,54 @@ button {
   line-height: 2;
 }
 
-/* line 3, src/pages/_about.scss */
+/* line 3, src/pages/_tradition.scss */
 .about.page .sub-grid {
   margin: -5.5em auto 13.5em auto;
+  max-width: 930px;
 }
-/* line 7, src/pages/_about.scss */
+/* line 8, src/pages/_tradition.scss */
 .about.page .masthead-4 {
   background-image: url(../img/pages/about/masthead.jpg);
 }
-/* line 8, src/pages/_about.scss */
+/* line 9, src/pages/_tradition.scss */
 .about.page .block-1 {
   background-image: url(../img/pages/about/block-1.jpg);
 }
-/* line 9, src/pages/_about.scss */
+/* line 10, src/pages/_tradition.scss */
 .about.page .block-2 {
   background-image: url(../img/pages/about/block-2.jpg);
 }
-/* line 10, src/pages/_about.scss */
+/* line 11, src/pages/_tradition.scss */
 .about.page .block-3 {
   background-image: url(../img/pages/about/block-3.jpg);
 }
-/* line 12, src/pages/_about.scss */
+/* line 13, src/pages/_tradition.scss */
 .about.page .block-3 {
   margin-top: 4.5em;
   margin-left: 0;
 }
-/* line 17, src/pages/_about.scss */
+/* line 18, src/pages/_tradition.scss */
 .about.page .block-text-1 {
-  margin-top: 7.5em;
-  margin-left: 17%;
+  margin-top: 14.5em;
+  margin-left: 15%;
+  width: 80%;
 }
-/* line 21, src/pages/_about.scss */
+/* line 23, src/pages/_tradition.scss */
 .about.page .block-text-1 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 27, src/pages/_about.scss */
+/* line 29, src/pages/_tradition.scss */
 .about.page .block-text-2 {
-  margin-top: 6.5em;
-  margin-left: 17%;
+  margin-top: 14.5em;
+  margin-right: 15%;
+  margin-left: 5%;
+  width: 80%;
 }
-/* line 31, src/pages/_about.scss */
+/* line 35, src/pages/_tradition.scss */
 .about.page .block-text-2 p {
   margin-top: 1.5em;
   line-height: 2.6;
-}
-/* line 37, src/pages/_about.scss */
-.about.page .block-text-3 {
-  margin: 17.7em 0 9em 0;
-  width: 80%;
-}
-/* line 41, src/pages/_about.scss */
-.about.page .block-text-3 .h6 {
-  line-height: 1.5;
-  letter-spacing: 0.42em;
-  text-transform: uppercase;
-}
-/* line 46, src/pages/_about.scss */
-.about.page .block-text-3 .h7 {
-  margin-top: 1.6em;
-  font-size: 1.8em;
-  letter-spacing: 0.1em;
-  text-transform: none;
 }
 
 /* line 3, src/pages/_method.scss */

@@ -11,7 +11,7 @@ define(function (require, exports, module) {
             'collections(/):kluft-signature(/)': 'kluftSignature',
             'collections(/):royal-sovereign(/)': 'royalSovereign',
             'collections(/):royal-sovereign-latex(/)': 'royalSovereignLatex',
-            'earl-kluft(/)': 'earlSKluft',
+            'tradition(/)': 'tradition',
             'method(/)': 'method',
             'kluft-standard(/)': 'kluftStandard',
             'retailers(/)(/:address)': 'retailers',

@@ -18,7 +18,7 @@ define(function(require) {
         FooterView = require('app/views/FooterView'),
         HomeView = require('app/views/HomeView'),
         CollectionView = require('app/views/CollectionView'),
-        AboutView = require('app/views/AboutView'),
+        TraditionView = require('app/views/TraditionView'),
         KluftStandardView = require('app/views/KluftStandardView'),
         BeyondLuxuryView = require('app/views/BeyondLuxuryView'),
         KluftSignatureView = require('app/views/KluftSignatureView'),
@@ -51,7 +51,7 @@ define(function(require) {
 
             app.headerRegion.show(this.headerView);
             app.footerRegion.show(this.footerView);
-            // this.onAppReady();
+            this.onAppReady();
 
             // $.ajax({
             //     url: '/api/v1/location',
@@ -143,10 +143,10 @@ define(function(require) {
             app.contentRegion.transitionToView(this.royalSovereignLatexView);
         },
 
-        earlSKluft: function() {
-            this.aboutView = new AboutView();
+        tradition: function() {
+            this.traditionView = new TraditionView();
 
-            app.contentRegion.transitionToView(this.aboutView);
+            app.contentRegion.transitionToView(this.traditionView);
         },
 
         method: function() {
