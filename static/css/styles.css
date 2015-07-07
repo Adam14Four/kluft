@@ -2324,32 +2324,42 @@ button {
   background-image: url(../img/pages/about/block-3.jpg);
 }
 /* line 13, src/pages/_tradition.scss */
+.about.page .h2, .about.page .h7 {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+/* line 17, src/pages/_tradition.scss */
 .about.page .block-3 {
   margin-top: 4.5em;
   margin-left: 0;
 }
-/* line 18, src/pages/_tradition.scss */
+/* line 22, src/pages/_tradition.scss */
 .about.page .block-text-1 {
   margin-top: 14.5em;
   margin-left: 15%;
   width: 80%;
+  padding-bottom: 0;
 }
-/* line 23, src/pages/_tradition.scss */
+/* line 28, src/pages/_tradition.scss */
 .about.page .block-text-1 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 29, src/pages/_tradition.scss */
+/* line 34, src/pages/_tradition.scss */
 .about.page .block-text-2 {
   margin-top: 14.5em;
   margin-right: 15%;
   margin-left: 5%;
   width: 80%;
 }
-/* line 35, src/pages/_tradition.scss */
+/* line 40, src/pages/_tradition.scss */
 .about.page .block-text-2 p {
   margin-top: 1.5em;
   line-height: 2.6;
+}
+
+/* line 47, src/pages/_tradition.scss */
+.about.page .mobile-grid .block-text-1 {
+  padding-bottom: 0;
 }
 
 /* line 3, src/pages/_method.scss */

@@ -36,7 +36,7 @@ define(function(require, exports, module) {
 
             if (!Modernizr.touch) {
                 // this.ui.parallaxBg.css('background-position', '50% ' + parseInt(scrolledY / 10) + 'px');
-                this.ui.parallaxBg.css('background-position', '50% ' + (this.bgYOffset + parseInt(-scrolledY / 6)) + 'px');
+                this.ui.parallaxBg.css('background-position', '50% ' + (this.bgYOffset + parseInt(scrolledY / 6)) + 'px');
             }
 
         },

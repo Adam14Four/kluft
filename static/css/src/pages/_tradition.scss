@@ -10,6 +10,10 @@
     .block-2 { background-image: url(../img/pages/about/block-2.jpg); }
     .block-3 { background-image: url(../img/pages/about/block-3.jpg); }
 
+    .h2, .h7 {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
     .block-3 {
         margin-top: 4.5em;
         margin-left: 0;
@@ -19,6 +23,7 @@
         margin-top: 14.5em;
         margin-left: 15%;
         width: 80%;
+        padding-bottom: 0;
 
         p {
             margin-top: 1.5em;
@@ -37,4 +42,8 @@
             line-height: 2.6;
         }
     }
+}
+
+.about.page .mobile-grid .block-text-1 {
+    padding-bottom: 0;
 }
