@@ -2,12 +2,12 @@ var mongoose = require('mongoose'),
     User = mongoose.model('User'),
     extend = require('util')._extend;
 
-var user = new User({
-    username: 'admin',
-    password: 'kluft2015'
-}).save(function(err) {
-    if (err) console.log('ERROR:', err);
-});
+// var user = new User({
+//     username: 'admin',
+//     password: 'kluft2015'
+// }).save(function(err) {
+//     if (err) console.log('ERROR:', err);
+// });
 
 /**
  * Load
