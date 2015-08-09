@@ -1,5 +1,22 @@
 <div class="container">
     <div class="row">
+        <div class="col-md-10">
+            <form id="search_form" action="#">
+                <label for="search">Search Locations:</label>
+                <div class="search-ux">
+                    <select class="form-select">
+                        <option value="title">Title</option>
+                        <option value="city">City</option>
+                        <option value="zipcode">Zipcode</option>
+                    </select>
+                    <input type="text" class="search" name="search" placeholder="search...">
+                    <button class="btn btn-submit btn-primary">Submit</button>
+                    <a href="/cms/location/page/1" class="btn btn-primary">Reset</a>
+                </div>
+            </form> 
+        </div>
+    </div>
+    <div class="row">
         <div class="page-header col-md-10">
             <h3>Location</h3>
         </div>
@@ -29,6 +46,15 @@
             $('.btn-danger').on('click', function(evt) {
                  if (!confirm('Are you sure?')) evt.preventDefault();
             });
+
+            $('#search_form').on('submit', function(e) {
+                e.preventDefault();
+                var searchTerm = $('.search').val();
+                var searchField = $('.form-select').val();
+                if (searchTerm) {
+                    window.location.pathname = '/cms/location/search_' + searchField + '/' + searchTerm;
+                }
+            })
         }
         </script>
  

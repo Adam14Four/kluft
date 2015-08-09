@@ -31,3 +31,15 @@ body.dragging,body.dragging *{cursor:move!important}
 td{position:relative}
 td:before{position:absolute}
 input[type=file]{height:27px}
+.search {
+    padding: 6px;
+    position: relative;
+    top: 2px;
+    width: 40%;
+    margin-right: 11px;
+}
+.form-select {
+    background-color: #fff;
+    height: 34px;
+    margin-right: 11px;
+}

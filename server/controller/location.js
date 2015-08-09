@@ -45,6 +45,69 @@ exports.index = function(req, res) {
     });
 };
 
+exports.searchTitle = function(req, res) {
+    var searchTerm = (req.param('searchTerm')) ? req.param('searchTerm') : 1;
+    var options = {
+        criteria: {
+            title: new RegExp(searchTerm, 'i')
+        }
+    };
+
+    Location.search(options, function(err, location) {
+        if (err) return res.render('500');
+        Location.count().exec(function(err, count) {
+            return res.render('cms/location/index', {
+                layout: 'admin',
+                location: location,
+                message: req.flash('success'),
+                error: req.flash('error')
+            });
+        });
+    });
+};
+
+exports.searchCity = function(req, res) {
+    var searchTerm = (req.param('searchTerm')) ? req.param('searchTerm') : 1;
+    var options = {
+        criteria: {
+            city: new RegExp(searchTerm, 'i')
+        }
+    };
+
+    Location.search(options, function(err, location) {
+        if (err) return res.render('500');
+        Location.count().exec(function(err, count) {
+            return res.render('cms/location/index', {
+                layout: 'admin',
+                location: location,
+                message: req.flash('success'),
+                error: req.flash('error')
+            });
+        });
+    });
+};
+
+exports.searchZipcode = function(req, res) {
+    var searchTerm = (req.param('searchTerm')) ? req.param('searchTerm') : 1;
+    var options = {
+        criteria: {
+            zip: new RegExp(searchTerm, 'i')
+        }
+    };
+
+    Location.search(options, function(err, location) {
+        if (err) return res.render('500');
+        Location.count().exec(function(err, count) {
+            return res.render('cms/location/index', {
+                layout: 'admin',
+                location: location,
+                message: req.flash('success'),
+                error: req.flash('error')
+            });
+        });
+    });
+};
+
 exports.new = function(req, res) {
     return res.render('cms/location/new', {
         layout: 'admin',

@@ -54,6 +54,13 @@ LocationSchema.statics = {
             .exec(cb);
     },
 
+    search: function(options, cb) {
+        var criteria = options.criteria || {};
+
+        this.find(criteria)
+            .exec(cb);
+    },
+
     listAll: function(cb) {
         this.find({}).exec(cb);        
     }
