@@ -1,7 +1,11 @@
 var mongoose = require('mongoose'),
     Location = mongoose.model('Location'),
     multiparty = require('multiparty'),
+    json2csv = require('json2csv'),
+    fs = require('fs'),
     extend = require('util')._extend;
+
+var fields = ['title', 'street', 'city', 'state', 'zip', 'country', 'phone'];
 
 exports.load = function(req, res, next, id) {
     Location.load(id, function(err, location) {
@@ -32,6 +36,13 @@ exports.index = function(req, res) {
 
     Location.list(options, function(err, location) {
         if (err) return res.render('500');
+        json2csv({ data: location, fields: fields }, function(err, csv) {
+            if (err) console.log(err);
+            fs.writeFile('file.csv', csv, function(err) {
+                if (err) throw err;
+                console.log('file saved');
+            });
+        });
         Location.count().exec(function(err, count) {
             return res.render('cms/location/index', {
                 layout: 'admin',
@@ -45,6 +56,10 @@ exports.index = function(req, res) {
     });
 };
 
+exports.download = function(req, res) {
+    return res.download('file.csv');
+};
+
 exports.searchTitle = function(req, res) {
     var searchTerm = (req.param('searchTerm')) ? req.param('searchTerm') : 1;
     var options = {
@@ -55,6 +70,14 @@ exports.searchTitle = function(req, res) {
 
     Location.search(options, function(err, location) {
         if (err) return res.render('500');
+        if (err) return res.render('500');
+        json2csv({ data: location, fields: fields }, function(err, csv) {
+            if (err) console.log(err);
+            fs.writeFile('file.csv', csv, function(err) {
+                if (err) throw err;
+                console.log('file saved');
+            });
+        });
         Location.count().exec(function(err, count) {
             return res.render('cms/location/index', {
                 layout: 'admin',
@@ -76,6 +99,45 @@ exports.searchCity = function(req, res) {
 
     Location.search(options, function(err, location) {
         if (err) return res.render('500');
+        if (err) return res.render('500');
+        if (err) return res.render('500');
+        json2csv({ data: location, fields: fields }, function(err, csv) {
+            if (err) console.log(err);
+            fs.writeFile('file.csv', csv, function(err) {
+                if (err) throw err;
+                console.log('file saved');
+            });
+        });
+        Location.count().exec(function(err, count) {
+            return res.render('cms/location/index', {
+                layout: 'admin',
+                location: location,
+                message: req.flash('success'),
+                error: req.flash('error')
+            });
+        });
+    });
+};
+
+exports.searchState = function(req, res) {
+    var searchTerm = (req.param('searchTerm')) ? req.param('searchTerm') : 1;
+    var options = {
+        criteria: {
+            state: new RegExp(searchTerm, 'i')
+        }
+    };
+
+    Location.search(options, function(err, location) {
+        if (err) return res.render('500');
+        if (err) return res.render('500');
+        if (err) return res.render('500');
+        json2csv({ data: location, fields: fields }, function(err, csv) {
+            if (err) console.log(err);
+            fs.writeFile('file.csv', csv, function(err) {
+                if (err) throw err;
+                console.log('file saved');
+            });
+        });
         Location.count().exec(function(err, count) {
             return res.render('cms/location/index', {
                 layout: 'admin',
@@ -97,6 +159,16 @@ exports.searchZipcode = function(req, res) {
 
     Location.search(options, function(err, location) {
         if (err) return res.render('500');
+        if (err) return res.render('500');
+        console.log(location);
+        if (err) return res.render('500');
+        json2csv({ data: location, fields: fields }, function(err, csv) {
+            if (err) console.log(err);
+            fs.writeFile('file.csv', csv, function(err) {
+                if (err) throw err;
+                console.log('file saved');
+            });
+        });
         Location.count().exec(function(err, count) {
             return res.render('cms/location/index', {
                 layout: 'admin',
