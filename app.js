@@ -11,6 +11,7 @@ var express = require('express'),
     multipart = require('connect-multiparty'),
     MongoStore = require('connect-mongo')(session),
     mongoose = require('mongoose'),
+    locale = require('locale'),
     flash = require('connect-flash');
 
 // create express instance
@@ -70,6 +71,8 @@ db.on('done', function() {
     resave: false
 }));
 
+var supported = ["en", "es", "zh"];
+app.use(locale(supported));
 
 app.use(flash());
 app.use(function(req, res, next) {

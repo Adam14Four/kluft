@@ -565,7 +565,7 @@ p.inverted, .p.inverted {
 }
 
 /* line 27, src/_typography.scss */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .h8, .retailers.page .errors p, .h9, .retail-locations .address-wrap:before, .h10, .header a, .footer a, .footer .to-top {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .h8, .retailers.page .errors p, .h9, .retail-locations .address-wrap:before, .h10, .header .main-nav a, .footer a, .footer .to-top {
   font-weight: 300;
   font-family: "Mrs Eaves OT";
   line-height: 1.2;
@@ -576,7 +576,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .h8, .retailers.page 
   -webkit-font-smoothing: antialiased;
 }
 /* line 37, src/_typography.scss */
-h1.inverted, .h1.inverted, h2.inverted, .h2.inverted, h3.inverted, .h3.inverted, h4.inverted, .h4.inverted, h5.inverted, .h5.inverted, h6.inverted, .h6.inverted, .h7.inverted, .h8.inverted, .retailers.page .errors p.inverted, .h9.inverted, .retail-locations .inverted.address-wrap:before, .h10.inverted, .header a.inverted, .footer a.inverted, .footer .inverted.to-top {
+h1.inverted, .h1.inverted, h2.inverted, .h2.inverted, h3.inverted, .h3.inverted, h4.inverted, .h4.inverted, h5.inverted, .h5.inverted, h6.inverted, .h6.inverted, .h7.inverted, .h8.inverted, .retailers.page .errors p.inverted, .h9.inverted, .retail-locations .inverted.address-wrap:before, .h10.inverted, .header .main-nav a.inverted, .footer a.inverted, .footer .inverted.to-top {
   color: #ffffff;
 }
 
@@ -653,7 +653,7 @@ h6.bold, .h6.bold {
 }
 
 /* line 105, src/_typography.scss */
-.h10, .header a, .footer a, .footer .to-top {
+.h10, .header .main-nav a, .footer a, .footer .to-top {
   font-size: 1.2em;
   font-family: "Mrs Eaves Lining OT";
   letter-spacing: 0.5em;
@@ -963,18 +963,18 @@ button {
   }
 }
 /* line 69, src/components/_header.scss */
-.header li {
+.header .main-nav li {
   display: inline-block;
   padding: 1.8em 1.0em 1.3em 1.0em;
 }
 @media (min-width: 960px) {
   /* line 69, src/components/_header.scss */
-  .header li {
+  .header .main-nav li {
     padding: 1.8em 2.5em 1.3em 2.5em;
   }
 }
 /* line 78, src/components/_header.scss */
-.header a {
+.header .main-nav a {
   font-size: 1.1em;
   letter-spacing: 0.2em;
   color: #ffffff;
@@ -984,7 +984,7 @@ button {
   transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
 /* line 85, src/components/_header.scss */
-.header a:hover {
+.header .main-nav a:hover {
   color: #D2D3D7;
 }
 
@@ -1238,7 +1238,7 @@ button {
   }
 }
 /* line 41, src/components/_footer.scss */
-.footer .h10, .footer .header a, .header .footer a, .footer a, .footer .to-top {
+.footer .h10, .footer .header .main-nav a, .header .main-nav .footer a, .footer a, .footer .to-top {
   padding-bottom: 55px;
   letter-spacing: 0.2em;
   color: #434e55;
@@ -1398,7 +1398,7 @@ button {
   letter-spacing: 0.1em;
 }
 /* line 59, src/components/_masthead.scss */
-.masthead .text-box .h10, .masthead .text-box .header a, .header .masthead .text-box a, .masthead .text-box .footer a, .footer .masthead .text-box a, .masthead .text-box .footer .to-top, .footer .masthead .text-box .to-top {
+.masthead .text-box .h10, .masthead .text-box .header .main-nav a, .header .main-nav .masthead .text-box a, .masthead .text-box .footer a, .footer .masthead .text-box a, .masthead .text-box .footer .to-top, .footer .masthead .text-box .to-top {
   letter-spacing: 0.38em;
 }
 /* line 63, src/components/_masthead.scss */
@@ -1433,7 +1433,7 @@ button {
   line-height: 1.7;
 }
 /* line 98, src/components/_masthead.scss */
-.masthead-2 .text-box .h10, .masthead-2 .text-box .header a, .header .masthead-2 .text-box a, .masthead-2 .text-box .footer a, .footer .masthead-2 .text-box a, .masthead-2 .text-box .footer .to-top, .footer .masthead-2 .text-box .to-top {
+.masthead-2 .text-box .h10, .masthead-2 .text-box .header .main-nav a, .header .main-nav .masthead-2 .text-box a, .masthead-2 .text-box .footer a, .footer .masthead-2 .text-box a, .masthead-2 .text-box .footer .to-top, .footer .masthead-2 .text-box .to-top {
   letter-spacing: 0.38em;
 }
 
@@ -1462,7 +1462,7 @@ button {
   line-height: 1.7;
 }
 /* line 134, src/components/_masthead.scss */
-.masthead-4 .text-box .h10, .masthead-4 .text-box .header a, .header .masthead-4 .text-box a, .masthead-4 .text-box .footer a, .footer .masthead-4 .text-box a, .masthead-4 .text-box .footer .to-top, .footer .masthead-4 .text-box .to-top {
+.masthead-4 .text-box .h10, .masthead-4 .text-box .header .main-nav a, .header .main-nav .masthead-4 .text-box a, .masthead-4 .text-box .footer a, .footer .masthead-4 .text-box a, .masthead-4 .text-box .footer .to-top, .footer .masthead-4 .text-box .to-top {
   letter-spacing: 0.38em;
 }
 
@@ -1947,7 +1947,7 @@ button {
   text-align: left;
 }
 /* line 4, src/components/_form.scss */
-.zipcode-form .h10, .zipcode-form .header a, .header .zipcode-form a, .zipcode-form .footer a, .footer .zipcode-form a, .zipcode-form .footer .to-top, .footer .zipcode-form .to-top {
+.zipcode-form .h10, .zipcode-form .header .main-nav a, .header .main-nav .zipcode-form a, .zipcode-form .footer a, .footer .zipcode-form a, .zipcode-form .footer .to-top, .footer .zipcode-form .to-top {
   letter-spacing: 0.38em;
   line-height: 1.9;
   margin-bottom: 1.0em;
@@ -2095,7 +2095,7 @@ button {
   height: 0px;
 }
 /* line 23, src/pages/_home.scss */
-.home.page .h10, .home.page .header a, .header .home.page a, .home.page .footer a, .footer .home.page a, .home.page .footer .to-top, .footer .home.page .to-top {
+.home.page .h10, .home.page .header .main-nav a, .header .main-nav .home.page a, .home.page .footer a, .footer .home.page a, .home.page .footer .to-top, .footer .home.page .to-top {
   -moz-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);

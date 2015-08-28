@@ -5,6 +5,8 @@ define(function(require) {
         helpers = require('app/utils/helpers'),
         constants = require('app/utils/constants'),
         channels = require('app/channels'),
+        I18n = require('i18n-js'),
+        locales = require('app/locales'),
 
         // Models
         Address = require('app/models/Address'),
@@ -38,7 +40,7 @@ define(function(require) {
             app.onload = true;
             app.isReady = false;
             app.waitingForLocations = false;
-            this.bootstrap();
+            this.I18nTranslate();
         },
 
         bootstrap: function() {
@@ -51,6 +53,8 @@ define(function(require) {
 
             app.headerRegion.show(this.headerView);
             app.footerRegion.show(this.footerView);
+
+            channels.globalChannel.trigger('reload');
 
             $.ajax({
                 url: '/api/v1/location',
@@ -184,6 +188,30 @@ define(function(require) {
 
         default: function() {
             this.home();
+        },
+
+        I18nTranslate: function() {
+            var self = this;
+            var supported = ["en", "en_US", "es", "zh", "zh-cn", "zh-hk", "zh-sg"];
+            window.I18n.defaultLocale = "en";
+            window.I18n.translations.en = locales.locales.en;
+            window.I18n.translations.es = locales.locales.es;
+            window.I18n.translations.zh = locales.locales.cn;
+            $.ajax({
+                url: '/api/v1/userlangauge',
+                success: function(data) {
+                    window.I18n.locale = data;
+                    window.locale = data;
+                    window.I18n.currentLocale();
+                    self.bootstrap();
+                },
+                error: function(error) {
+                    window.I18n.locale = 'en';
+                    window.locale = "en";
+                    window.I18n.currentLocale();
+                    self.bootstrap();
+                }
+            });
         }
 
     });

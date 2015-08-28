@@ -44,6 +44,7 @@
     "jquery": "^2.1.1",
     "json2csv": "^2.9.0",
     "knox": "0.9.1",
+    "locale": "0.0.20",
     "method-override": "^2.3.2",
     "mime": "1.2.11",
     "mongoose": "3.8.20",

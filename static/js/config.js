@@ -19,7 +19,7 @@ requirejs.config({
 
         // Main plugins
         'hbs': 'libs/hbs',
-        'i18n': 'libs/i18n',
+        'i18n-js': 'libs/i18n-js',
         'i18nprecompile': 'libs/i18nprecompile',
         'json2': 'libs/json2',
 

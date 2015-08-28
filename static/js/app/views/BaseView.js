@@ -9,7 +9,7 @@ define(function(require, exports, module) {
 
         onShow: function() {
             var self = this;
-
+            channels.globalChannel.on('reload', _.bind(this.onReload, this));
             $(window).scrollTop($(window).scrollTop()+1);
             this.bindUIElements();
             this.delegateEvents();
@@ -19,6 +19,12 @@ define(function(require, exports, module) {
             setTimeout(function(){
                 $('section').removeClass('is-loading');
             }, 300);
+        },
+
+        onReload: function() {
+            this.render();
+            this.onResize();
+            this.scrollEffects();
         },
 
         scrollEffects: function(e) {

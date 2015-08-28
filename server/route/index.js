@@ -4,6 +4,7 @@ var router = express.Router(),
     location = require('../controller/location'),
     admin = require('../controller/admin'),
     path = require('path'),
+    locale = require('locale'),
     email = require('../controller/email');
 
 router.param('locationId', location.load);
@@ -34,6 +35,11 @@ router.get('/cms', admin.validate, admin.index);
 router.get('/cms/login', admin.login);
 router.post('/cms/login', admin.authenticate);
 router.get('/cms/signout', admin.signout);
+router.get('/api/v1/userlangauge', function(req, res) {
+    var supported = ["en", "es", "zh"];
+    var langs = req.headers['accept-language'];
+    res.send(req.locale)
+})
 
 router.post('/form', email.send);
 

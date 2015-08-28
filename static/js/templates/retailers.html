@@ -2,7 +2,7 @@
     <div class="masthead  masthead-short masthead-5 parallax-bg">
         <div class="text-box">
             <div class="text-wrap">
-                <h2 class="h2">Find a Retailer<br/> near you</h2>
+                <h2 class="h2">{{t "Find a Retailer"}}<br/> {{t "near you"}}</h2>
             </div>
         </div>
         <div class="map"></div>
@@ -12,12 +12,12 @@
 <section class="section is-loading">
     <div class="headline">
         <form class="zipcode-form js-search">
-            <h6 class="h10">Enter your zip code</h6>
+            <h6 class="h10">{{t "Enter your zip code"}}</h6>
             <div class="zipcode-wrapper">
                 <div class="errors"></div>
-                <input class="btn zipcode" id="zipcode" type="text" name="address" data-model-bind="address" placeholder="zip code" value="{{#if address}}{{address}}{{/if}}">
+                <input class="btn zipcode" id="zipcode" type="text" name="address" data-model-bind="address" placeholder="{{t "zip code"}}" value="{{#if address}}{{address}}{{/if}}">
             </div>
-            <button class="btn search btn-submit">Search</button>
+            <button class="btn search btn-submit">{{t "Search"}}</button>
         </form>
     </div>
 </section>
