@@ -46,6 +46,7 @@ define(function(require) {
         bootstrap: function() {
             var self = this;
             channels.globalChannel.on( 'navigate', this.navigate, this );
+            channels.globalChannel.on('language-change', this.onLanguageChange, this);
 
             this.globalView = new GlobalView();
             this.headerView = new HeaderView();
@@ -55,6 +56,8 @@ define(function(require) {
             app.footerRegion.show(this.footerView);
 
             channels.globalChannel.trigger('reload');
+
+            // this.onAppReady();
 
             $.ajax({
                 url: '/api/v1/location',
@@ -191,12 +194,18 @@ define(function(require) {
         },
 
         I18nTranslate: function() {
+            if (localStorage && localStorage.getItem('language') ) {
+                this.setLang(localStorage.getItem('language'))
+                return;
+            }
+
             var self = this;
             var supported = ["en", "en_US", "es", "zh", "zh-cn", "zh-hk", "zh-sg"];
             window.I18n.defaultLocale = "en";
             window.I18n.translations.en = locales.locales.en;
             window.I18n.translations.es = locales.locales.es;
             window.I18n.translations.zh = locales.locales.cn;
+
             $.ajax({
                 url: '/api/v1/userlangauge',
                 success: function(data) {
@@ -212,7 +221,35 @@ define(function(require) {
                     self.bootstrap();
                 }
             });
-        }
+        },
+
+        setLang: function(lang) {
+            window.I18n.defaultLocale = "en";
+            window.I18n.translations.en = locales.locales.en;
+            window.I18n.translations.es = locales.locales.es;
+            window.I18n.translations.zh = locales.locales.cn;
+            window.I18n.locale = lang;
+            window.locale = lang;
+            window.I18n.currentLocale();
+            this.bootstrap();
+            $('body').addClass('lang-' + lang);
+        },
+
+        onLanguageChange: function(lang) {
+            if (lang === 'Spanish') {
+                lang = 'es';
+            } else if (lang === 'Chinese') {
+                lang = 'zh'
+            } else {
+                lang = 'en'
+            }
+
+            if (localStorage) {
+                localStorage.setItem('language', lang);
+            }
+
+            window.location.reload();
+        } 
 
     });
 

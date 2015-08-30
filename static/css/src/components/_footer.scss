@@ -78,4 +78,27 @@
             @include translate3d(-50%, -100%, 0);
         }
     }
+    .language-select {
+        position: relative;
+        padding-bottom: 5em;
+        select {
+            background-color: #eee;
+            background-image: none;
+            padding: 0.8rem;
+            font-size: 1.4em;
+            -webkit-appearance: none;
+            &:focus, &:active {
+                outline: none;
+            }
+        }
+        @media (min-width: 768px) {
+            padding-bottom: 0em;
+            float: right;
+            top: -10px;
+            right: 15px;
+        }
+        @media (min-width: 960px) {
+            right: 45px;
+        }
+    }
 }

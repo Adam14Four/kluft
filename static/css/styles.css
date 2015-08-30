@@ -1282,6 +1282,38 @@ button {
   -webkit-transform: translate3d(-50%, -100%, 0);
   transform: translate3d(-50%, -100%, 0);
 }
+/* line 81, src/components/_footer.scss */
+.footer .language-select {
+  position: relative;
+  padding-bottom: 5em;
+}
+/* line 84, src/components/_footer.scss */
+.footer .language-select select {
+  background-color: #eee;
+  background-image: none;
+  padding: 0.8rem;
+  font-size: 1.4em;
+  -webkit-appearance: none;
+}
+/* line 90, src/components/_footer.scss */
+.footer .language-select select:focus, .footer .language-select select:active {
+  outline: none;
+}
+@media (min-width: 768px) {
+  /* line 81, src/components/_footer.scss */
+  .footer .language-select {
+    padding-bottom: 0em;
+    float: right;
+    top: -10px;
+    right: 15px;
+  }
+}
+@media (min-width: 960px) {
+  /* line 81, src/components/_footer.scss */
+  .footer .language-select {
+    right: 45px;
+  }
+}
 
 /* line 1, src/components/_columns.scss */
 [class*='col-'] {

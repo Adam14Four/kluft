@@ -15,10 +15,12 @@ define(function(require, exports, module) {
         template: template,
 
         ui: {
+            'select': 'select',
             scrollBtn: '.back-to-top'
         },
 
         events: {
+            'change @ui.select': 'onChangeSelect',
             'click @ui.scrollBtn': 'onClickScrollBtn'
         },
 
@@ -26,10 +28,22 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
+            var option = 'English';
+            if (window.locale == 'es') {
+                option = 'Spanish';
+            } else if (window.locale == 'zh') {
+                option = 'Chinese';
+            }
+
+            this.ui.select.val(option);
         },
 
         onClickScrollBtn: function() {
             helpers.scrollTo('body');
+        },
+
+        onChangeSelect: function() {
+            channels.globalChannel.trigger('language-change', this.ui.select.val());
         }
 
     });
