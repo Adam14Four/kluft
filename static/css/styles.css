@@ -1220,20 +1220,20 @@ button {
   padding: 4em 0 5em 0;
 }
 /* line 27, src/components/_footer.scss */
-.footer li {
+.footer .footer-links li {
   display: block;
   padding: 1em 2em;
 }
 @media (min-width: 768px) {
   /* line 27, src/components/_footer.scss */
-  .footer li {
+  .footer .footer-links li {
     display: inline-block;
     padding: 1.8em 1.0em 1.3em 1.0em;
   }
 }
 @media (min-width: 960px) {
   /* line 27, src/components/_footer.scss */
-  .footer li {
+  .footer .footer-links li {
     padding: 1.8em 2.5em 1.3em 2.5em;
   }
 }
@@ -1288,23 +1288,100 @@ button {
   padding-bottom: 5em;
 }
 /* line 84, src/components/_footer.scss */
-.footer .language-select select {
-  background-color: #eee;
-  background-image: none;
-  padding: 0.8rem;
-  font-size: 1.4em;
-  -webkit-appearance: none;
+.footer .language-select h3 {
+  font-family: "Mrs Eaves Lining OT";
+  font-size: 11px;
+  letter-spacing: 0.2rem;
+  color: #909090;
+  text-transform: uppercase;
+  display: inline-block;
 }
-/* line 90, src/components/_footer.scss */
-.footer .language-select select:focus, .footer .language-select select:active {
-  outline: none;
+/* line 91, src/components/_footer.scss */
+.footer .language-select h3.select {
+  color: #fff;
+  cursor: pointer;
+}
+/* line 95, src/components/_footer.scss */
+.footer .language-select h3.select:hover .options, .footer .language-select h3.select.active .options {
+  max-height: 400px;
+}
+/* line 98, src/components/_footer.scss */
+.footer .language-select h3.select:hover:after, .footer .language-select h3.select.active:after {
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+/* line 102, src/components/_footer.scss */
+.footer .language-select h3.select:after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #909090;
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+/* line 116, src/components/_footer.scss */
+.footer .language-select .lang-select {
+  position: relative;
+  margin-right: 30px;
+}
+/* line 119, src/components/_footer.scss */
+.footer .language-select .lang-select:after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  left: 15px;
+  top: 2px;
+  width: 1px;
+  height: 11px;
+  background-color: #909090;
+}
+/* line 130, src/components/_footer.scss */
+.footer .language-select .options {
+  position: absolute;
+  top: -80px;
+  margin-left: -16px;
+  max-height: 0px;
+  background-color: #02111b;
+  overflow: hidden;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 138, src/components/_footer.scss */
+.footer .language-select .options li {
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 142, src/components/_footer.scss */
+.footer .language-select .options li:first-child {
+  padding-top: 10px;
+}
+/* line 145, src/components/_footer.scss */
+.footer .language-select .options li:last-child {
+  padding-bottom: 10px;
+}
+/* line 150, src/components/_footer.scss */
+.footer .language-select .option {
+  text-align: center;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   /* line 81, src/components/_footer.scss */
   .footer .language-select {
     padding-bottom: 0em;
     float: right;
-    top: -10px;
+    top: -35px;
     right: 15px;
   }
 }

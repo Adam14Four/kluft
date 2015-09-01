@@ -24,7 +24,7 @@
         padding: 4em 0 5em 0;
     }
 
-    li {
+    .footer-links li {
         display: block;
         padding: 1em 2em;
 
@@ -81,20 +81,80 @@
     .language-select {
         position: relative;
         padding-bottom: 5em;
-        select {
-            background-color: #eee;
-            background-image: none;
-            padding: 0.8rem;
-            font-size: 1.4em;
-            -webkit-appearance: none;
-            &:focus, &:active {
-                outline: none;
+        h3  {
+            font-family: $MrsEavesRoman;
+            font-size: 11px;
+            letter-spacing: 0.2rem;
+            color: #909090;
+            text-transform: uppercase;
+            display: inline-block;
+            &.select {
+                color: #fff;
+                cursor: pointer;
+                &:hover, &.active {
+                    .options {
+                        max-height: 400px;
+                    }
+                    &:after {
+                        @include rotate(-90deg);
+                    }
+                }
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    position: relative;
+                    top: 1px;
+                    width: 0; 
+                    height: 0; 
+                    border-top: 4px solid transparent;
+                    border-bottom: 4px solid transparent;
+                    border-left: 4px solid #909090;
+                    @include transition(transform 0.3s $easeDefault);
+                }
             }
+        }
+        .lang-select {
+            position: relative;
+            margin-right: 30px;
+            &:after {
+                content: '';
+                display: inline-block;
+                position: relative;
+                left: 15px;
+                top: 2px;
+                width: 1px;
+                height: 11px;
+                background-color: #909090;
+            }
+        }
+        .options {
+            position: absolute;
+            top: -80px;
+            margin-left: -16px;
+            max-height: 0px;
+            background-color: #02111b;
+            overflow: hidden;
+            @include transition(all 0.3s $easeDefault);
+            li {
+                padding: 5px;
+                padding-left: 15px;
+                padding-right: 15px;
+                &:first-child {
+                    padding-top: 10px;
+                }
+                &:last-child {
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        .option {
+            text-align: center;
+            color: $white;
         }
         @media (min-width: 768px) {
             padding-bottom: 0em;
             float: right;
-            top: -10px;
+            top: -35px;
             right: 15px;
         }
         @media (min-width: 960px) {

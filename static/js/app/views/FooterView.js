@@ -15,12 +15,14 @@ define(function(require, exports, module) {
         template: template,
 
         ui: {
-            'select': 'select',
+            select: '.select',
+            option: '.option',
             scrollBtn: '.back-to-top'
         },
 
         events: {
-            'change @ui.select': 'onChangeSelect',
+            'click @ui.option': 'onClickOption',
+            'click @ui.select': 'onClickSelect',
             'click @ui.scrollBtn': 'onClickScrollBtn'
         },
 
@@ -35,15 +37,20 @@ define(function(require, exports, module) {
                 option = 'Chinese';
             }
 
-            this.ui.select.val(option);
+            // this.ui.select.text(option);
+            this.ui.select[0].childNodes[0].nodeValue = option;
         },
 
         onClickScrollBtn: function() {
             helpers.scrollTo('body');
         },
 
-        onChangeSelect: function() {
-            channels.globalChannel.trigger('language-change', this.ui.select.val());
+        onClickSelect: function() {
+            this.ui.select.toggleClass('active');
+        },
+
+        onClickOption: function(e) {
+            channels.globalChannel.trigger('language-change', $(e.currentTarget).html());
         }
 
     });
