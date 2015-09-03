@@ -2,6 +2,10 @@ define(function(require, exports, module) {
     return {
         locales: {
             'cn': {
+                "English": "英文",
+                "Spanish": "西班牙人",
+                "Chinese": "中文",
+                "Langauge": "语言",
                 "Kluft": "Kluft",
                 "- Crafted by Masters.": "- 大师之作。",
                 "The Collection": "系列",
@@ -104,6 +108,10 @@ define(function(require, exports, module) {
                 "Directions": "路线指引"
             },
             'es': {
+                "English": "Inglés",
+                "Spanish": "Español",
+                "Chinese": "Chino",
+                "Langauge": "Idioma",
                 "Kluft": "Kluft",
                 "- Crafted by Masters.": "- Crafted by Masters.",
                 "The Collection": "La colección",
@@ -206,6 +214,10 @@ define(function(require, exports, module) {
                 "Directions": "Indicaciones"
             },
             'en': {
+                "English": "English",
+                "Spanish": "Spanish",
+                "Chinese": "Chinese",
+                "Langauge": "Langauge",
                 "Kluft": "Kluft",
                 "- Crafted by Masters.": "- Crafted by Masters.",
                 "The Collection": "The Collection",

@@ -84,7 +84,7 @@ define(function(require, exports, module) {
 
         resetErrors: function() {
             this.errors = [];
-            this.ui.errors.empty();
+            // this.ui.errors.empty();
             $('.error').removeClass('.error');
         },
 
@@ -94,23 +94,11 @@ define(function(require, exports, module) {
         },
 
         showErrors: function() {
-            var errorContainer = $('<p>').addClass('error');
-
-            errorContainer.text('Please provide a valid email').appendTo(this.ui.errors);
-
-            errorContainer.appendTo(this.ui.errors);
-
             this.$el.addClass('errors-showing');
         },
 
         onSuccess: function() {
-            var successContainer = $('<p>');
-
             this.$el.addClass('success-showing');
-            successContainer.text('Message sent.').appendTo(this.ui.success);
-
-            successContainer.appendTo(this.ui.success);
-
             this.ui.message.add(this.ui.email).val('');
         }
 

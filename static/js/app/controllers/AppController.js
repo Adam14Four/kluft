@@ -236,9 +236,9 @@ define(function(require) {
         },
 
         onLanguageChange: function(lang) {
-            if (lang === 'Spanish') {
+            if (lang === 'Spanish' || lang === '西班牙人' || lang === 'Español') {
                 lang = 'es';
-            } else if (lang === 'Chinese') {
+            } else if (lang === 'Chinese' || lang === '中文' || lang === 'Chino') {
                 lang = 'zh'
             } else {
                 lang = 'en'

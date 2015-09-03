@@ -89,6 +89,7 @@
             text-transform: uppercase;
             display: inline-block;
             &.select {
+                min-width: 91px;
                 color: #fff;
                 cursor: pointer;
                 &:hover, &.active {
@@ -128,6 +129,7 @@
             }
         }
         .options {
+            text-align: left;
             position: absolute;
             top: -80px;
             margin-left: -16px;

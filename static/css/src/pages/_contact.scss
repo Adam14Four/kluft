@@ -110,10 +110,14 @@
     }
 }
 
+.errors, .success {
+    display: none;
+}
+
 .errors-showing {
 
     .errors {
-
+        display: block;
         p {
             margin-left: 40px;
 
@@ -130,6 +134,7 @@
 .success-showing {
 
     .success {
+        display: block;
 
         p {
             margin-left: 50px;

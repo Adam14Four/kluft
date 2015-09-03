@@ -15,8 +15,12 @@
     <form action="" method="post" class="contact-form">
         <input type="text" class="email" name="email" placeholder="{{t "Your email address"}}" id="email" />
         <textarea class="message" name="message" rows="20" placeholder="{{t "messagehere"}}" cols="20" id="message"></textarea>
-        <div class="errors"></div>
-        <div class="success"></div>
+        <div class="errors">
+            <p class="error">{{t "Please provide a valid email"}}</p>
+        </div>
+        <div class="success">
+            <p>{{t "Message sent."}}</p>
+        </div>
         <input class="btn submit" type="submit" name="submit" value="{{t "Submit"}}" />
     </form>
 </div>
