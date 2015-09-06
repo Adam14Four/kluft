@@ -3274,6 +3274,27 @@ button {
   }
 }
 
+/* line 3, src/_lang-zh.scss */
+.lang-zh .beyond-luxury.page .masthead .text-box h4 br {
+  display: none;
+}
+/* line 8, src/_lang-zh.scss */
+.lang-zh .beyond-luxury.page .h8 br, .lang-zh .beyond-luxury.page .retailers.page .errors p br, .retailers.page .errors .lang-zh .beyond-luxury.page p br {
+  display: none;
+}
+/* line 13, src/_lang-zh.scss */
+.lang-zh .kluft-signature.page .h8 br, .lang-zh .kluft-signature.page .retailers.page .errors p br, .retailers.page .errors .lang-zh .kluft-signature.page p br {
+  display: none;
+}
+/* line 18, src/_lang-zh.scss */
+.lang-zh .royal-sovereign.page .h8 br, .lang-zh .royal-sovereign.page .retailers.page .errors p br, .retailers.page .errors .lang-zh .royal-sovereign.page p br {
+  display: none;
+}
+/* line 23, src/_lang-zh.scss */
+.lang-zh .royal-sovereign-latex.page .h8 br, .lang-zh .royal-sovereign-latex.page .retailers.page .errors p br, .retailers.page .errors .lang-zh .royal-sovereign-latex.page p br {
+  display: none;
+}
+
 @media (min-width: 480px) {
   /* line 5, src/mq/_480.scss */
   body {
