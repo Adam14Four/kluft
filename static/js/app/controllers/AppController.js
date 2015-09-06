@@ -45,6 +45,9 @@ define(function(require) {
 
         bootstrap: function() {
             var self = this;
+            if (window.locale === 'zh') {
+                document.title = "Kluft® - 大师之作。";
+            }
             channels.globalChannel.on( 'navigate', this.navigate, this );
             channels.globalChannel.on('language-change', this.onLanguageChange, this);
 
@@ -239,9 +242,9 @@ define(function(require) {
             if (lang === 'Spanish' || lang === '西班牙人' || lang === 'Español') {
                 lang = 'es';
             } else if (lang === 'Chinese' || lang === '中文' || lang === 'Chino') {
-                lang = 'zh'
+                lang = 'zh';
             } else {
-                lang = 'en'
+                lang = 'en';
             }
 
             if (localStorage) {

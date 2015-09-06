@@ -1301,21 +1301,22 @@ button {
 }
 /* line 91, src/components/_footer.scss */
 .footer .language-select h3.select {
+  min-width: 91px;
   color: #fff;
   cursor: pointer;
 }
-/* line 95, src/components/_footer.scss */
+/* line 96, src/components/_footer.scss */
 .footer .language-select h3.select:hover .options, .footer .language-select h3.select.active .options {
   max-height: 400px;
 }
-/* line 98, src/components/_footer.scss */
+/* line 99, src/components/_footer.scss */
 .footer .language-select h3.select:hover:after, .footer .language-select h3.select.active:after {
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-/* line 102, src/components/_footer.scss */
+/* line 103, src/components/_footer.scss */
 .footer .language-select h3.select:after {
   content: '';
   display: inline-block;
@@ -1331,12 +1332,12 @@ button {
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
 }
-/* line 116, src/components/_footer.scss */
+/* line 117, src/components/_footer.scss */
 .footer .language-select .lang-select {
   position: relative;
   margin-right: 30px;
 }
-/* line 119, src/components/_footer.scss */
+/* line 120, src/components/_footer.scss */
 .footer .language-select .lang-select:after {
   content: '';
   display: inline-block;
@@ -1347,8 +1348,9 @@ button {
   height: 11px;
   background-color: #909090;
 }
-/* line 130, src/components/_footer.scss */
+/* line 131, src/components/_footer.scss */
 .footer .language-select .options {
+  text-align: left;
   position: absolute;
   top: -80px;
   margin-left: -16px;
@@ -1360,21 +1362,21 @@ button {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 138, src/components/_footer.scss */
+/* line 140, src/components/_footer.scss */
 .footer .language-select .options li {
   padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 142, src/components/_footer.scss */
+/* line 144, src/components/_footer.scss */
 .footer .language-select .options li:first-child {
   padding-top: 10px;
 }
-/* line 145, src/components/_footer.scss */
+/* line 147, src/components/_footer.scss */
 .footer .language-select .options li:last-child {
   padding-bottom: 10px;
 }
-/* line 150, src/components/_footer.scss */
+/* line 152, src/components/_footer.scss */
 .footer .language-select .option {
   text-align: center;
   color: #ffffff;
