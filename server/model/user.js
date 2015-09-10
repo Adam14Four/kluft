@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'),
     config = require('../config'),
-    bcrypt = require('bcrypt'),
+    bcrypt = require('bcrypt-nodejs'),
     Schema = mongoose.Schema,
     SALT_WORK_FACTOR = 10;
 

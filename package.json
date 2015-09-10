@@ -24,7 +24,7 @@
     "backbone": "^1.1.2",
     "backbone.marionette": "^2.2.2",
     "backbone.radio": "^0.7.0",
-    "bcrypt": "0.8.0",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "1.9.1",
     "browsernizr": "^1.0.2",
     "compression": "1.2.0",
