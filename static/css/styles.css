@@ -3274,10 +3274,6 @@ button {
   }
 }
 
-/* line 3, src/_lang-zh.scss */
-.lang-zh .beyond-luxury.page .masthead .text-box h4 br {
-  display: none;
-}
 /* line 8, src/_lang-zh.scss */
 .lang-zh .beyond-luxury.page .h8 br, .lang-zh .beyond-luxury.page .retailers.page .errors p br, .retailers.page .errors .lang-zh .beyond-luxury.page p br {
   display: none;
@@ -3293,6 +3289,10 @@ button {
 /* line 23, src/_lang-zh.scss */
 .lang-zh .royal-sovereign-latex.page .h8 br, .lang-zh .royal-sovereign-latex.page .retailers.page .errors p br, .retailers.page .errors .lang-zh .royal-sovereign-latex.page p br {
   display: none;
+}
+/* line 27, src/_lang-zh.scss */
+.lang-zh .method.page .masthead-4 .text-box {
+  max-width: 870px;
 }
 
 @media (min-width: 480px) {

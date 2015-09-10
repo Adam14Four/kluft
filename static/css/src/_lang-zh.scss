@@ -1,8 +1,8 @@
 .lang-zh {
     .beyond-luxury.page .masthead .text-box h4 {
-        br {
-            display: none;
-        }
+        // br {
+        //     display: none;
+        // }
     }
     .beyond-luxury.page .h8 {
         br {
@@ -23,5 +23,8 @@
         br {
             display: none;
         }
+    }
+    .method.page .masthead-4 .text-box {
+        max-width: 870px;
     }
 }
