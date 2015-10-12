@@ -60,20 +60,20 @@ define(function(require) {
 
             channels.globalChannel.trigger('reload');
 
-            this.onAppReady();
+            // this.onAppReady();
 
-            // $.ajax({
-            //     url: '/api/v1/location',
-            //     }).done(function(data) {
-            //         var newData = _.each(data, function(location) {
-            //             location.zip = parseInt(location.zip, 10);
-            //             location.lat = location.geo[0];
-            //             location.lng = location.geo[1];
-            //         });
+            $.ajax({
+                url: '/api/v1/location',
+                }).done(function(data) {
+                    var newData = _.each(data, function(location) {
+                        location.zip = parseInt(location.zip, 10);
+                        location.lat = location.geo[0];
+                        location.lng = location.geo[1];
+                    });
 
-            //         app.locations = newData;
-            //         self.onAppReady();
-            // });
+                    app.locations = newData;
+                    self.onAppReady();
+            });
         },
 
         navigate: function(options) {
