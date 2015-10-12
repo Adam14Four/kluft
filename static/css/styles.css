@@ -2422,56 +2422,74 @@ button {
   max-width: 930px;
 }
 /* line 8, src/pages/_tradition.scss */
+.about.page .masthead-caption {
+  position: absolute;
+  display: block;
+  max-width: 70%;
+  bottom: 30px;
+  left: 7.5%;
+  font-family: "Mrs Eaves Lining OT";
+  font-size: 1.8em;
+  letter-spacing: 0.1em;
+  color: #d9d9d9;
+}
+@media (min-width: 768px) {
+  /* line 8, src/pages/_tradition.scss */
+  .about.page .masthead-caption {
+    left: 10.5%;
+  }
+}
+/* line 23, src/pages/_tradition.scss */
 .about.page .masthead-4 {
   background-image: url(../img/pages/about/masthead.jpg);
 }
-/* line 9, src/pages/_tradition.scss */
+/* line 24, src/pages/_tradition.scss */
 .about.page .block-1 {
   background-image: url(../img/pages/about/block-1.jpg);
 }
-/* line 10, src/pages/_tradition.scss */
+/* line 25, src/pages/_tradition.scss */
 .about.page .block-2 {
   background-image: url(../img/pages/about/block-2.jpg);
 }
-/* line 11, src/pages/_tradition.scss */
+/* line 26, src/pages/_tradition.scss */
 .about.page .block-3 {
   background-image: url(../img/pages/about/block-3.jpg);
 }
-/* line 13, src/pages/_tradition.scss */
+/* line 28, src/pages/_tradition.scss */
 .about.page .h2, .about.page .h7 {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
-/* line 17, src/pages/_tradition.scss */
+/* line 32, src/pages/_tradition.scss */
 .about.page .block-3 {
   margin-top: 4.5em;
   margin-left: 0;
 }
-/* line 22, src/pages/_tradition.scss */
+/* line 37, src/pages/_tradition.scss */
 .about.page .block-text-1 {
   margin-top: 14.5em;
   margin-left: 15%;
   width: 80%;
   padding-bottom: 0;
 }
-/* line 28, src/pages/_tradition.scss */
+/* line 43, src/pages/_tradition.scss */
 .about.page .block-text-1 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
-/* line 34, src/pages/_tradition.scss */
+/* line 49, src/pages/_tradition.scss */
 .about.page .block-text-2 {
   margin-top: 14.5em;
   margin-right: 15%;
   margin-left: 5%;
   width: 80%;
 }
-/* line 40, src/pages/_tradition.scss */
+/* line 55, src/pages/_tradition.scss */
 .about.page .block-text-2 p {
   margin-top: 1.5em;
   line-height: 2.6;
 }
 
-/* line 47, src/pages/_tradition.scss */
+/* line 62, src/pages/_tradition.scss */
 .about.page .mobile-grid .block-text-1 {
   padding-bottom: 0;
 }

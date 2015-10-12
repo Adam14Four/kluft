@@ -5,6 +5,21 @@
         max-width: 930px;
     }
 
+    .masthead-caption {
+        position: absolute;
+        display: block;
+        max-width: 70%;
+        bottom: 30px;
+        left: 7.5%;
+        font-family: $MrsEavesRoman;
+        font-size: 1.8em;
+        letter-spacing: 0.1em;
+        color: #d9d9d9;
+        @media (min-width: 768px) {
+            left: 10.5%;
+        }
+    }
+
     .masthead-4 { background-image: url(../img/pages/about/masthead.jpg); }
     .block-1 { background-image: url(../img/pages/about/block-1.jpg); }
     .block-2 { background-image: url(../img/pages/about/block-2.jpg); }
