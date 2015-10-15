@@ -179,7 +179,6 @@ define(function(require, exports, module) {
             _.each(this.locations, this.setDistance, this);
             var results = _.sortBy(this.locations, this.sortLocations);
             results = this.checkResults(results.slice(0, 6));
-            console.log(results);
             if (results.length === 0) {
                 this.$el.removeClass('showing-results').addClass('no-results');;
 
@@ -260,8 +259,6 @@ define(function(require, exports, module) {
         },
 
         isFormValid: function (address) {
-            // console.log(address)
-            // return (/(^\d{5}$)|(^\d{5}-\d{4}$)/).test(address);
             return true;
         },
 
