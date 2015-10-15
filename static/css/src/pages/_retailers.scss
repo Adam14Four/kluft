@@ -32,7 +32,7 @@
         width: 35%;
         display: none;
         overflow: hidden;
-        z-index: 0;
+        z-index: 1000;
         min-height: 400px;
         max-height: 470px;
         background-color: $white !important;
@@ -50,6 +50,26 @@
             font-size: 1.2em;
             text-transform: none;
             color: red;
+        }
+    }
+
+    .no-results-found {
+        display: none;
+        float: left;
+        margin: 15px 0 0 15%;
+        font-size: 14px;
+        @media (min-width: 768px) {
+            float: none;
+            width: 50%;
+            margin: 15px 0 0 50%;
+            text-align: left;
+        }
+
+    }
+
+    &.no-results {
+        .no-results-found {
+            display: block;
         }
     }
 

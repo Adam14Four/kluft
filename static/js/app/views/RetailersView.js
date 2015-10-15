@@ -171,25 +171,35 @@ define(function(require, exports, module) {
         },
 
         onUpdateAddress: function() {
+            this.$el.removeClass('no-results');
             if (_.isUndefined(this.model.get('location')) || this.model.get('location') === null) {
                 this.ui.inputAddress.val('');
                 return this.$el.removeClass('showing-results');
             }
             _.each(this.locations, this.setDistance, this);
             var results = _.sortBy(this.locations, this.sortLocations);
+            results = this.checkResults(results.slice(0, 6));
+            console.log(results);
+            if (results.length === 0) {
+                this.$el.removeClass('showing-results').addClass('no-results');;
+
+                return; 
+            }
+
             this.collection.reset(results.slice(0, 6));
-            this.checkResults(results.slice(0, 6));
+            this.$el.addClass('showing-results');
         },
 
         checkResults: function(results) {
-            // console.log(results);
-            // if (results[0].distance > 60) {
-            //     console.log('too far away');
+            var trimmedResults = []
 
-            //     return;
-            // }
+            _.each(results, function(result) {
+                if (result.distance < 500) {
+                    trimmedResults.push(result);
+                }
+            });
 
-            this.$el.addClass('showing-results');
+            return trimmedResults;
         },
 
         sortLocations: function(location) {
@@ -250,8 +260,9 @@ define(function(require, exports, module) {
         },
 
         isFormValid: function (address) {
-            console.log(address)
-            return (/(^\d{5}$)|(^\d{5}-\d{4}$)/).test(address);
+            // console.log(address)
+            // return (/(^\d{5}$)|(^\d{5}-\d{4}$)/).test(address);
+            return true;
         },
 
         onDestroy: function() {
