@@ -104,7 +104,7 @@ define(function(require, exports, module) {
                 "Submit": "提交",
                 "Please enter a valid email address": "请输入有效的电子邮件地址",
                 "Please provide a valid email": "请提供有效的电子邮件",
-                "Message sent.": "信息已发送。",
+                "Message sent": "信息已发送。",
                 "Please enter a zip code": "请输入邮政编码",
                 "Please provide a valid zip code": "请提供有效的邮政编码",
                 "Directions": "路线指引"
@@ -212,7 +212,7 @@ define(function(require, exports, module) {
                 "Submit": "Enviar",
                 "Please enter a valid email address": "Introduzca una dirección de correo electrónico válida.",
                 "Please provide a valid email": "Introduzca una dirección de correo electrónico válida.",
-                "Message sent.": "Mensaje enviado.",
+                "Message sent": "Mensaje enviado.",
                 "Please enter a zip code": "Introduzca un código postal",
                 "Please provide a valid zip code": "Proporcione un código postal válido",
                 "Directions": "Indicaciones"
@@ -320,7 +320,7 @@ define(function(require, exports, module) {
                 "Submit": "Submit",
                 "Please enter a valid email address": "Please enter a valid email address",
                 "Please provide a valid email": "Please provide a valid email",
-                "Message sent.": "Message sent.",
+                "Message sent": "Message sent.",
                 "Please enter a zip code": "Please enter a zip code",
                 "Please provide a valid zip code": "Please provide a valid zip code",
                 "Directions": "Directions"
