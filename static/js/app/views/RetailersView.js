@@ -193,7 +193,7 @@ define(function(require, exports, module) {
             var trimmedResults = []
 
             _.each(results, function(result) {
-                if (result.distance < 500) {
+                if (result.distance < 1000) {
                     trimmedResults.push(result);
                 }
             });
