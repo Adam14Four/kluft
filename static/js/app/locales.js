@@ -2,6 +2,7 @@ define(function(require, exports, module) {
     return {
         locales: {
             'cn': {
+                "Search by zip code or country": "Search by zip code or country",
                 "Beyondtwo": "超越",
                 "English": "英文",
                 "Spanish": "西班牙人",
@@ -110,6 +111,7 @@ define(function(require, exports, module) {
                 "Directions": "路线指引"
             },
             'es': {
+                "Search by zip code or country": "Search by zip code or country",
                 "Beyondtwo": "Beyond",
                 "English": "Inglés",
                 "Spanish": "Español",
@@ -218,6 +220,7 @@ define(function(require, exports, module) {
                 "Directions": "Indicaciones"
             },
             'en': {
+                "Search by zip code or country": "Search by zip code or country",
                 "Beyondtwo": "Beyond",
                 "English": "English",
                 "Spanish": "Spanish",

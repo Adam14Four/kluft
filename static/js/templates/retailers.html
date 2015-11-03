@@ -12,10 +12,10 @@
 <section class="section is-loading">
     <div class="headline">
         <form class="zipcode-form js-search">
-            <h6 class="h10">{{t "Enter your zip code"}}</h6>
+            <h6 class="h10">{{t "Search by zip code or country"}}</h6>
             <div class="zipcode-wrapper">
                 <div class="errors"></div>
-                <input class="btn zipcode" id="zipcode" type="text" name="address" data-model-bind="address" placeholder="{{t "zip code"}}" value="{{#if address}}{{address}}{{/if}}">
+                <input class="btn zipcode" id="zipcode" type="text" name="address" data-model-bind="address" value="{{#if address}}{{address}}{{/if}}">
             </div>
             <button class="btn search btn-submit">{{t "Search"}}</button>
         </form>
