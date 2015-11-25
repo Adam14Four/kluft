@@ -2062,6 +2062,7 @@ button {
 }
 /* line 4, src/components/_form.scss */
 .zipcode-form .h10, .zipcode-form .header .main-nav a, .header .main-nav .zipcode-form a, .zipcode-form .footer a, .footer .zipcode-form a, .zipcode-form .footer .to-top, .footer .zipcode-form .to-top {
+  max-width: 360px;
   letter-spacing: 0.38em;
   line-height: 1.9;
   margin-bottom: 1.0em;
