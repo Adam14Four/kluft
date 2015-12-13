@@ -206,8 +206,10 @@ define(function(require) {
             var supported = ["en", "en_US", "es", "zh", "zh-cn", "zh-hk", "zh-sg"];
             window.I18n.defaultLocale = "en";
             window.I18n.translations.en = locales.locales.en;
-            window.I18n.translations.es = locales.locales.es;
-            window.I18n.translations.zh = locales.locales.cn;
+            // window.I18n.translations.es = locales.locales.es;
+            // window.I18n.translations.zh = locales.locales.cn;
+            window.I18n.translations.es = locales.locales.en;
+            window.I18n.translations.zh = locales.locales.en;
 
             $.ajax({
                 url: '/api/v1/userlangauge',
@@ -229,8 +231,10 @@ define(function(require) {
         setLang: function(lang) {
             window.I18n.defaultLocale = "en";
             window.I18n.translations.en = locales.locales.en;
-            window.I18n.translations.es = locales.locales.es;
-            window.I18n.translations.zh = locales.locales.cn;
+            // window.I18n.translations.es = locales.locales.es;
+            // window.I18n.translations.zh = locales.locales.cn;
+            window.I18n.translations.es = locales.locales.en;
+            window.I18n.translations.zh = locales.locales.en;
             window.I18n.locale = lang;
             window.locale = lang;
             window.I18n.currentLocale();
