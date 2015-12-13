@@ -30,14 +30,14 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
-            var option = 'English';
-            if (window.locale == 'es') {
-                option = 'Español';
-            } else if (window.locale == 'zh') {
-                option = '中文';
-            }
+            // var option = 'English';
+            // if (window.locale == 'es') {
+            //     option = 'Español';
+            // } else if (window.locale == 'zh') {
+            //     option = '中文';
+            // }
 
-            this.ui.select[0].childNodes[0].nodeValue = option;
+            // this.ui.select[0].childNodes[0].nodeValue = option;
         },
 
         onClickScrollBtn: function() {
