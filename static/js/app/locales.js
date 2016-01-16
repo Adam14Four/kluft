@@ -111,7 +111,7 @@ define(function(require, exports, module) {
                 "Directions": "路线指引"
             },
             'es': {
-                "Search by zip code or country": "Search by zip code or Country (or province/region)",
+                "Search by zip code or country": "Busque por código postal o por país (o provincia/región)",
                 "Beyondtwo": "Beyond",
                 "English": "Inglés",
                 "Spanish": "Español",
