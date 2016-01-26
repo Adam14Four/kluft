@@ -34,9 +34,9 @@ define(function(require, exports, module) {
             if (window.locale == 'es') {
                 option = 'Español';
             } 
-            // else if (window.locale == 'zh') {
-            //     option = '中文';
-            // }
+            else if (window.locale == 'zh') {
+                option = '中文';
+            }
 
             this.ui.select[0].childNodes[0].nodeValue = option;
         },

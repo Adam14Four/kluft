@@ -207,8 +207,7 @@ define(function(require) {
             window.I18n.defaultLocale = "en";
             window.I18n.translations.en = locales.locales.en;
             window.I18n.translations.es = locales.locales.es;
-            // window.I18n.translations.zh = locales.locales.cn;
-            window.I18n.translations.zh = locales.locales.en;
+            window.I18n.translations.zh = locales.locales.cn;
 
             $.ajax({
                 url: '/api/v1/userlangauge',
@@ -231,8 +230,7 @@ define(function(require) {
             window.I18n.defaultLocale = "en";
             window.I18n.translations.en = locales.locales.en;
             window.I18n.translations.es = locales.locales.es;
-            // window.I18n.translations.zh = locales.locales.cn;
-            window.I18n.translations.zh = locales.locales.en;
+            window.I18n.translations.zh = locales.locales.cn;
             window.I18n.locale = lang;
             window.locale = lang;
             window.I18n.currentLocale();
