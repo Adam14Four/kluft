@@ -112,7 +112,7 @@ define(function(require, exports, module) {
                 "Directions": "路线指引"
             },
             'es': {
-                "december": "Earl S. Kluft, Founder of E.S. Kluft & Co. December 2014",
+                "december": "Earl S. Kluft, Fundador de E.S. Kluft & Company. Diciembre de 2014",
                 "Search by zip code or country": "Busque por código postal o por país (o provincia/región)",
                 "Beyondtwo": "Beyond",
                 "English": "Inglés",
@@ -184,7 +184,7 @@ define(function(require, exports, module) {
                 "insideevery": "El interior de cada colchón Royal Soveign Latex alberga capas de látex Talalay natural, el sistema más sofisticado de soporte natural. Su estructura de células abiertas permite una excelente regulación del aire y adaptabilidad del soporte gracias al número reducido de puntos de presión. También añadimos varios niveles de lujoso relleno y espuma viscoelástica para contribuir a que el látex proporcione un descanso más saludable a lo largo de la vida útil del colchón.",
                 "amattress": "Un fabricante de colchones dedicado a perfeccionar el descanso de lujo",
                 "Kluft Heritage": "El legado de Kluft",
-                "sinceourbeg": "Since 2004, E.S. Kluft & Company has mastered the luxury mattress. Our founder, world-class master craftsman Earl S. Kluft, created a heritage of opulent, signature creations. These mattresses have defined world-class comfort for the past decade. For generations to come, Kluft craftsmanship will always set the universal standard for sophistication and refinement.",
+                "sinceourbeg": "Desde 2004, E.S. Kluft & Company domina el sector de los colchones de lujo. Nuestro fundador, un maestro artesano de primer orden, Earl S. Kluft, ha construido un legado de lujosas e inconfundibles creaciones. Durante la pasada década estos colchones fueron el canon del confort y el lujo. Las próximas generaciones encontrarán en la producción artesanal de Kluft el arquetipo de la sofisticación y el refinamiento.",
                 "Kluft Today": "Kluft en la actualidad",
                 "perfectionis": "La perfección es un viaje, no un destino. Llevamos al límite los métodos artesanos y la tecnología para fusionar materiales completamente naturales con nuestra pasión por la innovación en el diseño. Nuestra empresa es la culminación de décadas de arduo trabajo, conocimiento y experiencia a la que solo se le puede dar un nombre: Kluft.",
                 "A mattress maker dedicated to": "Un fabricante de colchones dedicado a",
