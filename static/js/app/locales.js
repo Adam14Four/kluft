@@ -2,7 +2,7 @@ define(function(require, exports, module) {
     return {
         locales: {
             'cn': {
-                "Search by zip code or country": "Search by zip code or Country (or province/region)",
+                "Search by zip code or country": "按邮政编码或国家（或省/地区）搜索",
                 "Beyondtwo": "超越",
                 "English": "英文",
                 "Spanish": "西班牙人",
