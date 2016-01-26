@@ -2,6 +2,7 @@ define(function(require, exports, module) {
     return {
         locales: {
             'cn': {
+                "december": "Earl S. Kluft 是 E.S. Kluft & Company 公司的创始人。2014 年 12 月",
                 "Search by zip code or country": "按邮政编码或国家（或省/地区）搜索",
                 "Beyondtwo": "超越",
                 "English": "英文",
@@ -73,7 +74,7 @@ define(function(require, exports, module) {
                 "insideevery": "每张 Royal Soveign 乳胶床垫内部均采用天然 Talalay 乳胶垫层，打造最佳天然支撑系统。其开孔式结构能够提供绝佳空气流通和响应式支撑，从而最大限度减少压力点。此外，我们还添加了奢华衬垫和粘弹性记忆海绵垫层来为乳胶垫层提供辅助，在床垫的寿命周期内带来更健康的睡眠体验。",
                 "amattress": "致力于不断提升奢华睡眠体验的床垫制造商。",
                 "Kluft Heritage": "Kluft 传统",
-                "sinceourbeg": "Since 2004, E.S. Kluft & Company has mastered the luxury mattress. Our founder, world-class master craftsman Earl S. Kluft, created a heritage of opulent, signature creations. These mattresses have defined world-class comfort for the past decade. For generations to come, Kluft craftsmanship will always set the universal standard for sophistication and refinement.",
+                "sinceourbeg": "自 2004 年以来，E.S. Kluft & Company一直致力于打造高端豪华床垫。我们的公司创始人 Earl S. Kluft 出生于床垫世家，是全球顶尖的床垫制作匠人。 在过去十年里， 出自 Kluft 品牌的豪华舒适床垫备受追捧。在未来，Kluft 将继续坚持其品牌信条，打造精益求精，豪华舒适的全球顶级床垫。",
                 "Kluft Today": "今日 Kluft ",
                 "perfectionis": "追求完美，永无止境。我们不断挑战工艺和技术极限，将全天然材料与对设计创新的激情融合在一起。我们现在所拥有的一切是数十年辛勤工作、知识和经验的结晶，并铸就一个独一无二的品牌：Kluft。",
                 "A mattress maker dedicated to": "致力于不断提升",
@@ -111,6 +112,7 @@ define(function(require, exports, module) {
                 "Directions": "路线指引"
             },
             'es': {
+                "december": "Earl S. Kluft, Founder of E.S. Kluft & Co. December 2014",
                 "Search by zip code or country": "Busque por código postal o por país (o provincia/región)",
                 "Beyondtwo": "Beyond",
                 "English": "Inglés",
@@ -220,6 +222,7 @@ define(function(require, exports, module) {
                 "Directions": "Indicaciones"
             },
             'en': {
+                "december": "Earl S. Kluft, Founder of E.S. Kluft & Co. December 2014",
                 "Search by zip code or country": "Search by zip code or Country (or province/region)",
                 "Beyondtwo": "Beyond",
                 "English": "English",
