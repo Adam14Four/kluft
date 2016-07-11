@@ -16,6 +16,7 @@ var LocationSchema = new Schema({
     "zip": String,
     "country": String,
     "phone": String,
+    "shop": String,
     "slug": String
 });
 

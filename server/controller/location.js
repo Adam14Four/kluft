@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
     fs = require('fs'),
     extend = require('util')._extend;
 
-var fields = ['title', 'street', 'city', 'state', 'zip', 'country', 'phone'];
+var fields = ['title', 'street', 'city', 'state', 'zip', 'country', 'phone', 'shop'];
 
 exports.load = function(req, res, next, id) {
     Location.load(id, function(err, location) {
