@@ -39,9 +39,12 @@
     }
 
     .h10 {
-        padding-bottom: 55px;
+        padding-bottom: 20px;
         letter-spacing: 0.2em;
         color: #434e55;
+        @media (min-width: 768px) {
+            padding-bottom: 55px;
+        }
     }
 
     a, .to-top {
@@ -155,8 +158,60 @@
         }
         @media (min-width: 768px) {
             padding-bottom: 0em;
+            float: left;
+            top: -70px;
+            left: 15px;
+        }
+        @media (min-width: 960px) {
+            left: 45px;
+        }
+    }
+
+    .social-links {
+        position: relative;
+        margin-bottom: 20px;
+        span {
+            display: inline-block;
+            position: relative;
+            top: 0px;
+            left: -4px;
+            width: 1px;
+            height: 23px;
+            background-color: #909090;
+        }
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 12px;
+            text-indent: -999rem;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+        }
+        .facebook {
+            left: -5px;
+            top: -1px;
+            width: 9px;
+            height: 21px;
+            background-image: url(../img/icon-facebook.png);
+            &:hover {
+                background-image: url(../img/icon-facebook-hover.png);
+            }
+        }
+        .instagram {
+            width: 23px;
+            height: 23px;
+            left: 3px;
+            background-image: url(../img/icon-instagram.png);
+            &:hover {
+                background-image: url(../img/icon-instagram-hover.png);
+            }
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 0;
             float: right;
-            top: -35px;
+            top: -79px;
             right: 15px;
         }
         @media (min-width: 960px) {

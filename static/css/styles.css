@@ -1242,11 +1242,17 @@ button {
 }
 /* line 41, src/components/_footer.scss */
 .footer .h10, .footer .header .main-nav a, .header .main-nav .footer a, .footer a, .footer .to-top {
-  padding-bottom: 55px;
+  padding-bottom: 20px;
   letter-spacing: 0.2em;
   color: #434e55;
 }
-/* line 47, src/components/_footer.scss */
+@media (min-width: 768px) {
+  /* line 41, src/components/_footer.scss */
+  .footer .h10, .footer .header .main-nav a, .header .main-nav .footer a, .footer a, .footer .to-top {
+    padding-bottom: 55px;
+  }
+}
+/* line 50, src/components/_footer.scss */
 .footer a, .footer .to-top {
   padding: 0;
   font-size: 1.1em;
@@ -1257,21 +1263,21 @@ button {
   -webkit-transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
-/* line 55, src/components/_footer.scss */
+/* line 58, src/components/_footer.scss */
 .footer a:hover, .footer .to-top:hover {
   color: #D2D3D7;
 }
-/* line 60, src/components/_footer.scss */
+/* line 63, src/components/_footer.scss */
 .footer .back-to-top {
   text-align: center;
   position: relative;
   cursor: pointer;
 }
-/* line 65, src/components/_footer.scss */
+/* line 68, src/components/_footer.scss */
 .footer .back-to-top .to-top {
   padding-top: 22px;
 }
-/* line 69, src/components/_footer.scss */
+/* line 72, src/components/_footer.scss */
 .footer .back-to-top:before {
   content: '';
   position: absolute;
@@ -1285,12 +1291,12 @@ button {
   -webkit-transform: translate3d(-50%, -100%, 0);
   transform: translate3d(-50%, -100%, 0);
 }
-/* line 81, src/components/_footer.scss */
+/* line 84, src/components/_footer.scss */
 .footer .language-select {
   position: relative;
   padding-bottom: 5em;
 }
-/* line 84, src/components/_footer.scss */
+/* line 87, src/components/_footer.scss */
 .footer .language-select h3 {
   font-family: "Mrs Eaves Lining OT";
   font-size: 11px;
@@ -1299,24 +1305,24 @@ button {
   text-transform: uppercase;
   display: inline-block;
 }
-/* line 91, src/components/_footer.scss */
+/* line 94, src/components/_footer.scss */
 .footer .language-select h3.select {
   min-width: 91px;
   color: #fff;
   cursor: pointer;
 }
-/* line 96, src/components/_footer.scss */
+/* line 99, src/components/_footer.scss */
 .footer .language-select h3.select:hover .options, .footer .language-select h3.select.active .options {
   max-height: 400px;
 }
-/* line 99, src/components/_footer.scss */
+/* line 102, src/components/_footer.scss */
 .footer .language-select h3.select:hover:after, .footer .language-select h3.select.active:after {
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-/* line 103, src/components/_footer.scss */
+/* line 106, src/components/_footer.scss */
 .footer .language-select h3.select:after {
   content: '';
   display: inline-block;
@@ -1332,12 +1338,12 @@ button {
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
 }
-/* line 117, src/components/_footer.scss */
+/* line 120, src/components/_footer.scss */
 .footer .language-select .lang-select {
   position: relative;
   margin-right: 30px;
 }
-/* line 120, src/components/_footer.scss */
+/* line 123, src/components/_footer.scss */
 .footer .language-select .lang-select:after {
   content: '';
   display: inline-block;
@@ -1348,7 +1354,7 @@ button {
   height: 11px;
   background-color: #909090;
 }
-/* line 131, src/components/_footer.scss */
+/* line 134, src/components/_footer.scss */
 .footer .language-select .options {
   text-align: left;
   position: absolute;
@@ -1362,37 +1368,101 @@ button {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 140, src/components/_footer.scss */
+/* line 143, src/components/_footer.scss */
 .footer .language-select .options li {
   padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 144, src/components/_footer.scss */
+/* line 147, src/components/_footer.scss */
 .footer .language-select .options li:first-child {
   padding-top: 10px;
 }
-/* line 147, src/components/_footer.scss */
+/* line 150, src/components/_footer.scss */
 .footer .language-select .options li:last-child {
   padding-bottom: 10px;
 }
-/* line 152, src/components/_footer.scss */
+/* line 155, src/components/_footer.scss */
 .footer .language-select .option {
   text-align: center;
   color: #ffffff;
 }
 @media (min-width: 768px) {
-  /* line 81, src/components/_footer.scss */
+  /* line 84, src/components/_footer.scss */
   .footer .language-select {
     padding-bottom: 0em;
+    float: left;
+    top: -70px;
+    left: 15px;
+  }
+}
+@media (min-width: 960px) {
+  /* line 84, src/components/_footer.scss */
+  .footer .language-select {
+    left: 45px;
+  }
+}
+/* line 170, src/components/_footer.scss */
+.footer .social-links {
+  position: relative;
+  margin-bottom: 20px;
+}
+/* line 173, src/components/_footer.scss */
+.footer .social-links span {
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left: -4px;
+  width: 1px;
+  height: 23px;
+  background-color: #909090;
+}
+/* line 182, src/components/_footer.scss */
+.footer .social-links a {
+  position: relative;
+  display: inline-block;
+  padding: 12px;
+  text-indent: -999rem;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+/* line 192, src/components/_footer.scss */
+.footer .social-links .facebook {
+  left: -5px;
+  top: -1px;
+  width: 9px;
+  height: 21px;
+  background-image: url(../img/icon-facebook.png);
+}
+/* line 198, src/components/_footer.scss */
+.footer .social-links .facebook:hover {
+  background-image: url(../img/icon-facebook-hover.png);
+}
+/* line 202, src/components/_footer.scss */
+.footer .social-links .instagram {
+  width: 23px;
+  height: 23px;
+  left: 3px;
+  background-image: url(../img/icon-instagram.png);
+}
+/* line 207, src/components/_footer.scss */
+.footer .social-links .instagram:hover {
+  background-image: url(../img/icon-instagram-hover.png);
+}
+@media (min-width: 768px) {
+  /* line 170, src/components/_footer.scss */
+  .footer .social-links {
+    margin-bottom: 0;
     float: right;
-    top: -35px;
+    top: -79px;
     right: 15px;
   }
 }
 @media (min-width: 960px) {
-  /* line 81, src/components/_footer.scss */
-  .footer .language-select {
+  /* line 170, src/components/_footer.scss */
+  .footer .social-links {
     right: 45px;
   }
 }
