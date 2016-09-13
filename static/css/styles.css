@@ -1415,7 +1415,7 @@ button {
   left: -4px;
   width: 1px;
   height: 23px;
-  background-color: #909090;
+  background-color: #3f464e;
 }
 /* line 182, src/components/_footer.scss */
 .footer .social-links a {
@@ -1427,28 +1427,31 @@ button {
   background-repeat: no-repeat;
   background-position: center center;
   cursor: pointer;
+  opacity: 0.2;
+  -moz-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
-/* line 192, src/components/_footer.scss */
+/* line 193, src/components/_footer.scss */
+.footer .social-links a:hover {
+  opacity: 1;
+}
+/* line 197, src/components/_footer.scss */
 .footer .social-links .facebook {
   left: -5px;
   top: -1px;
   width: 9px;
   height: 21px;
-  background-image: url(../img/icon-facebook.png);
-}
-/* line 198, src/components/_footer.scss */
-.footer .social-links .facebook:hover {
+  margin-right: 15px;
   background-image: url(../img/icon-facebook-hover.png);
 }
-/* line 202, src/components/_footer.scss */
+/* line 209, src/components/_footer.scss */
 .footer .social-links .instagram {
   width: 23px;
   height: 23px;
   left: 3px;
-  background-image: url(../img/icon-instagram.png);
-}
-/* line 207, src/components/_footer.scss */
-.footer .social-links .instagram:hover {
+  margin-left: 15px;
   background-image: url(../img/icon-instagram-hover.png);
 }
 @media (min-width: 768px) {
